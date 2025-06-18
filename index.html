@@ -1,0 +1,1978 @@
+<!doctype html>
+<html lang="ko">
+ <head>  
+  <title>"50 Plus" 일자리 플랫폼 FO</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<style>
+		@charset "utf-8";
+
+			/* @font-face {
+				font-family: "NotoSansL";
+				src: url("../font/NotoSans-Light.woff") format("woff"),
+					url("./font/NotoSans-Light.woff2") format("woff2");
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: "NotoSansM";
+				src: url("../font/NotoSans-Medium.woff") format("woff"),
+					url("../font/NotoSans-Medium.woff2") format("woff2");
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: "NotoSansB";
+				src: url("../font/NotoSans-Bold.woff") format("woff"),
+					url("../font/NotoSans-Bold.woff2") format("woff2");
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: "SamyangB";
+				src: url("../font/Samyang-Bold.woff") format("woff"),
+					url("../font/Samyang-Bold.woff2") format("woff2");
+				font-weight:normal;
+				font-style: normal;
+			} */
+
+		/* Common */
+		body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,form,fieldset,legend,input,textarea,button,select,div{margin:0;padding:0;box-sizing:border-box;word-break:keep-all;word-wrap:break-word}
+		td,th{margin:0;padding:0;word-break:keep-all;word-wrap:break-word}
+		body,input,textarea,select,button,table,th,td,pre{color:#000;font-family:NotoSansL;font-size:18px;line-height:1.8}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;line-height:1.2}
+		img,fieldset,iframe{border:0;vertical-align:top}
+		textarea{resize:none;font-size:16px}
+		ul,ol{margin:0;padding:0;list-style:none}
+		ul:after,ol:after{content:'';display:block;clear:both}
+		em,address{font-style:normal}
+		input,select{vertical-align:middle}
+		table{width:100%;border-collapse:separate;empty-cells:show;border-spacing:0}
+		hr,legend{display:none}
+		caption{overflow:hidden;position:static;top:0;left:0;width:0;height:0;font-size:0;line-height:0;text-transform:uppercase}
+		strong, b{font-weight:bold}
+		button{box-sizing:border-box;border:none;background:none;}
+		label{cursor:pointer}
+
+		a{color:inherit;text-decoration:none}
+		a{box-sizing:border-box}
+
+		a, button{cursor:pointer}
+		[tabindex="-1"]{outline:0}
+
+		.hidden{overflow:hidden;position:absolute;font:0/0 dotum;width:0;height:0}
+		.clear{clear:both}
+		.tleft{text-align:left !important}
+		.tright{text-align:right !important}
+		.tcenter{text-align:center !important}
+		.pb0{padding-bottom:0 !important;}
+		.textLink{color:#1869b4 !important;border-bottom:1px solid #1869b4 !important;}
+		.blockTxtPc{display:block;}
+		.title.borderNone{border:0 !important;}
+
+		.skip{position:relative;width:100%;overflow:hidden;z-index:99999}
+		.skip a{display:block;width:100%;margin-top:-50px}
+		.skip a:focus{height:50px;margin-top:0;color:#fff;font-size:20px;line-height:51px;text-align:center;background:#173f35}
+
+		html.hasModal{overflow:hidden;position:fixed;top:0;left:0;right:0;bottom:0}
+
+		.topBtn{position:fixed;bottom:30px;left:50%;margin-left:640px;z-index:101;}
+		.topBtn button{background:url(../img/pc/btn_top.png) no-repeat 50%;width:50px;height:50px;color:transparent;font-size:0;text-indent:-9999px;}
+
+		/* Layout */
+		html, body{height:100%}
+		body{min-height:100%}
+		.wrapper{min-height:100%;position:relative;min-width:1400px;margin:0 auto;overflow:hidden;padding-bottom:140px;}
+		.container{min-height:100%;padding:80px 0 140px;margin:-80px 0 -140px}
+		.container > .inner{position:relative;width:1400px;margin:0 auto;padding:0 10px 200px}
+
+		.pcNone{display:block}
+		.moNone{display:none}
+		/* color */
+		.colorff{color:#fff !important;}
+		.color00{color:#000 !important;}
+		.color01{color:#0d7efe !important;}
+		.color02{color:#333 !important;}
+		.color03{color:#666 !important;}
+		.color04{color:#999 !important;}
+		.color05{color:#181818 !important;}
+		.color06{color:#202020 !important;}
+		.color_point{color:#5d9eda !important;}
+		.inlineTxt{display:inline-block;}
+		.point{color:red;font-weight:bold;}
+
+		.location{position:relative}
+		.location ul{position:absolute;top:30px;right:0;}
+		.location ul:after{content:'';display:block;clear:both;}
+		.location ul li.home{color:#888;padding-left:0;background:none;}
+		.location ul li{float:left;font-family:'NotoSansL';font-size:14px;color:#888;padding-left:16px;margin-right:10px;background:url(../img/pc/blt_arrow.png) no-repeat 0 50%;}
+		.location ul li:last-child{margin-right:0;font-family:'NotoSansB';color:#444;}
+
+		/* Form */
+		input{-webkit-appearance:none;-webkit-border-radius:0;}
+		input::-ms-clear{display:none}
+		input[type=password]::-ms-reveal{display:none}
+		input[type=text], input[type=password], input[type=tel]{width:100%;height:48px;padding:8px 13px 8px 18px;color:#000;border:1px solid #e8e8e8;vertical-align:middle;color:#000}
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus{border-color:#1869b4;outline:none}
+		input[type=text][disabled], input[type=password][disabled], input[type=tel][disabled], input[type=text][readonly], input[type=password][readonly], input[type=tel][readonly]{color:#999;border-color:#e8e8e8;background:#eee}
+		input:-ms-input-placeholder[type=text], input:-ms-input-placeholder[type=password], input:-ms-input-placeholder[type=tel]{color:#999}
+		:-ms-input-placeholder{color:#999}
+		:-moz-placeholder{color:#999}
+		::-webkit-input-placeholder{color:#999}
+		textarea{resize:none;font-size:18px;display:block;width:100%;height:200px;padding:4px 17px;margin-top:6px;outline:none;border-color:#e8e8e8;border-style:solid;-webkit-appearance:none;}
+		textarea:focus{border-color:#1869b4;}
+		.error textarea{border-color:#f05333;}
+		textarea::placeholder{color:#999}
+		input::placeholder{color:#999}
+
+
+		body{text-align:left !important}
+		.guideHeader{position:fixed;top:0;left:0;width:100%;height:170px;background:#fff;z-index:100}
+		.guideHeader h1{padding:20px;font-size:23px}
+		.guideHeader .g_gnb{position:relative;padding:0 0 45px 0;background:#fff}
+		.guideHeader .g_gnb .gnbList{position:relative;padding-left:15px;background:#0c82e9}
+		.guideHeader .g_gnb .gnbList li{display:inline-block;*display:inline;*zoom:1;width:auto;padding-top:7px}
+		.guideHeader .g_gnb .gnbList li > a{position:relative;display:block;height:46px;padding:0 20px;color:#fff;font-size:18px;line-height:45px;border-radius:5px 5px 0 0}
+		.guideHeader .g_gnb .gnbList li > a:before{content:'';display:block;position:absolute;top:50%;left:0;width:1px;height:14px;margin-top:-7px;background:rgba(255,255,255,0.7)}
+		.guideHeader .g_gnb .gnbList li:first-child a:before, .guideHeader .g_gnb .gnbList li.on+li a:before{display:none;}
+		.guideHeader .g_gnb .gnbList li.on > a{color:#000;background:#fff}
+		.topBtn{position:absolute;top:6px;right:30px;}
+		.topBtn a{position:relative;display:inline-block;margin-left:10px;padding:5px 15px;font-size:16px}
+		.topBtn a:after{content:'';position:absolute;top:13px;right:0;width:8px;height:8px;border:solid #666;border-width:1px 1px 0 0;transform:rotate(45deg);}
+		.sGnbTop{position:fixed;top:0;left:0;width:100%}
+
+		.guideContainer{position:relative;/*width:1500px;*/margin:0 20px 100px 20px;padding:170px 0;z-index:10}
+		.guideContainer.list{width:auto;margin-top:-50px}
+		.guideHeader .guideSnb{position:absolute;bottom:0;left:30px;}
+		.guideHeader .guideSnb li{float:left}
+		.guideHeader .guideSnb a{position:relative;display:block;padding:0 15px;font-size:14px;line-height:35px}
+		.guideHeader .guideSnb a:before{content:'';position:absolute;top:12px;left:0;width:1px;height:10px;background:#ccc;}
+		.guideHeader .guideSnb li:first-child a:before{display:none;}
+		.guideHeader .guideSnb li.on a{color:#000;background:#f5f5f5}
+
+		.guideTit2, .guideTit3{line-height:1}
+		.guideTit2{margin-bottom:30px;color:#000;font-size:32px}
+		.guideTit3{margin:50px 0 10px;color:#444;font-size:18px}
+		.guideTit4{margin:50px 0 10px;color:#444;font-size:16px}
+		.guideList li{position:relative;min-height:16px;padding:0 0 5px 12px;line-height:1.2}
+		.guideList li:before{content:'';display:block;position:absolute;top:5px;left:0;width:3px;height:3px;border-radius:3px;background:#888}
+
+		.htmlList{border-top:1px solid #ccc}
+		.htmlList th, .htmlList td{padding:4px 7px;color:#111;border-bottom:1px solid #ccc;border-left:1px solid #ccc;font-size:13px;}
+		.htmlList th:first-child, .htmlList td:first-child{border-left:none}
+		.htmlList th{background:#eee;text-align:center}
+		.htmlList td{text-align:center}
+		.htmlList td a{text-decoration:underline}
+		.htmlList tbody tr:hover{background:#f4f7f8}
+		.htmlList tr.bgTxt td{background:#ccdbef}
+		.bgStep td{background:#f2dea3}
+		.bgWashing td{background:#c9eff9}
+		.bgDefer td{background:gray}
+
+		div.codeGuide{padding:20px;background:#f7f7f7}
+		.codeGuide{margin-bottom:15px}
+		.codeGuide li{position:relative;margin-top:5px;padding-left:10px;color:#111}
+		.codeGuide li:before{content:'-';display:inline-block;width:10px;margin-left:-10px;}
+		.codeGuide li a{text-decoration:underline}
+
+		code{overflow:auto;display:block;max-height:400px;margin:30px 0;padding:20px;border:2px solid #ccc;background:#f7f7f7}
+		pre{margin:0;padding:0;color:#111;font-family:notokr;font-size:15px;line-height:1.5}
+
+		.codeView{position:relative;padding:20px;border:2px solid #F30}
+		.codeView .btnBtm{margin:0}
+		.codeView .btnBtm .btnArea, .codeView .btnBtm .btnStep{position:relative !important}
+
+		.codeView [class^="stepType"]{position:relative;}
+		.codeView [class^="stepType"] ul{position:relative;top:0;right:0}
+		.codeView [class^="stepType"]:before{position:absolute;top:0}
+		.codeView .headArea{width:100%;text-align:center;line-height:110px;color:#fff}
+		.codeView .pageLocation{width:100%;min-width:inherit;line-height:40px}
+		.codeView .pageBtn{right:0;margin:0}
+		.codeView .topBox .inner{width:100%}
+		.codeView .topBox:after{width:100%}
+
+		@media (min-width: 320px) and (max-width: 480px) {
+			.guideHeader{position:relative;top:auto;left:auto;width:100%;overflow-x:auto}
+				.guideContainer{padding-top:30px}
+				.guideHeader .guideSnb{left:0;padding:0 15px;width:100%;overflow-x:auto}
+				.guideHeader .guideSnb ul{display:flex}
+				.guideHeader .guideSnb ul li{float:none;display:inline-block}
+
+		}
+
+		.line_bg{background:#ffc000;}
+		.line_bg_sub{background:#fff2cc;}
+		.ing{background:red;color:#fff;padding:5px 10px;}
+		.finish{background:green;color:#fff;padding:5px 10px;}
+		.finish.type02{background:brown;color:#fff;padding:5px 10px;}
+		.includ{background:purple;color:#fff;padding:5px 10px;}
+		.wait{background:royalblue;color:#fff;padding:5px 10px;}
+	</style>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var length = $('.sqnc').length;
+			var i;
+			for (i = 0; i < length; i++){
+				var num = i;
+				$('.sqnc').eq(i).find('.num').html(num + 1);
+			}
+		});
+	</script>
+ </head>
+ <body>
+	<div class="guideHeader">
+		<h1><strong style="color:#0c82e9;">"50 Plus" 일자리 플랫폼 FO (반응형)</strong></h1>
+		<div class="g_gnb">
+			<ul class="gnbList">
+				<!-- <li><a href="html/guide.html">PC Guide</a></li> -->
+				<li class="on"><a href="filelist.html">file list</a></li>
+                <!-- <li><a href="filelist_mo.html">MO List</a></li> -->
+			</ul>
+		</div>
+	</div>
+
+	<div class="guideContainer list">
+		<h2 class="hidden">file list</h2>
+		
+		<!-- JWP Mall FO -->
+		<h3 class="guideTit3">리스트</h3>
+		<table class="htmlList">
+			<colgroup>
+				<col style="width:3%">
+				<col style="width:16%">
+				<col style="width:15%">
+				<col style="width:15%">
+				<col style="width:10%">
+				<col style="width:20%">
+				<col style="width:2%">
+				<col style="width:5%">
+				<col style="width:1%">
+				<col >
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" width="">NO</th>
+					<th scope="col" width="">1depth</th>
+					<th scope="col" width="">2depth</th>
+					<th scope="col" width="">3depth</th>
+					<th scope="col" width="">4depth</th>
+					<th scope="col" width="">파일/링크</th>
+					<th scope="col" width="">작업자</th>
+					<th scope="col" width="">작업상태</th>
+					<th scope="col" width="">작업일</th>
+					<th scope="col" width="20%">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="background:hsl(300, 53%, 49%);">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft" style="color:#fff;">공통 html</td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft" style="color:#fff;"><a href="html/가이드.html" target="_blank">가이드.html</a></td><!-- 파일링크 -->
+					<td style="color:#fff;">박성광</td>
+					<td></td>
+					<td></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr style="background:hsl(300, 53%, 49%);">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft" style="color:#fff;">레이아웃 html</td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft" style="color:#fff;"><a href="html/레이아웃.html" target="_blank">레이아웃.html</a></td><!-- 파일링크 -->
+					<td style="color:#fff;">박성광</td>
+					<td>
+						<span class="finish">완료</span>
+						<span class="ing">진행</span>
+						<span class="includ">포함</span>
+						<span class="wait">대기</span>
+					</td>
+					<td></td>
+					<td class="tleft">
+						<span style="color:#fff">[공통] 접근성 필수 class="skip" 부분 추가</span>
+					</td>
+				</tr>
+
+				<!-- file list -->
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">GATE</td><!-- 1depth -->
+					<td class="tleft">GATE메인</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAG-0101-M)GATE메인.html" target="_blank">(FAG-0101-M)GATE메인.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">지도팝업 <strong class="point">(P)</strong></td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAG-0102-P)위치안내 지도_팝업.html" target="_blank">(FAG-0102-P)위치안내 지도_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">메인</td><!-- 1depth -->
+					<td class="tleft">플랫폼메인</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAI-0101-M)플랫폼메인.html" target="_blank">(FAI-0101-M)플랫폼메인.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">시니어특별관</td><!-- 1depth -->
+					<td class="tleft">사업안내</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0101-M).html" target="_blank">(FAA-0101-M).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">시니어 구직등록</td><!-- 2depth -->
+					<td class="tleft">구직등록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0201-T).html" target="_blank">(FAA-0201-T).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">상담신청</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0202-T).html" target="_blank">(FAA-0202-T).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">시니어 인력뱅크</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0301-M).html" target="_blank">(FAA-0301-M).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">시니어직무 훈련신청</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0401-M).html" target="_blank">(FAA-0401-M).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">취업사관학교 훈련신청</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0501-M).html" target="_blank">(FAA-0501-M).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">동행기업인증</td><!-- 2depth -->
+					<td class="tleft">신규신청</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0601-T).html" target="_blank">(FAA-0601-T).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">동행기업리스트</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAA-0602-T).html" target="_blank">(FAA-0602-T).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">일자리</td><!-- 1depth -->
+					<td class="tleft">경력인재지원</td><!-- 2depth -->
+					<td class="tleft">경력인재지원 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0101-M)경력인재지원 목록.html" target="_blank">(FAB-0101-M)경력인재지원 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">경력인재지원 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0102-M)경력인재지원 상세.html" target="_blank">(FAB-0102-M)경력인재지원 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">경력인재지원 약관동의</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0103-P)경력인재지원 약관동의.html" target="_blank">(FAB-0103-P)경력인재지원 약관동의.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">경력인재지원 이력서</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0104-P)경력인재지원 이력서.html" target="_blank">(FAB-0104-P)경력인재지원 이력서.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">경력인재지원 추가입력사항</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0105-P)경력인재지원 추가입력사항.html" target="_blank">(FAB-0105-P)경력인재지원 추가입력사항.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">가치동행일자리</td><!-- 2depth -->
+					<td class="tleft">가치동행일자리 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0201-M)가치동행일자리 목록.html" target="_blank">(FAB-0201-M)가치동행일자리 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">가치동행일자리 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0202-M)가치동행일자리 상세.html" target="_blank">(FAB-0202-M)가치동행일자리 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">가치동행일자리(이용동의,확약서)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0203-M)가치동행일자리(이용동의,확약서).html" target="_blank">(FAB-0203-M)가치동행일자리(이용동의,확약서).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">가치동행일자리(이력서)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0204-M)가치동행일자리(이력서).html" target="_blank">(FAB-0204-M)가치동행일자리(이력서).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">가치동행일자리(추가입력사항)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0205-M)가치동행일자리(추가입력사항).html" target="_blank">(FAB-0205-M)가치동행일자리(추가입력사항).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">채용설명회</td><!-- 2depth -->
+					<td class="tleft">채용설명회 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0301-M)채용설명회 목록.html" target="_blank">(FAB-0301-M)채용설명회 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">채용설명회 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0302-M)채용설명회 상세.html" target="_blank">(FAB-0302-M)채용설명회 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">채용설명회 약관동의</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0303-P)채용설명회 약관동의.html" target="_blank">(FAB-0303-P)채용설명회 약관동의.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">채용설명회 이력서</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0304-P)채용설명회 이력서.html" target="_blank">(FAB-0304-P)채용설명회 이력서.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">채용설명회 추가입력사항</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0305-P)채용설명회 추가입력사항.html" target="_blank">(FAB-0305-P)채용설명회 추가입력사항.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">협력기업채용관</td><!-- 2depth -->
+					<td class="tleft">협력기업채용관 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0401-M)협력기업채용관 목록.html" target="_blank">(FAB-0401-M)협력기업채용관 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">협력기업채용관 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0402-M)협력기업채용관 상세.html" target="_blank">(FAB-0402-M)협력기업채용관 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">협력기업채용관 약관동의</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0403-P)협력기업채용관 약관동의.html" target="_blank">(FAB-0403-P)협력기업채용관 약관동의.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">협력기업채용관 이력서</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0404-P)협력기업채용관 이력서.html" target="_blank">(FAB-0404-P)협력기업채용관 이력서.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">협력기업채용관 추가입력사항</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0405-P)협력기업채용관 추가입력사항.html" target="_blank">(FAB-0405-P)협력기업채용관 추가입력사항.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">합격자발표</td><!-- 2depth -->
+					<td class="tleft">합격자발표 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0501-M)합격자발표 목록.html" target="_blank">(FAB-0501-M)합격자발표 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">합격자발표 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAB-0502-M)합격자발표 상세.html" target="_blank">(FAB-0502-M)합격자발표 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">역량강화</td><!-- 1depth -->
+					<td class="tleft">교육안내</td><!-- 2depth -->
+					<td class="tleft">역량강화 교육안내</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0101-M)역량강화 교육안내.html" target="_blank">(FAC-0101-M)역량강화 교육안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">40대 특화과정</td><!-- 2depth -->
+					<td class="tleft">40대 특화과정 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0201-M)40대 특화과정 목록.html" target="_blank">(FAC-0201-M)40대 특화과정 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">40대 특화과정 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0202-M)40대 특화과정 상세.html" target="_blank">(FAC-0202-M)40대 특화과정 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">직업훈련</td><!-- 2depth -->
+					<td class="tleft">직업훈련 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0301-M)직업훈련 목록.html" target="_blank">(FAC-0301-M)직업훈련 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">직업훈련 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0302-M)직업훈련 상세.html" target="_blank">(FAC-0302-M)직업훈련 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">역량강화교육</td><!-- 2depth -->
+					<td class="tleft">역량강화교육 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0401-M)역량강화교육 목록.html" target="_blank">(FAC-0401-M)역량강화교육 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">역량강화교육 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0402-M)역량강화교육 상세.html" target="_blank">(FAC-0402-M)역량강화교육 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">수강신청(기본정보)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0403-M)수강신청(기본정보).html" target="_blank">(FAC-0403-M)수강신청(기본정보).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">수강신청(강좌정보)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0404-M)수강신청(강좌정보).html" target="_blank">(FAC-0404-M)수강신청(강좌정보).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">수강신청(등록)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0405-M)수강신청(등록).html" target="_blank">(FAC-0405-M)수강신청(등록).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">공공교육</td><!-- 2depth -->
+					<td class="tleft">공공교육</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAC-0501-M)공공교육.html" target="_blank">(FAC-0501-M)공공교육.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">상담</td><!-- 1depth -->
+					<td class="tleft">상담 안내</td><!-- 2depth -->
+					<td class="tleft">상담안내</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAD-0101-M)상담안내.html" target="_blank">(FAD-0101-M)상담안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">1:1상담신청</td><!-- 2depth -->
+					<td class="tleft">상담신청</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAD-0102-M)상담신청.html" target="_blank">(FAD-0102-M)상담신청.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">기업지원</td><!-- 1depth -->
+					<td class="tleft">기업지원 안내</td><!-- 2depth -->
+					<td class="tleft">기업지원 안내</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAK-0101-M)기업지원 안내.html" target="_blank">(FAK-0101-M)기업지원 안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">기업모집 공고</td><!-- 2depth -->
+					<td class="tleft">기업모집 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAK-0102-M)기업지원 목록.html" target="_blank">(FAK-0102-M)기업지원 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">기업모집 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAK-0103-M)기업지원 상세.html" target="_blank">(FAK-0103-M)기업지원 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">기업모집 약관동의</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAK-0104-P)기업지원 약관동의.html" target="_blank">(FAK-0104-P)기업지원 약관동의.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">기업모집 추가입력사항</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAK-0105-P)기업지원 추가입력사항.html" target="_blank">(FAK-0105-P)기업지원 추가입력사항.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">사업안내</td><!-- 1depth -->
+					<td class="tleft">사업안내</td><!-- 2depth -->
+					<td class="tleft">일자리사업안내</td><!-- 3depth -->
+					<td class="tleft">일자리사업안내_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0101-T)일자리사업안내_탭.html" target="_blank">(FAE-0101-T)일자리사업안내_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="ing">진행</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">경력인재지원</td><!-- 3depth -->
+					<td class="tleft">경력인재지원_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0102-T)경력인재지원_탭.html" target="_blank">(FAE-0102-T)경력인재지원_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">가치동행일자리</td><!-- 3depth -->
+					<td class="tleft">가치동행일자리_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0103-T)가치동행일자리_탭.html" target="_blank">(FAE-0103-T)가치동행일자리_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">채용설명회</td><!-- 3depth -->
+					<td class="tleft">채용설명회_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0104-T)채용설명회_탭.html" target="_blank">(FAE-0104-T)채용설명회_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">협력기업채용관</td><!-- 3depth -->
+					<td class="tleft">협력기업채용관_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0105-T)협력기업채용관_탭.html" target="_blank">(FAE-0105-T)협력기업채용관_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">공지사항</td><!-- 2depth -->
+					<td class="tleft">공지사항 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0201-M)공지사항 목록.html" target="_blank">(FAE-0201-M)공지사항 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">공지사항 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0202-M)공지사항 상세.html" target="_blank">(FAE-0202-M)공지사항 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">자주하는질문</td><!-- 2depth -->
+					<td class="tleft">자주하는질문 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0301-M)자주하는질문 목록.html" target="_blank">(FAE-0301-M)자주하는질문 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">자주하는질문 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0302-M)자주하는질문 상세.html" target="_blank">(FAE-0302-M)자주하는질문 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">캠퍼스 및 센터위치</td><!-- 2depth -->
+					<td class="tleft">캠퍼스 및 센터위치</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAE-0401-M)캠퍼스 및 센터위치.html" target="_blank">(FAE-0401-M)캠퍼스 및 센터위치.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">로그인</td><!-- 1depth -->
+					<td class="tleft">로그인</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0101-M)로그인.html" target="_blank">(FAL-0101-M)로그인.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">아이디찾기</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0102-M)아이디찾기.html" target="_blank">(FAL-0102-M)아이디찾기.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">아이디찾기(개인회원)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0103-M)아이디찾기(개인회원).html" target="_blank">(FAL-0103-M)아이디찾기(개인회원).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">아이디찾기(기업회원)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0104-M)아이디찾기(기업회원).html" target="_blank">(FAL-0104-M)아이디찾기(기업회원).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">비밀번호찾기</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0105-M)비밀번호찾기.html" target="_blank">(FAL-0105-M)비밀번호찾기.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">비밀번호찾기(개인회원)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0106-M)비밀번호찾기(개인회원).html" target="_blank">(FAL-0106-M)비밀번호찾기(개인회원).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">비밀번호찾기(기업회원)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0107-M)비밀번호찾기(기업회원).html" target="_blank">(FAL-0107-M)비밀번호찾기(기업회원).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">비밀번호변경안내</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0108-M)비밀번호변경안내.html" target="_blank">(FAL-0108-M)비밀번호변경안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">Any-ID 인증로그인</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAL-0109-M)Any-ID 인증로그인.html" target="_blank">(FAL-0109-M)Any-ID 인증로그인.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">회원가입</td><!-- 1depth -->
+					<td class="tleft">회원가입</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0101-M)회원가입.html" target="_blank">(FAJ-0101-M)회원가입.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">개인회원(인증)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0102-M)개인회원(인증).html" target="_blank">(FAJ-0102-M)개인회원(인증).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">개인회원(약관동의)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0103-M)개인회원(약관동의).html" target="_blank">(FAJ-0103-M)개인회원(약관동의).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">개인회원(정보입력)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0104-M)개인회원(정보입력).html" target="_blank">(FAJ-0104-M)개인회원(정보입력).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">개인회원(가입완료)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0105-M)개인회원(가입완료).html" target="_blank">(FAJ-0105-M)개인회원(가입완료).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">기업회원(기업인증)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0106-M)기업회원(기업인증).html" target="_blank">(FAJ-0106-M)기업회원(기업인증).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">기업회원(정보입력)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0107-M)기업회원(정보입력).html" target="_blank">(FAJ-0107-M)기업회원(정보입력).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">기업회원(가입완료)</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0108-M)기업회원(가입완료).html" target="_blank">(FAJ-0108-M)기업회원(가입완료).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">회원가입불가안내</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="(FAJ-0109-M)회원가입불가안내.html" target="_blank">(FAJ-0109-M)회원가입불가안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">마이페이지</td><!-- 1depth -->
+					<td class="tleft">마이페이지 메인</td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0101-M)마이페이지 메인.html" target="_blank">(FAM-0101-M)마이페이지 메인.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">내정보수정</td><!-- 2depth -->
+					<td class="tleft">내정보상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0201-M)내정보상세.html" target="_blank">(FAM-0201-M)내정보상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">비밀번호변경</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0202-M)비밀번호변경.html" target="_blank">(FAM-0202-M)비밀번호변경.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">비밀번호변경안내</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0203-M)비밀번호변경안내.html" target="_blank">(FAM-0203-M)비밀번호변경안내.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">회원탈퇴안내_팝업 <strong class="point">(P)</strong></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0204-P)회원탈퇴안내_팝업.html" target="_blank">(FAM-0204-P)회원탈퇴안내_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">이력서 관리</td><!-- 2depth -->
+					<td class="tleft">이력서 목록</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0301-M)이력서 목록.html" target="_blank">(FAM-0301-M)이력서 목록.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">이력서(약관동의)</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0302-M)이력서(약관동의).html" target="_blank">(FAM-0302-M)이력서(약관동의).html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">이력서 상세</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0303-M)이력서 상세.html" target="_blank">(FAM-0303-M)이력서 상세.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">가치동행일자리</td><!-- 2depth -->
+					<td class="tleft">참여현황</td><!-- 3depth -->
+					<td class="tleft">참여현황_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0401-T)참여현황_탭.html" target="_blank">(FAM-0401-T)참여현황_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">교육</td><!-- 3depth -->
+					<td class="tleft">교육_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0402-T)교육_탭.html" target="_blank">(FAM-0402-T)교육_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">활동관리</td><!-- 3depth -->
+					<td class="tleft">활동관리_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0403-T)활동관리_탭.html" target="_blank">(FAM-0403-T)활동관리_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">활동실적집계</td><!-- 3depth -->
+					<td class="tleft">활동실적집계_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0404-T)활동실적집계_탭.html" target="_blank">(FAM-0404-T)활동실적집계_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">일자리</td><!-- 2depth -->
+					<td class="tleft">사업참여현황</td><!-- 3depth -->
+					<td class="tleft">사업참여현황</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0501-T)사업참여현황.html" target="_blank">(FAM-0501-T)사업참여현황.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">활동관리</td><!-- 3depth -->
+					<td class="tleft">활동관리_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0502-T)활동관리_탭.html" target="_blank">(FAM-0502-T)활동관리_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">활동실적집계</td><!-- 3depth -->
+					<td class="tleft">활동실적집계_탭</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0503-T)활동실적집계_탭.html" target="_blank">(FAM-0503-T)활동실적집계_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">관심 일자리</td><!-- 3depth -->
+					<td class="tleft">관심 일자리</td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0504-T)관심 일자리.html" target="_blank">(FAM-0504-T)관심 일자리.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">상담내역</td><!-- 2depth -->
+					<td class="tleft">상담내역</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0601-M)상담내역.html" target="_blank">(FAM-0601-M)상담내역.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">생애설계 준비도 진단결과</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0602-M)생애설계 준비도 진단결과.html" target="_blank">(FAM-0602-M)생애설계 준비도 진단결과.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft">수강신청내역</td><!-- 2depth -->
+					<td class="tleft">내강좌_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0701-T)내강좌_탭.html" target="_blank">(FAM-0701-T)내강좌_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">시간표_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0702-T)시간표_탭.html" target="_blank">(FAM-0702-T)시간표_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">결제내역_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0703-T)결제내역_탭.html" target="_blank">(FAM-0703-T)결제내역_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">위시리스트_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0704-T)위시리스트_탭.html" target="_blank">(FAM-0704-T)위시리스트_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">기존강좌_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0705-T)기존강좌_탭.html" target="_blank">(FAM-0705-T)기존강좌_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">할인 및 면제_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0706-T)할인 및 면제_탭.html" target="_blank">(FAM-0706-T)할인 및 면제_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">온라인 수강이력_탭</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0707-T)온라인 수강이력_탭.html" target="_blank">(FAM-0707-T)온라인 수강이력_탭.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">기존 수강이력 가져오기_팝업 <strong class="point">(P)</strong></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0708-T)기존 수강이력 가져오기_팝업.html" target="_blank">(FAM-0708-T)기존 수강이력 가져오기_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">현금이체정보_팝업 <strong class="point">(P)</strong></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0709-T)현금이체정보_팝업.html" target="_blank">(FAM-0709-T)현금이체정보_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">취소사유작성_팝업 <strong class="point">(P)</strong></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0710-T)취소사유작성_팝업.html" target="_blank">(FAM-0710-T)취소사유작성_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">출석확인_팝업 <strong class="point">(P)</strong></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0711-T)출석확인_팝업.html" target="_blank">(FAM-0711-T)출석확인_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft"></td><!-- 1depth -->
+					<td class="tleft"></td><!-- 2depth -->
+					<td class="tleft">할인 및 면제 신청</td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAM-0712-T)할인 및 면제 신청.html" target="_blank">(FAM-0712-T)할인 및 면제 신청.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				
+
+
+
+
+
+
+
+
+
+				
+				<tr class="sqnc">
+					<td class="no num"></td><!-- no -->
+					<td class="tleft line_bg">공통</td><!-- 1depth -->
+					<td class="tleft">우편번호검색_팝업 <strong class="point">(P)</strong></td><!-- 2depth -->
+					<td class="tleft"></td><!-- 3depth -->
+					<td class="tleft"></td><!-- 4depth -->
+					<td class="tleft"><a href="html/(FAZ-0101-P)우편번호검색_팝업.html" target="_blank">(FAZ-0101-P)우편번호검색_팝업.html</a></td><!-- 파일링크 -->
+					<td>박성광</td>
+					<td>
+						<span class="wait">대기</span>
+					</td>
+					<td><span style="color:tomato"></span></td>
+					<td class="tleft"></td>
+				</tr>
+				<!-- file list -->
+			</tbody>
+    </table>
+	</div>  
+ </body>
+</html>
