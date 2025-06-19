@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>50 plus 프로젝트</title>
+  <link rel="stylesheet" href="css/common.css">
+  <!-- REQUIRED SCRIPTS -->
+  <!-- <script src="js/jquery-3.2.1.js"></script> -->
+  <!-- Swiper JS, css -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- common.js -->
+  <!-- <script src="js/common.js"></script> -->
+</head>
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+  
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">레이어 팝업</div>
+    <!-- 레이어 버튼 -->
+    <button onclick="modalControl('o','#main_layer_pop');return false" class="btn_fixed_up" style="border:1px solid #222">레이어팝업 호출버튼</button>
+    <!-- 비밀번호 레이어팝업 -->
+    <section class="modal_new modal_overlay " id="main_layer_pop"><!-- 클래스에 modal_overlay를 넣으면 오버레이 클릭 시 닫힙니다 -->
+      <div class="modal_n_wrap">
+        <div class="modal_n_body">
+          <div class="pop_cont">
+            테스트
+          </div>
+          <button type="button" onclick="modalControl('c')" class="btn_close"><span class="hidden">닫기</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">체크박스 / 라디오버튼</div>
+    <div class="inner mt30">
+      <label class="custom-checkbox">
+        <input type="checkbox" name="option1" />
+        <span class="checkmark"></span>
+        옵션 1
+      </label>
+
+      <label class="custom-radio">
+        <input type="radio" name="group" value="a" />
+        <span class="radiomark"></span>
+        선택 A
+      </label>
+
+      <label class="custom-radio">
+        <input type="radio" name="group" value="b" />
+        <span class="radiomark"></span>
+        선택 B
+      </label>
+    </div>
+    
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">기본 swiper</div>
+    <!-- 중단AD배너 -->
+    <div class="inner mt30">
+      <!-- Swiper -->
+      <!-- 슬라이드 컨테이너 -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- 페이지 네비게이션 (원형 점) -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Swiper JS -->
+      <script>
+        const swiper = new Swiper(".mySwiper", {
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+    </div>
+
+    <!--  -->
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">기본 swiper</div>
+    <!-- 중단AD배너 -->
+    <div class="inner mt30">
+      <!-- Swiper -->
+      <div class="swiper_wrap pc">
+        <div class="swiper mySwiper type01" id="swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+          </div>
+          <div class="sw_bts">
+            <div class="swiper-button-next"><img src="img/pc/swiper/btn_sw_right.png" alt=""></div>
+            <div class="swiper-button-prev"><img src="img/pc/swiper/btn_sw_left.png" alt=""></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-autoplay-button">
+              <img src="img/pc/swiper/btn_sw_pause.png" alt="" class="pause">
+              <img src="img/pc/swiper/btn_sw_play.png" alt="" class="play">
+            </div>
+          </div>
+        </div>
+        <script>
+          var swiper1 = new Swiper("#swiper1", {
+            slidesPerView: 1, // 한번에 보여지는 슬라이드 숫자
+            slidesPerGroup: 1, // 한번에 이동되는 슬라이드 숫자
+            loop: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+            navigation: {
+              nextEl: "#swiper1 .swiper-button-next",
+              prevEl: "#swiper1 .swiper-button-prev",
+            },
+            pagination: {
+              el: "#swiper1 .swiper-pagination",
+              type: "fraction",
+              clickable: true,
+            }
+          });
+          // swiper1의 일시정지 및 재생 제어
+          $("#swiper1 .swiper-autoplay-button .pause").on("click", function() {
+            swiper1.autoplay.stop();
+            $(this).hide();
+            $("#swiper1 .swiper-autoplay-button .play").show();
+          });
+          $("#swiper1 .swiper-autoplay-button .play").on("click", function() {
+            swiper1.autoplay.start();
+            $(this).hide();
+            $("#swiper1 .swiper-autoplay-button .pause").show();
+          });
+        </script>
+      </div>
+    </div>
+    <!--  -->
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">기본 swiper</div>
+    <!-- 중단AD배너 -->
+    <div class="inner mt30">
+      <!-- Swiper -->
+      <div class="swiper_wrap pc">
+        <div class="swiper mySwiper type01" id="swiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/pc/banner/banner_01.png" alt=""></a></div>
+          </div>
+          <div class="sw_bts">
+            <div class="swiper-button-next"><img src="img/pc/swiper/btn_sw_right.png" alt=""></div>
+            <div class="swiper-button-prev"><img src="img/pc/swiper/btn_sw_left.png" alt=""></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-autoplay-button">
+              <img src="img/pc/swiper/btn_sw_pause.png" alt="" class="pause">
+              <img src="img/pc/swiper/btn_sw_play.png" alt="" class="play">
+            </div>
+          </div>
+        </div>
+        <script>
+          var swiper2 = new Swiper("#swiper2", {
+            slidesPerView: 1, // 한번에 보여지는 슬라이드 숫자
+            slidesPerGroup: 1, // 한번에 이동되는 슬라이드 숫자
+            loop: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+            navigation: {
+              nextEl: "#swiper2 .swiper-button-next",
+              prevEl: "#swiper2 .swiper-button-prev",
+            },
+            pagination: {
+              el: "#swiper2 .swiper-pagination",
+              type: "fraction",
+              clickable: true,
+            }
+          });
+          // swiper2의 일시정지 및 재생 제어
+          $("#swiper2 .swiper-autoplay-button .pause").on("click", function() {
+            swiper2.autoplay.stop();
+            $(this).hide();
+            $("#swiper2 .swiper-autoplay-button .play").show();
+          });
+          $("#swiper2 .swiper-autoplay-button .play").on("click", function() {
+            swiper2.autoplay.start();
+            $(this).hide();
+            $("#swiper2 .swiper-autoplay-button .pause").show();
+          });
+        </script>
+      </div>
+    </div>
+    <!--  -->
+
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">셀렉트 박스</div>
+    <div class="inner mt30">
+      <div class="select_box full">
+        <label for="fruit">과일을 선택하세요:</label>
+        <select id="fruit" name="fruit">
+          <option value="">-- 선택하세요 --</option>
+          <option value="apple">사과</option>
+          <option value="banana">바나나</option>
+          <option value="orange">오렌지</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">탭</div>
+    <div class="inner mt30">
+      <div class="tab_wrap">
+        <ul class="tab-menu">
+          <li class="active"><a href="#">Tab 1</a></li>
+          <li><a href="#">Tab 2</a></li>
+          <li><a href="#">Tab 3</a></li>
+        </ul>      
+        <div class="tab-content">
+          <div class="tab active">This is Tab 1 content.</div>
+          <div class="tab">This is Tab 2 content.</div>
+          <div class="tab">This is Tab 3 content.</div>
+        </div>
+      </div>
+
+      <div class="tab_wrap">
+        <ul class="tab-menu">
+          <li class="active"><a href="#">Tab 1</a></li>
+          <li><a href="#">Tab 2</a></li>
+          <li><a href="#">Tab 3</a></li>
+        </ul>      
+        <div class="tab-content">
+          <div class="tab active">This is Tab 1 content.</div>
+          <div class="tab">This is Tab 2 content.</div>
+          <div class="tab">This is Tab 3 content.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">파일첨부</div>
+    <div class="inner mt30">
+      <!-- 파일첨부 -->
+      <strong class="s-tit">파일첨부</strong>
+      <div class="file-add-wrap">
+          <div class="drop-area file-drop" data-list="file-list2">
+              <div class="file-tit-cont">
+                  <span class="tit">파일명</span>
+                  <span class="size">
+                    <span>크기</span>
+                    <span>삭제</span>
+                  </span>
+              </div>
+              <ul class="file-list"></ul>
+              <p class="drag-cont"><span class="icon-btn drag">이곳에 파일을 드래그 하세요.</span></p>
+              <div class="file-btn-cont">
+                <label>
+                  <input type="file" class="file-input" multiple="">
+                  <span class="btn btn-file"><span>파일추가</span></span>
+                  <!-- <span class="file-size"> 총 2.6MB (1개)</span> -->
+                </label>
+              </div>
+          </div>
+      </div>
+      <!-- //파일첨부 -->
+    </div>
+
+
+    <!-- 가이드 제목 -->
+    <div class="guide_tit mt50">아코디언</div>
+    <div class="inner mt30">
+      <div class="accordion on">
+        <button>응답자 보기</button>
+        <div class="accordion-detail">
+          <ul>
+            <li>[응답자 01]</li>
+            <li>[응답자 02]</li>
+            <li>[응답자 03]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

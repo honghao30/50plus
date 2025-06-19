@@ -1,13 +1,8 @@
 @charset "utf-8";
 @import url('reset.css');
-@import url('common_01.css');
-
-/* @import url('swiper.min.css'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900|Roboto:400,500,700&display=swap'); */
 
 /* font */
-body{font-family:'Pretendard','Noto Sans KR',Dotum,sans-serif;font-size:14px;color:#666;line-height:19px;font-weight:400;}
+body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -3%;}
 
 /* Pretendard */
 @font-face {
@@ -37,31 +32,98 @@ body{font-family:'Pretendard','Noto Sans KR',Dotum,sans-serif;font-size:14px;col
 		url("../font/Pretendard-SemiBold.woff") format("woff"), /* Modern Browsers */
 		url("../font/Pretendard-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
 }
-/* Montserrat */
-@font-face {
-	font-family: "Montserrat";
-	font-style: normal;
-	font-weight: 300;
-	src: local("Montserrat-Light"),
-		url("../font/Montserrat-Light.woff2") format("woff2"), /* Super Modern Browsers */
-		url("../font/Montserrat-Light.woff") format("woff"), /* Modern Browsers */
-		url("../font/Montserrat-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+
+/* common style */
+.h1-title {
+	font-size: 48px;
+	line-height: 48px;
+
+	
+} 
+.h2-title {
+	font-size: 32px;
+	line-height: 32px;
+	
 }
-@font-face {
-	font-family: "Montserrat";
-	font-style: normal;
-	font-weight: 500;
-	src: local("Montserrat-Light"),
-		url("../font/Montserrat-Regular.woff2") format("woff2"), /* Super Modern Browsers */
-		url("../font/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
-		url("../font/Montserrat-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+.h3-title {
+	font-size: 22px;
+	line-height: 22px;
+	
 }
-@font-face {
-	font-family: "Montserrat";
-	font-style: normal;
-	font-weight: 600;
-	src: local("Montserrat-SemiBold"),
-		url("../font/Montserrat-SemiBold.woff2") format("woff2"), /* Super Modern Browsers */
-		url("../font/Montserrat-SemiBold.woff") format("woff"), /* Modern Browsers */
-		url("../font/Montserrat-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+.font-body-style1 {
+	font-size: 22px;
+	line-height: 22px;
+
+}
+.font-body-style2 {
+	font-size: 20px;
+	line-height: 20px;
+
+}
+.font-body-style3 {
+	font-size: 18px;
+	line-height: 18px;
+
+}
+.font-body-style4 {
+	font-size: 16px;
+	line-height: 16px;
+
+}
+.font-body-style5 {
+	font-size: 15px;
+	line-height: 15px;
+
+}
+.font-body-caption {
+	font-size: 15px;
+	line-height: 15px;
+	
+}
+.font-body-caption-sm {
+	font-size: 14px;
+	line-height: 14px;
+	
+}
+@media (max-width: 768px) {
+	.h1-title {
+		font-size: 32px;
+		line-height: 32px;		
+	} 
+	.h2-title {
+		font-size: 22px;
+		line-height: 22px;		
+	}
+	.h3-title {
+		font-size: 22px;
+		line-height: 22px;		
+	}
+	.font-body-style1 {
+		font-size: 16px;
+		line-height: 16px;	
+	}
+	.font-body-style2 {
+		font-size: 15px;
+		line-height: 15px;	
+	}
+	.font-body-style3 {
+		font-size: 14px;
+		line-height: 14px;	
+	}
+	.font-body-style4 {
+		font-size: 16px;
+		line-height: 16px;	
+	}
+	.font-body-style5 {
+		font-size: 15px;
+		line-height: 15px;	
+	}
+	.font-body-caption {
+		font-size: 14px;
+		line-height: 14px;		
+	}
+	.font-body-caption-sm {
+		font-size: 13px;
+		line-height: 13px;		
+	}
 }
