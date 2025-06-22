@@ -1,0 +1,117 @@
+@charset "utf-8";
+* {margin:0; padding:0;}
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 400
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Bold.eot'); /* IE9 Compat Modes */
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-ExtraBold.eot'); /* IE9 Compat Modes */
+    src: url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+            url('//www.seoul.go.kr/seoulgnb/fonts/NanumGothic-ExtraBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 800
+}
+#seoul-gnb-plugin {
+	width:100%;
+	height:48px;
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:14px;
+    vertical-align:baseline;
+    background:transparent;
+    font-family: 'Nanum Gothic';
+    background-color:#0c82e9;
+    font-weight: 400;
+    color: #222;
+    font-style: normal;
+    line-height: 1.35em;
+}
+
+#seoul-gnb-plugin .seoul-gnb-holder {position: relative; max-width: 1152px; height:48px; margin: 0 auto;}
+#seoul-gnb-plugin .seoul-gnb-holder:after {display:block; content:""; clear:both;}
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-link {float:left; width:97.5px; height:18.5px; padding:0; margin:8px 0 0 0;}
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-link a {display: block; width: 105px; height: 27px; background: url(//www.seoul.go.kr/seoulgnb/images/icon_set_common.png) no-repeat -122px -165px; text-indent:-9999px;}
+
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-news {position:absolute; top:0; left:0; right:290px; left:179px; height:48px; margin:0; padding:0; color:inherit;}
+/* #seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-icon-notice {display:block; position:absolute; top:50%; left:0; width:17px; height:11px; margin:-5px 0 0 0; padding:0; background:url(//www.seoul.go.kr/seoulgnb/images/ico-sprite-common-gnb.png) -17px -45px no-repeat; text-indent:-9999px;} 2021-09-01 change*/
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-icon-notice {display:block;position:absolute;top:50%;left:0;width: 19px;height: 17px;margin:-5px 0 0 0;padding:0;background: url(//www.seoul.go.kr/seoulgnb/images/ico-sprite-common-gnb.png?ver1) -21px -53px no-repeat;text-indent:-9999px;background-size: 350px auto;}
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-news dd {margin:0; padding:0 0 0 23px; color:inherit;}
+#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-news dd a {overflow:hidden; display:block; width:100%; height:48px; background-image:none; font-size:14px; line-height:48px; color:#fff; text-indent:0; text-overflow:ellipsis; white-space:nowrap; text-decoration:none;}
+
+#seoul-gnb-plugin .seoul-gnb-menu {position:absolute; right:0; top:0; margin:0; padding:0;}
+#seoul-gnb-plugin .seoul-gnb-menu:after {display:block; content:""; clear:both;}
+#seoul-gnb-plugin .seoul-gnb-menu > dt {position:absolute; left:-99px; top:-99px; width:0; height:0; overflow:hidden; text-indent:-9999px;}
+#seoul-gnb-plugin .seoul-gnb-menu > dd {float:left; margin:0; padding:0 10px;}
+#seoul-gnb-plugin .seoul-gnb-menu > dd > a {display:block; font-size:14px; height:48px; line-height:48px; font-weight:700; color:#fff; text-decoration:none;}
+#seoul-gnb-plugin .seoul-gnb-menu > dd .seoul-gnb-icon-menu4 {display:block; font-size:14px; height:48px; line-height:48px; font-weight:700; color:#fff; border:0; background:transparent; text-decoration:none; cursor:pointer;}
+
+#seoul-gnb-plugin * { font-family:"Nanum Gothic", sans-serif; font-weight:400; }
+
+/* white */
+#seoul-gnb-plugin.white {background-color:#fff;}
+#seoul-gnb-plugin.white .seoul-gnb-holder .seoul-gnb-link a {background-position:-5px -165px;}
+#seoul-gnb-plugin.white .seoul-gnb-holder .seoul-gnb-news dd a {color:#575757;}
+/* #seoul-gnb-plugin.white .seoul-gnb-holder .seoul-gnb-icon-notice {background-position:-1px -45px}  2021-09-01 change*/
+#seoul-gnb-plugin.white .seoul-gnb-holder .seoul-gnb-icon-notice {background-position: 1px -46px; background-size: 300px auto} 
+#seoul-gnb-plugin.white .seoul-gnb-menu > dd > a {color:#575757;}
+#seoul-gnb-plugin.white .seoul-gnb-menu > dd .seoul-gnb-icon-menu4 {color:#575757;} 
+
+.seoul-gnb-menu-section {position:absolute; top:48px; right:0; width:200px; border:1px solid #959595;  background:#fff; z-index:9999; box-sizing:border-box;}
+.seoul-gnb-menu-section:before {content:''; position:absolute; width:20px; height:12px;  background:url(//www.seoul.go.kr/seoulgnb/images/bg_info_detail_arr.png) no-repeat; right:25px; top:-11px;}
+.seoul-gnb-menu-section > dl > dt {background-color:#0d82e9; color:#fff; padding:10px 0; font-size:14px; padding-left:20px; margin:1px 1px 19px 1px;}
+.seoul-gnb-menu-section > dl > dd {padding:0 31px; margin-left:-30px;}
+.seoul-gnb-menu-section > dl > dd > ul:after {display:block; content:""; clear:both;}
+.seoul-gnb-menu-section > dl > dd > ul > li {position: relative;overflow:visible; float:left; width:53px; height:80px; margin-left:30px; list-style:none;}
+.seoul-gnb-menu-section > dl > dd > ul > li:before {content: '';position: absolute;top: 0;left: 0;width: 53px;height: 53px;background: #e4eaeb;border-radius: 50%;z-index: -1;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(1) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_house_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(2) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_economy_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(3) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_traffic_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(4) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_environment_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(5) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_welfare_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(6) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_safty_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(7) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_culture_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li:nth-child(8) {background:url(//www.seoul.go.kr/seoulgnb/images/icon_work_new.png) no-repeat; background-size:53px auto;}
+.seoul-gnb-menu-section > dl > dd > ul > li a {font-size:13px; color:#222; font-weight:700; text-align:center; display:block; height:80px; padding-top:57px; text-decoration:none; box-sizing:border-box;}
+.seoul-gnb-menu-section > p {border-top:1px dashed #c9c9c9; margin:7px 13px 0 13px; padding:10px 0 12px 0;}
+.seoul-gnb-menu-section > p > a {display:block; width:100%; text-align:center; color:#313131; font-size:14px; font-weight:700; text-decoration:none;}
+.seoul-gnb-menu-section > button {position:absolute; top:7px; right:8px; margin:0; padding:0 0 0 6px; border:0; cursor: pointer; background:transparent;width: 28px;height: 28px;}
+.seoul-gnb-menu-section > button .seoul-gnb-icon-service-close {display:block; overflow:hidden; width:14px; height:14px; vertical-align:middle; background:url(//www.seoul.go.kr/seoulgnb/images/btn_allmenu_close.png) 0 0 no-repeat; background-size:100%; text-indent:-9999px;}
+.seoul-gnb-menu-section > button .hd-element {overflow:hidden;position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;}
+
+@media (hover:hover) and (pointer: fine) {
+    .seoul-gnb-menu-section > dl > dd > ul > li:hover:before {background: #d9edff}
+    .wise-link:hover {color: #0d82e9;font-weight: 700 !important;text-decoration: underline;text-underline-offset: 4px;}
+}
+
+@media all and (max-width:1024px){
+	#seoul-gnb-plugin .seoul-gnb-holder .seoul-gnb-link { margin-left:5px; }
+	#seoul-gnb-plugin .seoul-gnb-news { display:none !important; }
+}
+@media all and (max-width:480px){
+	#seoul-gnb-plugin .seoul-gnb-menu > dd { padding-left:4px; padding-right:4px; }
+	#seoul-gnb-plugin .seoul-gnb-menu > dd > a { font-size:13px; }
+	#seoul-gnb-plugin .seoul-gnb-menu > dd .seoul-gnb-icon-menu4 { font-size:13px; }
+}
+@media all and (max-width:320px){
+	#seoul-gnb-plugin .seoul-gnb-menu > dd { padding-left:2px; padding-right:2px; }
+	#seoul-gnb-plugin .seoul-gnb-menu > dd > a { font-size:12px; }
+	#seoul-gnb-plugin .seoul-gnb-menu > dd .seoul-gnb-icon-menu4 { font-size:12px; }
+}

@@ -52,8 +52,63 @@
         color: #222;
       }
       .guide-cont {
-        margin-top: 10px;
+        margin-top: 30px;
       }
+      .flex-lay-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .flex-lay-col ul {
+        display: flex;
+        gap: 15px;
+        border: 1px solid var(--color-gray-100);
+      }
+
+      .color-chip {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid var(--color-gray-100);
+            flex-shrink: 0; /* Prevents shrinking in flex container */
+        }
+
+        .color-list {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .color-list li {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          justify-content: space-between;
+          border-bottom: 1px solid var(--color-gray-100);
+        }
+        /* Styles for the variable name text */
+        .variable-code {
+            font-family: 'SF Mono', 'Courier New', monospace;
+            color: var(--color-sub-orange);
+            background-color: #fef0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-left: auto; /* Pushes it to the right */
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: var(--font-color-dark);
+            min-width: 150px; /* Aligns variable names */
+        }
+
+        .item-value {
+            color: var(--font-color-gray);
+        }
     </style>
 </head>
 <body>
@@ -63,21 +118,92 @@
     <header class="guide-header">
       <nav class="guide-gnb">
         <ul>
-          <li><a href="#font">폰트</a></li>
+          <li><a href="#font">Typography</a></li>
           <li><a href="#color">칼라</a></li>
-          <li><a href="#">tab</a></li>
-          <li><a href="#">button</a></li>
+          <li><a href="#icon">아이콘</a></li>
+          <li><a href="#button">button</a></li>
+          <li><a href="#">tab</a></li>          
         </ul>
       </nav>
     </header>
     <!-- //header -->
     <div class="guide-content">
         <div class="guide-section">
-            <h2 class="guide-title" id="font">폰트</h2>
-            <div class="guide-cont">
-              <h1></h1>
+            <h2 class="guide-title" id="font">Typography</h2>
+            <div class="guide-cont flex-lay-col">
+              <h1 class="h1-title">Typography .h1-title </h1>
+              <h2 class="h2-title">Typography .h2-title </h2>
+              <h3 class="h3-title">Typography .h3-title </h3>
+              <p class="font-body-style1">Typography .font-body-style1</p>
+              <p class="font-body-style2">Typography .font-body-style2</p>
+              <p class="font-body-style3">Typography .font-body-style3</p>
+              <p class="font-body-style4">Typography .font-body-style4</p>
+              <p class="font-body-style5">Typography .font-body-style5</p>
+              <p class="font-body-caption">Typography .font-body-caption</p>
+              <p class="font-body-caption-sm">Typography .font-body-caption-sm</p>
             </div>
         </div>
+
+        <div class="guide-section">
+          <h2 class="guide-title" id="color">Color</h2>
+          <div class="guide-cont flex-lay-col">
+            <ul class="color-list">
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-main-color);"></span>
+                    <span class="item-name">Main Color</span>
+                    <span class="variable-code">--color-main-color</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-sub-blue);"></span>
+                    <span class="item-name">Sub Blue</span>
+                    <span class="variable-code">--color-sub-blue</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-sub-orange);"></span>
+                    <span class="item-name">Sub Orange</span>
+                    <span class="variable-code">--color-sub-orange</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-darkgray);"></span>
+                    <span class="item-name">Dark Gray</span>
+                    <span class="variable-code">--color-darkgray</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-lightgray);"></span>
+                    <span class="item-name">Light Gray</span>
+                    <span class="variable-code">--color-lightgray</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-white); border: 1px solid #eee;"></span>
+                    <span class="item-name">White</span>
+                    <span class="variable-code">--color-white</span>
+                </li>
+                <li class="font-body-style5">
+                    <span class="color-chip" style="background-color: var(--color-black);"></span>
+                    <span class="item-name">Black</span>
+                    <span class="variable-code">--color-black</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2 class="guide-title" id="icon">Icon</h2>
+          <div class="guide-cont ">
+              <i class="ico ico-people"></i>
+              <i class="ico ico-login"></i>
+              <i class="ico ico-lock"></i>
+              <i class="ico ico-home"><span class="ir-text">홈</span></i>   
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2 class="guide-title" id="button">Button</h2>
+          <div class="guide-cont ">
+              <a href="#" class="btn btn-blue">btn btn-blue</a>
+          </div>
+        </div>
+
     </div>
   </div>
 </body>

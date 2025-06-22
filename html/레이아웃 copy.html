@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>50 plus 프로젝트</title>
+  <link rel="stylesheet" href="css/common.css">
+  <!-- REQUIRED SCRIPTS -->
+  <script src="js/jquery-3.2.1.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- common.js -->
+  <script src="js/common.js"></script>
+</head>
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <!-- 접근성 필수 -->
+    <ul class="skip">
+      <li><a href="#content">본문내용 바로가기</a></li>
+      <li><a href="#gnb">주메뉴 바로가기</a></li>
+    </ul>
+
+    <!-- header -->
+    <div class="header">header</div>
+    <!-- //header -->
+
+    <!-- content -->
+    <div class="content">content</div>
+    <!-- //content -->
+
+    <!-- footer -->
+    <div class="footer">footer</div>
+    <!-- //footer -->
+
+
+    <!--  -->
+    <table>
+  <thead>
+    <tr>
+      <th>1Depth</th>
+      <th>2Depth</th>
+      <th>3Depth</th>
+      <th>4Depth</th>
+      <th>5Depth</th>
+      <th>6Depth</th>
+      <th>기능 유형</th>
+      <th>구현</th>
+      <th>액션구분</th>
+      <th>화면구분</th>
+      <th>요구사항 ID</th>
+      <th>요구내용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="14">회원가입</td>
+      <td rowspan="2">약관동의</td>
+      <td colspan="9"></td>
+      <td>TRV-BC-SGN-01-11</td>
+      <td>약관 동의</td>
+    </tr>
+    <tr>
+      <td colspan="9"></td>
+      <td>TRV-BC-SGN-01-12</td>
+      <td>세부 약관</td>
+    </tr>
+    <tr>
+      <td rowspan="5">기본정보</td>
+      <td>기업명 *</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-01</td>
+      <td>기업 코드, 직원 코드, 회사 이메일 인증</td>
+    </tr>
+    <tr>
+      <td>메일 주소 인증 *</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-08</td>
+      <td>
+        이메일 주소 입력, 이메일 인증<br>
+        인증번호 등록 > 인증확인<br>
+        인증번호 오류 알림 : 입력하신 인증번호가 유효하지 않습니다. 다시 확인 후 입력해 주세요
+      </td>
+    </tr>
+    <tr>
+      <td>비밀번호 입력/ 재확인 *</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-04</td>
+      <td>
+        비밀번호 입력<br>
+        - 영문+숫자+특수문자, 대소문자<br>
+        - 보안 패턴 강화 - 개인정보 포함 금지
+      </td>
+    </tr>
+    <tr>
+      <td>여권정보 입력</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-10</td>
+      <td>여권정보 등록 - 영문이름, 성별, 생년월일, 여권번호 등</td>
+    </tr>
+    <tr>
+      <td>회사정보</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-06</td>
+      <td>회사코드, 회사명 Default 제공</td>
+    </tr>
+    <tr>
+      <td>부서 정보</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-07</td>
+      <td>부서 코드, 부서명 Default 제공</td>
+    </tr>
+    <tr>
+      <td>가입완료</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-13</td>
+      <td>필수 항목 미등록 알림</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="6"></td>
+      <td>TRV-BC-SGN-01-14</td>
+      <td>가입 완료</td>
+    </tr>
+    <tr>
+      <td rowspan="6">로그인</td>
+      <td rowspan="4">로그인</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-LGN-01-02</td>
+      <td>ID/PW 입력 후 로그인</td>
+    </tr>
+    <tr>
+      <td colspan="6"></td>
+      <td>TRV-BC-LGN-01-01</td>
+      <td>아이디 저장</td>
+    </tr>
+    <tr>
+      <td colspan="6"></td>
+      <td>TRV-BC-LGN-01-03</td>
+      <td>자동 로그인</td>
+    </tr>
+    <tr>
+      <td colspan="6"></td>
+      <td>TRV-BC-LGN-01-04</td>
+      <td>로그인 상태 유지</td>
+    </tr>
+    <tr>
+      <td rowspan="2">아이디/비밀번호 찾기</td>
+      <td colspan="6"></td>
+      <td>TRV-BC-LGN-01-05</td>
+      <td>5회 이상 실패시, 잠금</td>
+    </tr>
+    <tr>
+      <td colspan="6"></td>
+      <td>TRV-BC-SCH-01-02</td>
+      <td>비밀번호 찾기 : 비밀번호 초기화 메일 발송</td>
+    </tr>
+  </tbody>
+</table>
+
+    <!--  -->
+
+
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
+
+
+
+
+
