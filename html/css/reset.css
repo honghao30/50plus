@@ -119,4 +119,21 @@ a {
 }
 
 /* 공통 */
+.bg-color-gray {
+	background-color: var(--color-ed);
+}
+.pc-only {
+	display: inline-flex;
+}
+.mo-only {
+	display: none;
+}
+@media (max-width: 768px) {
+	.pc-only {
+		display: none;
+	}
+	.mo-only {
+		display: inline-flex;
+	}
+}
 .mt-0 {margin-top: 0;}

@@ -57,9 +57,32 @@ const tabMenu = (type = 'full') => {
       initTabs('.tab-container-full', 'full');
   }
 };
+// faq
+const accordion = () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+      const questionButton = item.querySelector('.faq-question');
+      questionButton.addEventListener('click', () => {
+          const isActive = item.classList.contains('is-active');
+          
+          // Optional: Close all other items
+          // faqItems.forEach(otherItem => {
+          //     otherItem.classList.remove('is-active');
+          // });
+
+          // Toggle the clicked item
+          if (!isActive) {
+              item.classList.add('is-active');
+          } else {
+              item.classList.remove('is-active');
+          }
+      });
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   setupDropdowns();
   copyDv();
   tabMenu('sort');
+  accordion();
 });
