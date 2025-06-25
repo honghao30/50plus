@@ -123,13 +123,59 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 .ico.ico-search::after {
 	background: url(../img/common/ico-search.svg) no-repeat;
 }
+.ico.ico-arrow-right-wt::after {
+	background: url(../img/common/ico-arrow-right-wt.svg) no-repeat;
+}
+.ico.ico-x {
+	width: 16px;
+	height: 16px;
+}
+.ico.ico-x::after {
+	background: url(../img/common/ico-x.svg) no-repeat;
+	background-size: 100% auto;
+}
+.ico.ico-reset {
+	width: 16px;
+	height: 16px;
+}
+.ico.ico-reset::after {
+	background: url(../img/common/ico-reset.svg) no-repeat;
+	background-size: 100% auto;
+}
+.ico.ico-favor::after {
+	background: url(../img/common/ico-like-off.svg) no-repeat;
+	background-size: 100% auto;
+}
 /* 버튼 */
+.button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top: 80px;
+}
 .btn {
 	display: inline-block;
-	width: 240px;
+	min-width: 240px;
 	height: 54px;
 	border-radius: 3px;
 }
+.btn-primary {
+    background-color: var(--color-main-color);
+    color: var(--color-white);    
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+	padding: 0 60px;
+    border-radius: 90px;
+	display: inline-flex;
+	align-items: center;
+    justify-content: center;
+	height: 96px;
+}
+.btn-primary i {
+	margin-left: 50px;
+}
+
 .btn-blue {
 	background-color: #0096E0;
 	color: #fff;
@@ -278,6 +324,44 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 	font-size: 25px;
     line-height: 18px;
 }	
+/* radio */
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;    
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    display: none; /* 기본 라디오 버튼 숨기기 */
+}
+
+/* 커스텀 라디오 버튼 스타일 */
+.radio-item .custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #C2CADB;
+    border-radius: 50%;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.radio-item input[type="radio"]:checked + .custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-sub-blue);
+    border-radius: 50%;
+}
 
 
 /* 반복영역 건너뛰기 */
@@ -457,6 +541,7 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 }
 .page-title-wrap .description {
 	margin-top: 16px;
+	line-height: 32px;
 }
 .page-title-wrap .search-wrap {
 	max-width: 800px;
@@ -640,3 +725,4 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 		width: 188px;
 	}
 }
+

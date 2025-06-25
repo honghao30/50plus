@@ -80,9 +80,32 @@ const accordion = () => {
   });
 }
 
+// filters
+const filtersSelect = () => {
+  const filterLinks = document.querySelectorAll('.filter-option li a');
+
+  filterLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault();
+          
+          const clickedLi = link.parentElement;
+          const parentUl = clickedLi.parentElement;
+
+          // 같은 그룹(ul) 내의 다른 li에서 is-active 클래스 제거
+          parentUl.querySelectorAll('li').forEach(siblingLi => {
+              siblingLi.classList.remove('is-active');
+          });
+          
+          // 클릭된 li에 is-active 클래스 추가
+          clickedLi.classList.add('is-active');
+      });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setupDropdowns();
   copyDv();
   tabMenu('sort');
   accordion();
+  filtersSelect();
 });

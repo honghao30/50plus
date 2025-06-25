@@ -107,152 +107,208 @@
               </a>
             </li>
             <li class="font-body-style4">
-              사업안내
+              일자리
             </li>
             <li class="font-body-style4">
-              공지사항
+              경력인재지원
             </li>
           </ol>
         </div>
-      </div>
-      <div class="content-inner-full bg-color-gray">
-        <div class="tab-nav-icon">
-          <a href="#" class="ico-job is-active">              
-            일자리 사업 안내
-          </a>
-          <a href="#" class="ico-suport">              
-            경력인재지원
-          </a>
-          <a href="#" class="ico-puzzle">              
-            가치동행일자리
-          </a>
-          <a href="#" class="ico-mic">
-            채용설명회
-          </a>
-          <a href="#" class="ico-building">
-            협력기업채용관
-          </a>
+        <!-- //location -->
+        <div class="page-title-wrap">
+          <div class="page-title">
+            <div class="h1-title">경력인재지원</div>
+            <div class="font-body-style1 description">중장년이 관심분야의 일 경험을 쌓고<br>
+              민간·공공 분야의 지속 가능한 일자리로 진입할 수 있도록 지원하는 사업입니다.</div>
+          </div>
         </div>
-      </div>
-      <div class="content-inner-fix">
+        <!-- //page-title-wrap -->
         <div class="content-section">
-            <!-- //본문 영역           -->
-          <div class="section-title-container">
-              <div class="title h1-title">일자리 사업 안내</div>
-              <div class="description font-body-style1">
-                중장년 세대가 경험과 역량을 활용해 사회에 기여하는 동시에새로운 커리어를 탐색할 기회를 제공합니다.<br>
-재취업에 필요한 직무능력을 강화하고 민간·공공 분야로 새로운 일자리 진입을 확대하여 중장년의 경력 전환을 지원합니다.
+          <div class="filter-options-top">
+              <div class="filter-group">
+                  <div class="tit">모집상태</div>
+                  <label class="radio-item">
+                      <input type="radio" name="status" value="all" checked>
+                      <span class="custom-radio"></span>
+                      전체
+                  </label>
+                  <label class="radio-item">
+                      <input type="radio" name="status" value="open">
+                      <span class="custom-radio"></span>
+                      신청접수중
+                  </label>
+                  <label class="radio-item">
+                      <input type="radio" name="status" value="soon">
+                      <span class="custom-radio"></span>
+                      모집예정
+                  </label>
+                  <label class="radio-item">
+                      <input type="radio" name="status" value="closed">
+                      <span class="custom-radio"></span>
+                      마감
+                  </label>
               </div>
-              <div class="button-area">
-                <a href="#" class="btn btn-primary">
-                  가치동행일자리 모집공고 바로가기
-                  <i class="ico ico-arrow-right-wt"></i>
-                </a>
+              <div class="filter-group">
+                  <div class="tit">사전교육여부</div>
+                  <label class="radio-item">
+                      <input type="radio" name="education" value="all" checked>
+                      <span class="custom-radio"></span>
+                      전체
+                  </label>
+                  <label class="radio-item">
+                      <input type="radio" name="education" value="none">
+                      <span class="custom-radio"></span>
+                      없음
+                  </label>
+                  <label class="radio-item">
+                      <input type="radio" name="education" value="yes">
+                      <span class="custom-radio"></span>
+                      있음
+                  </label>
+              </div>
+          </div> 
+          <!-- 필터 옵션      -->
+          <!-- 메인 필터 패널 -->
+          <div class="filter-main-panel">
+              <!-- 업종 컬럼 -->
+              <div class="filter-column">
+                  <div class="title">업종</div>
+                  <div class="filter-option">
+                    <ul>
+                        <li class="is-active"><a href="#">경영/금융/사무/보험</a></li>
+                        <li><a href="#">공무원(교사)</a></li>
+                        <li><a href="#">교육/강사/연구/법률</a></li>
+                        <li><a href="#">의료/보건/사회복지</a></li>
+                        <li><a href="#">마케팅/무역</a></li>
+                        <li><a href="#">전문직(의사/변호사 등)</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <!-- 연봉 컬럼 -->
+              <div class="filter-column">
+                  <div class="title">연봉</div>
+                  <div class="filter-option">
+                    <ul>
+                        <li><a href="#">2,500만원 이하</a></li>
+                        <li class="is-active"><a href="#">2,500~3,000만원</a></li>
+                        <li><a href="#">3,000~4,000만원</a></li>
+                        <li><a href="#">4,000~5,000만원</a></li>
+                        <li><a href="#">5,000~6,000만원</a></li>
+                        <li><a href="#">6,000~7,000만원</a></li>
+                        <li><a href="#">6,000~7,000만원</a></li>
+                        <li><a href="#">6,000~7,000만원</a></li>
+                        <li><a href="#">6,000~7,000만원</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <!-- 경력사항 컬럼 -->
+              <div class="filter-column">
+                  <div class="title">경력사항</div>
+                  <div class="filter-option">
+                    <ul>
+                        <li class="is-active"><a href="#">신입</a></li>
+                        <li><a href="#">경력</a></li>
+                        <li><a href="#">경력무관</a></li>
+                    </ul>
+                  </div>
+              </div>
+
+              <!-- 근무지 컬럼 -->
+              <div class="filter-column location-column">
+                  <div class="title">근무지</div>
+                  <div class="location-sub-column">
+                      <div class="filter-option-wrap">
+                          <div class="lo-title">지역</div>
+                          <div class="filter-option">
+                            <ul>
+                                <li class="is-active"><a href="#">서울</a></li>
+                                <li><a href="#">인천</a></li>
+                                <li><a href="#">경기</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="filter-option-wrap">                      
+                        <div class="lo-title">상세</div>
+                        <div class="filter-option">
+                          <ul>
+                              <li><a href="#">서울 전체</a></li>
+                              <li class="is-active"><a href="#">강남구</a></li>
+                              <li><a href="#">강동구</a></li>
+                              <li><a href="#">강북구</a></li>
+                              <li><a href="#">강서구</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          
+          </div>
+          <!-- /필터 옵션 -->
+          <div class="box-type bg-gray">
+              <div class="select-list">
+                  <div class="selected-option">
+                    금융사무
+                    <button type="button" class="btn-remove-option">
+                      <i class="ico ico-x"></i>
+                    </button>
+                  </div>    
+                  <div class="selected-option">
+                    강동구
+                    <button type="button" class="btn-remove-option">
+                      <i class="ico ico-x"></i>
+                    </button>
+                  </div> 
+                  <div class="bar"></div>               
+                  <button type="button" class="btn-reset">
+                    초기화
+                    <i class="ico ico-reset"></i>
+                  </button>
+              </div>
+              <div class="input-group search">
+                  <div class="input-group-inner">
+                    <input type="text" class="font-body-style3" placeholder="검색어를 입력해 주세요." >
+                    <button type="button" class="btn-search">
+                      <i class="ico ico-search"><span class="ir-text">검색</span></i>
+                    </button>
+                  </div>
+              </div>
+          </div>  
+        <!-- 채용정보 -->
+          <div class="job-list-container">
+            <div class="job-card-grid">                    
+                <div class="job-card">
+                    <div class="card-header">
+                        <span class="job-tag">경력인지원</span>
+                        <button class="like-button" aria-label="찜하기">
+                            <i class="ico ico-favor"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="title-line">
+                            2025 서울 중장년 가치동행일자리 사업 경로당복지파트너 참여자 추
+                        </a>
+                        <p class="job-details">월 250만원 이상 | 정규직 | 신입</p>
+                        <div class="recruitment-info">
+                            <span><strong>모집인원 :</strong> 10명</span>
+                            <span><strong>모집기간 :</strong> 2025-04-01-2025-06-26</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="status-button apply">신청·접수하기 (D-15)</button>
+                    </div>
+                </div>       
+
+              </div>
+      
+              <div class="load-more-container">
+                  <button class="load-more-button">+ 더보기</button>
               </div>
           </div>
-          <!-- 타이틀 섹션 -->
-          <div class="cont-section">
-            <div class="h2-title">중장년 일자리 지원사업</div>
-            <div class="job-categories">
-                <a href="#" class="category-item">
-                    <div class="category-icon-wrapper">
-                        <img src="img/common/ico-pen.svg" alt="" />
-                    </div>
-                    <span class="category-title">경력인재지원</span>
-                </a>
-                <a href="#" class="category-item">
-                    <div class="category-icon-wrapper">
-                      <img src="img/common/ico-puzle.svg" alt="" />
-                    </div>
-                    <span class="category-title">가치동행일자리</span>
-                </a>
-                <a href="#" class="category-item">
-                    <div class="category-icon-wrapper">
-                      <img src="img/common/ico-mic.svg" alt="" />
-                    </div>
-                    <span class="category-title">채용설명회</span>
-                </a>
-                <a href="#" class="category-item">
-                    <div class="category-icon-wrapper">
-                      <img src="img/common/ico-build.svg" alt="" />
-                    </div>
-                    <span class="category-title">협력기업채용관</span>
-                </a>
-            </div>
-            <!-- job category -->
-            <ul class="program-list">
-                <li class="program-item">
-                    <div class="program-info">
-                      <h5 class="program-title">경력 인재 지원</h5>
-                      <ul class="description-list">
-                        <li><strong>중장년 구인 기업</strong>과 함께 구직자에게 채용과 직무 정보를 제공합니다. </li>
-                        <li>간략 소개 키워드</li>
-                      </ul>
-                      <div class="program-tags">
-                          <span class="program-tag">#주 30~40시간 채용형</span>
-                          <span class="program-tag">#월 57시간 직무체험형</span>
-                          <span class="program-tag">#40~64세 서울시 중장년</span>
-                      </div>
-                    </div>
-                    <div class="program-button">
-                        <a href="#" class="btn-go">모집공고 바로가기 &rarr;</a>
-                    </div>
-                </li>
-                <li class="program-item">
-                    <div class="program-info">
-                      <h5 class="program-title">가치동행일자리</h5>
-                      <ul class="description-list">
-                        <li><strong>중장년 구인 기업</strong>과 함께 구직자에게 채용과 직무 정보를 제공합니다. </li>
-                        <li>간략 소개 키워드</li>
-                      </ul>
-                      <div class="program-tags">
-                          <span class="program-tag">#주 30~40시간 채용형</span>
-                          <span class="program-tag">#월 57시간 직무체험형</span>
-                          <span class="program-tag">#40~64세 서울시 중장년</span>
-                      </div>
-                    </div>
-                    <div class="program-button">
-                        <a href="#" class="btn-go">모집공고 바로가기 &rarr;</a>
-                    </div>
-                </li>                
-                <li class="program-item">
-                    <div class="program-info">
-                      <h5 class="program-title">채용설명회</h5>
-                      <ul class="description-list">
-                        <li><strong>중장년 구인 기업</strong>과 함께 구직자에게 채용과 직무 정보를 제공합니다. </li>
-                        <li>간략 소개 키워드</li>
-                      </ul>
-                      <div class="program-tags">
-                          <span class="program-tag">#주 30~40시간 채용형</span>
-                          <span class="program-tag">#월 57시간 직무체험형</span>
-                          <span class="program-tag">#40~64세 서울시 중장년</span>
-                      </div>
-                    </div>
-                    <div class="program-button">
-                        <a href="#" class="btn-go">모집공고 바로가기 &rarr;</a>
-                    </div>
-                </li>                
-                <li class="program-item">
-                    <div class="program-info">
-                      <h5 class="program-title">협력기업채용관</h5>
-                      <ul class="description-list">
-                        <li><strong>중장년 구인 기업</strong>과 함께 구직자에게 채용과 직무 정보를 제공합니다. </li>
-                        <li>간략 소개 키워드</li>
-                      </ul>
-                      <div class="program-tags">
-                          <span class="program-tag">#주 30~40시간 채용형</span>
-                          <span class="program-tag">#월 57시간 직무체험형</span>
-                          <span class="program-tag">#40~64세 서울시 중장년</span>
-                      </div>
-                    </div>
-                    <div class="program-button">
-                        <a href="#" class="btn-go">모집공고 바로가기 &rarr;</a>
-                    </div>
-                </li>
-            </ul>
-          </div>
-            <!-- //본문 영역  -->
         </div>
+        <!-- //content-section -->
         <div class="bottom-sns-area">
             <p class="font-body-style2">정보 및 재단소식을 쉽고 빠르게 받아보세요!</p>
             <div class="sns-list">
@@ -267,6 +323,7 @@
               </a>
           </div>
         </div>
+        <!-- sns -->
       </div>
     </div>
     <!-- //content -->
