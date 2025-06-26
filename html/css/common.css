@@ -146,12 +146,25 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 	background: url(../img/common/ico-like-off.svg) no-repeat;
 	background-size: 100% auto;
 }
+.ico.ico-plus::after {
+	background: url(../img/common/ico-plus.svg) no-repeat;
+	background-size: 100% auto;
+}
+.ico.ico-pen-wt {
+	background: url(../img/common/ico-pencle-wt.svg) no-repeat;
+	background-size: 100% auto;
+}
+
 /* 버튼 */
 .button-area {
     display: flex;
     align-items: center;
     justify-content: center;
 	margin-top: 80px;
+}
+.button-area.flex-end {
+	justify-content: flex-end;
+	margin-top: 40px;
 }
 .btn {
 	display: inline-block;
@@ -175,7 +188,33 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 .btn-primary i {
 	margin-left: 50px;
 }
-
+.btn-line-box {
+	height: 56px;
+	min-width: 79px;
+	background-color: var(--color-white);
+	border: 1px solid #D8D9DA;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn.btn-apply {
+	display: flex;
+	background-color: var(--color-main-color);
+	color: var(--color-white);
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 18px;
+	border-radius: 8px;
+	min-width: 148px;
+	gap: 4px;
+	border-radius: 8px;
+}
 .btn-blue {
 	background-color: #0096E0;
 	color: #fff;
@@ -546,6 +585,10 @@ body{font-family: var(--ft-family-main);font-weight: 400;letter-spacing: -0.02em
 .page-title-wrap .search-wrap {
 	max-width: 800px;
     width: 100%;
+}
+.page-title-wrap.has-bottom-line {
+	padding-bottom: 26px;
+	border-bottom: 2px solid var(--font-color-dark);
 }
 .content-section {
 	padding: 64px 0 120px;

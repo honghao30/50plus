@@ -49,6 +49,17 @@ time, mark, audio, video {
 	border: 0;
 	vertical-align: baseline;
 }
+caption {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    text-align: left;
+    clip: rect(1px, 1px, 1px, 1px);
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -115,6 +126,7 @@ a {
 	--font-color-gray: #666666;
 	--font-color-highlight: #0178FF;
 	--font-color-999: #999;
+	--color-border-light: #D8D9DA;
 
 }
 
@@ -136,4 +148,3 @@ a {
 		display: inline-flex;
 	}
 }
-.mt-0 {margin-top: 0;}
