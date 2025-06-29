@@ -1,0 +1,76 @@
+/* 공통 value */
+:root {    
+    /* ## Primary Colors (주요 색상) */
+    --color-primary: #4F6793;
+    --color-secondary: #0178FF;
+    
+    --color-accent: #FF4C4C;
+    
+    /* ## Grayscale Colors (회색조) */
+    --color-white: #FFFFFF;
+    --color-gray-50: #F8F8F8;
+    --color-gray-100: #EDEDED;
+    --color-gray-200: #D9DFEC;
+    --color-gray-300: #D8D9DA;
+    --color-gray-600: #999999;
+    --color-gray-700: #666666;
+    --color-gray-800: #333333;
+    --color-gray-900: #222222;
+    --color-black: #151515;
+
+    /* -------------------------------------------------------------------------- */
+    /* # Typography
+    /* /* 폰트 패밀리, 사이즈, 색상 등을 정의합니다.
+    /* -------------------------------------------------------------------------- */
+
+    /* ## Font Family */
+    --font-family-main: 'Pretendard', sans-serif;
+    --font-family-seoul: 'Nanum Gothic', sans-serif; /* 서울시 GNB용 폰트 */
+
+    /* ## Font Color */
+    --font-color-primary: #151515;
+    --font-color-secondary: #222222;
+    --font-color-tertiary: #666666;
+    --font-color-placeholder: #999999;
+    --font-color-accent: #0178FF;
+    --font-color-white: #FFFFFF;
+
+
+    /* -------------------------------------------------------------------------- */
+    /* # Layout & Borders
+    /* /* 레이아웃 최대 너비, 보더 색상 등을 정의합니다.
+    /* -------------------------------------------------------------------------- */
+
+    /* ## Layout */
+    --layout-max-width: 1440px;
+
+    /* ## Border */
+    --border-color-primary: #D8D9DA;
+}
+
+
+/* :root {
+	--max-wid: 1440px;
+
+	--color-white: #fff;
+	--color-black: #000;
+	--color-main-color: #4F6793;
+	--color-sub-blue: #0178FF;
+	--color-sub-orange: #FF4C4C;
+	--color-lightgray: #D8D9DA;
+	--color-darkgray: #151515;
+	--color-gray-100:#D9DFEC;
+	--color-222: #222222;
+	--color-ed: #EDEDED;
+	--color-gray-f8: #F8F8F8;
+	--color-333: #333;
+
+	--ft-family-main: 'Pretendard', sans-serif;
+	--font-color-dark: #151515;
+	--font-color-light: #222222;
+	--font-color-gray: #666666;
+	--font-color-highlight: #0178FF;
+	--font-color-999: #999;
+	--color-border-light: #D8D9DA;
+
+} */

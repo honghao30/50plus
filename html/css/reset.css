@@ -102,33 +102,6 @@ a {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
  }
-/* 공통 value */
-:root {
-	--max-wid: 1440px;
-	/* color */
-	--color-white: #fff;
-	--color-black: #000;
-	--color-main-color: #4F6793;
-	--color-sub-blue: #0178FF;
-	--color-sub-orange: #FF4C4C;
-	--color-lightgray: #D8D9DA;
-	--color-darkgray: #151515;
-	--color-gray-100:#D9DFEC;
-	--color-222: #222222;
-	--color-ed: #EDEDED;
-	--color-gray-f8: #F8F8F8;
-	--color-333: #333;
-
-	/* font:  */
-	--ft-family-main: 'Pretendard', sans-serif;
-	--font-color-dark: #151515;
-	--font-color-light: #222222;
-	--font-color-gray: #666666;
-	--font-color-highlight: #0178FF;
-	--font-color-999: #999;
-	--color-border-light: #D8D9DA;
-
-}
 
 /* 공통 */
 .bg-color-gray {
