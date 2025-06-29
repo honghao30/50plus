@@ -1,394 +1,420 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>50 plus 프로젝트 스타일 가이드</title>
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/seoul-common-gnb.css">
-  <!-- REQUIRED SCRIPTS -->
-  <!-- <script src="js/jquery-3.2.1.js"></script> -->
-  <!-- Swiper JS, css -->
-  <script src="js/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <!-- common.js -->
-  <!-- <script src="js/common.js"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>50 plus 프로젝트 스타일 가이드</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/seoul-common-gnb.css">
+    <!-- REQUIRED SCRIPTS -->
+    <!-- <script src="js/jquery-3.2.1.js"></script> -->
+    <!-- Swiper JS, css -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- common.js -->
+    <!-- <script src="js/common.js"></script> -->
     <style>
-      /* =================================================================================================
+        /* =================================================================================================
        * 50+ PROJECT GLOBAL CSS VARIABLES
        * ================================================================================================= */
-      :root {
-        /* Primary Colors */
-        --color-primary: #4F6793;
-        --color-secondary: #0178FF;
-        
-        /* Accent & Status Colors */
-        --color-accent: #FF4C4C;
-        
-        /* Grayscale Colors */
-        --color-white: #FFFFFF;
-        --color-gray-50: #F8F8F8;
-        --color-gray-100: #EDEDED;
-        --color-gray-200: #D9DFEC;
-        --color-gray-300: #D8D9DA;
-        --color-gray-600: #999999;
-        --color-gray-700: #666666;
-        --color-gray-800: #333333;
-        --color-gray-900: #222222;
-        --color-black: #151515;
+        :root {
+            /* Primary Colors */
+            --color-primary: #4F6793;
+            --color-secondary: #0178FF;
 
-        /* Font Family */
-        --font-family-main: 'Pretendard', sans-serif;
-        --font-family-seoul: 'Nanum Gothic', sans-serif;
+            /* Accent & Status Colors */
+            --color-accent: #FF4C4C;
 
-        /* Font Color */
-        --font-color-primary: #151515;
-        --font-color-secondary: #222222;
-        --font-color-tertiary: #666666;
-        --font-color-placeholder: #999999;
-        --font-color-accent: #0178FF;
-        --font-color-white: #FFFFFF;
+            /* Grayscale Colors */
+            --color-white: #FFFFFF;
+            --color-gray-50: #F8F8F8;
+            --color-gray-100: #EDEDED;
+            --color-gray-200: #D9DFEC;
+            --color-gray-300: #D8D9DA;
+            --color-gray-600: #999999;
+            --color-gray-700: #666666;
+            --color-gray-800: #333333;
+            --color-gray-900: #222222;
+            --color-black: #151515;
 
-        /* Layout */
-        --layout-max-width: 1440px;
-        
-        /* Border */
-        --border-color-primary: var(--color-gray-300);
-      }
+            /* Font Family */
+            --font-family-main: 'Pretendard', sans-serif;
+            --font-family-seoul: 'Nanum Gothic', sans-serif;
 
-      /* =================================================================================================
+            /* Font Color */
+            --font-color-primary: #151515;
+            --font-color-secondary: #222222;
+            --font-color-tertiary: #666666;
+            --font-color-placeholder: #999999;
+            --font-color-accent: #0178FF;
+            --font-color-white: #FFFFFF;
+
+            /* Layout */
+            --layout-max-width: 1440px;
+
+            /* Border */
+            --border-color-primary: var(--color-gray-300);
+        }
+
+        /* =================================================================================================
        * GUIDE PAGE STYLES
        * ================================================================================================= */
-      .guide-header {
-        width: 100%;
-        height: 50px;
-        background-color: var(--color-primary);
-        color: var(--font-color-white);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-      }
-      .guide-gnb {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .guide-gnb ul {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-size: 16px;
-      }
-      .guide-content {
-        padding: 80px 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      .guide-title {
-        font-family: var(--font-family-main);
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 22px;
-        color: var(--font-color-primary);
-        padding-bottom: 10px;
-        border-bottom: 2px solid var(--color-black);
-      }
-      .guide-cont {
-        margin-top: 30px;
-      }
-      .flex-lay-col {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 15px;
-      }
-      .flex-lay-col ul {
-        display: flex;
-        gap: 15px;
-        border: 1px solid var(--color-gray-200);
-        padding: 20px;
-        border-radius: 8px;
-      }
+        .guide-header {
+            width: 100%;
+            height: 50px;
+            background-color: var(--color-primary);
+            color: var(--font-color-white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+        }
 
-      .color-chip {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        border: 1px solid var(--color-gray-200);
-        flex-shrink: 0;
-      }
+        .guide-gnb {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-      .color-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border: 1px solid var(--border-color-primary);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .color-list li {
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        justify-content: space-between;
-        border-bottom: 1px solid var(--border-color-primary);
-      }
-      .color-list li:last-child {
-          border-bottom: none;
-      }
-      
-      .variable-code {
-        font-family: 'SF Mono', 'Courier New', monospace;
-        color: var(--color-accent);
-        background-color: #fdd;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 14px;
-        margin-left: auto;
-      }
+        .guide-gnb ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+        }
 
-      .item-name {
-        font-weight: 600;
-        color: var(--font-color-primary);
-        min-width: 150px;
-      }
+        .guide-content {
+            padding: 80px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-      hr {
-        border: 0;
-        border-top:1px solid var(--color-gray-100);
-        margin: 40px 0;
-      }
+        .guide-title {
+            font-family: var(--font-family-main);
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 22px;
+            color: var(--font-color-primary);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-black);
+        }
+
+        .guide-cont {
+            margin-top: 30px;
+        }
+
+        .flex-lay-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .flex-lay-col ul {
+            display: flex;
+            gap: 15px;
+            border: 1px solid var(--color-gray-200);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .color-chip {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid var(--color-gray-200);
+            flex-shrink: 0;
+        }
+
+        .color-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid var(--border-color-primary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .color-list li {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color-primary);
+        }
+
+        .color-list li:last-child {
+            border-bottom: none;
+        }
+
+        .variable-code {
+            font-family: 'SF Mono', 'Courier New', monospace;
+            color: var(--color-accent);
+            background-color: #fdd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-left: auto;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: var(--font-color-primary);
+            min-width: 150px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--color-gray-100);
+            margin: 40px 0;
+        }
     </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header class="guide-header">
-      <nav class="guide-gnb">
-        <ul>
-          <li><a href="#font">Typography</a></li>
-          <li><a href="#color">Colors</a></li>
-          <li><a href="#icon">Icons</a></li>
-          <li><a href="#button">Buttons</a></li>
-          <li><a href="#form">Forms</a></li>          
-        </ul>
-      </nav>
-    </header>
-    <div class="guide-content">
-        <div class="guide-section">
-            <h2 class="guide-title" id="font">Typography</h2>
-            <div class="guide-cont flex-lay-col">
-              <h1 class="h1-title">Typography .h1-title </h1>
-              <h2 class="h2-title">Typography .h2-title </h2>
-              <h3 class="h3-title">Typography .h3-title </h3>
-              <p class="font-body-style1">Typography .font-body-style1</p>
-              <p class="font-body-style2">Typography .font-body-style2</p>
-              <p class="font-body-style3">Typography .font-body-style3</p>
-              <p class="font-body-style4">Typography .font-body-style4</p>
-              <p class="font-body-style5">Typography .font-body-style5</p>
-              <p class="font-body-caption">Typography .font-body-caption</p>
-              <p class="font-body-caption-sm">Typography .font-body-caption-sm</p>
-            </div>
-        </div>
+    <div class="wrap">
+        <header class="guide-header">
+            <nav class="guide-gnb">
+                <ul>
+                    <li><a href="#font">Typography</a></li>
+                    <li><a href="#color">Colors</a></li>
+                    <li><a href="#icon">Icons</a></li>
+                    <li><a href="#button">Buttons</a></li>
+                    <li><a href="#form">Forms</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="guide-content">
+            <div class="guide-section">
+                <h2 class="guide-title" id="font">Typography</h2>
+                <div class="guide-cont flex-lay-col">
+                    <h1 class="h1-title">Typography .h1-title (40px)</h1>
+                    <h2 class="h2-title">Typography .h2-title (32px)</h2>
+                    <h3 class="h3-title">Typography .h3-title (24px)</h3>
+                    <p class="font-body-style1">Typography .font-body-style1 (24px)</p>
+                    <p class="font-body-style2">Typography .font-body-style2 (22px)</p>
+                    <p class="font-body-style3">Typography .font-body-style3 (20px)</p>
+                    <p class="font-body-style4">Typography .font-body-style4 (18px)</p>
+                    <p class="font-body-style5">Typography .font-body-style5 (16px)</p>
+                    <p class="font-body-caption">Typography .font-body-caption (15px)</p>
+                    <p class="font-body-caption-sm">Typography .font-body-caption-sm (14px)</p>
+                </div>
 
-        <hr>
-
-        <div class="guide-section">
-          <h2 class="guide-title" id="color">Color Palette</h2>
-          <div class="guide-cont flex-lay-col">
-            <ul class="color-list">
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-primary);"></span>
-                    <span class="item-name">Primary</span>
-                    <span class="variable-code">--color-primary</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-secondary);"></span>
-                    <span class="item-name">Secondary</span>
-                    <span class="variable-code">--color-secondary</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-accent);"></span>
-                    <span class="item-name">Accent</span>
-                    <span class="variable-code">--color-accent</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-black);"></span>
-                    <span class="item-name">Black</span>
-                    <span class="variable-code">--color-black</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-900);"></span>
-                    <span class="item-name">Gray 900</span>
-                    <span class="variable-code">--color-gray-900</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-800);"></span>
-                    <span class="item-name">Gray 800</span>
-                    <span class="variable-code">--color-gray-800</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-700);"></span>
-                    <span class="item-name">Gray 700</span>
-                    <span class="variable-code">--color-gray-700</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-600);"></span>
-                    <span class="item-name">Gray 600</span>
-                    <span class="variable-code">--color-gray-600</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-300);"></span>
-                    <span class="item-name">Gray 300</span>
-                    <span class="variable-code">--color-gray-300</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-200);"></span>
-                    <span class="item-name">Gray 200</span>
-                    <span class="variable-code">--color-gray-200</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-100);"></span>
-                    <span class="item-name">Gray 100</span>
-                    <span class="variable-code">--color-gray-100</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-gray-50);"></span>
-                    <span class="item-name">Gray 50</span>
-                    <span class="variable-code">--color-gray-50</span>
-                </li>
-                <li>
-                    <span class="color-chip" style="background-color: var(--color-white); border: 1px solid #eee;"></span>
-                    <span class="item-name">White</span>
-                    <span class="variable-code">--color-white</span>
-                </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr>
-
-        <div class="guide-section">
-          <h2 class="guide-title" id="icon">Icons</h2>
-          <div class="guide-cont flex-lay-col">
-              <ul>
-                <li><i class="ico ico-people"></i></li>
-                <li><i class="ico ico-login"></i></li>
-                <li><i class="ico ico-lock"></i></li>
-                <li><i class="ico ico-home"><span class="ir-text">홈</span></i></li>   
-                <li><i class="ico ico-search"><span class="ir-text">검색</span></i></li>
-              </ul>
-          </div>
-        </div>
-        
-        <hr>
-
-        <div class="guide-section">
-          <h2 class="guide-title" id="button">Buttons</h2>
-          <div class="guide-cont flex-lay-col" style="gap: 40px;">
-            <!-- Large Buttons -->
-            <div class="flex-lay-col">
-                <h3 style="margin-bottom: 10px; font-weight: 500;">Large (96px)</h3>
-                <div class="flex gap10">
-                  <a href="#" class="btn btn-primary btn-lg">Primary</a>
-                  <a href="#" class="btn btn-primary btn-lg btn-rounded">Primary</a>
-                  <a href="#" class="btn btn-primary btn-lg btn-rounded">
-                    Primary 
-                    <i class="ico ico-arrow-right-wt"></i>
-                  </a>
+                <div class="guide-cont flex-lay-col">
+                    <ul class="item-list">
+                        <li><span class="item-name" style="font-size:var(--font-size-xxl)">H1 Title (40px)</span><span class="variable-code">--font-size-xxl</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-xl)">H2 Title (32px)</span><span class="variable-code">--font-size-xl</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-lg)">H3 Title (24px)</span><span class="variable-code">--font-size-lg</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-md-2)">Body 2 (22px)</span><span class="variable-code">--font-size-md-2</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-md)">Body 3 (20px)</span><span class="variable-code">--font-size-md</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-base-2)">Body 4 (18px)</span><span class="variable-code">--font-size-base-2</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-base)">Body 5 (16px)</span><span class="variable-code">--font-size-base</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-sm)">Caption (15px)</span><span class="variable-code">--font-size-sm</span></li>
+                        <li><span class="item-name" style="font-size:var(--font-size-xs)">Caption Small (14px)</span><span class="variable-code">--font-size-xs</span></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Medium Buttons -->
-            <div class="flex-lay-col">
-                <h3 style="margin-bottom: 10px; font-weight: 500;">Medium (56px)</h3>
-                <div class="flex gap10">
-                  <a href="#" class="btn btn-primary btn-md">Primary</a>
-                  <a href="#" class="btn btn-primary btn-md btn-rounded">Primary</a>
-                  <a href="#" class="btn btn-secondary btn-md">Secondary</a>
-                </div>
-            </div>
-            <!-- Small Buttons -->
-            <div class="flex-lay-col">
-                <h3 style="margin-bottom: 10px; font-weight: 500;">Small (32px)</h3>
-                <div class="flex gap10">
-                  <a href="#" class="btn btn-primary btn-sm">Primary</a>                  
-                  <a href="#" class="btn btn-secondary btn-sm">Secondary</a>
-                </div>
-            </div>
-            <!-- Special Buttons -->
-            <div class="flex-lay-col">
-                <h3 style="margin-bottom: 10px; font-weight: 500;">Special Buttons</h3>
-                <div class="flex gap10">
-                  <div class="button-area btn-load-more mt-0">
-                      <button type="button">
-                        <i class="ico ico-plus"></i>
-                        더보기
-                      </button>
-                  </div>
-                  
-                </div>
-            </div>
-          </div>
-        </div>
 
-        <hr>
+            <hr>
 
-        <div class="guide-section">
-          <h2 class="guide-title" id="form">Forms</h2>
-          <div class="guide-cont" style="max-width: 500px; margin: 30px auto;">
-            <div class="guide-cont flex-lay-col">
-                <div class="search-wrap wid100p">
-                    <div class="input-group search">
-                        <div class="input-group-inner">
-                          <input type="text" class="font-body-style3" placeholder="검색어를 입력해 주세요." />
-                          <button type="button" class="btn-search">
-                            <i class="ico ico-search"><span class="ir-text">검색</span></i>
-                          </button>
+            <div class="guide-section">
+                <h2 class="guide-title" id="color">Color Palette</h2>
+                <div class="guide-cont flex-lay-col">
+                    <ul class="color-list">
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-primary);"></span>
+                            <span class="item-name">Primary</span>
+                            <span class="variable-code">--color-primary</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-secondary);"></span>
+                            <span class="item-name">Secondary</span>
+                            <span class="variable-code">--color-secondary</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-accent);"></span>
+                            <span class="item-name">Accent</span>
+                            <span class="variable-code">--color-accent</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-black);"></span>
+                            <span class="item-name">Black</span>
+                            <span class="variable-code">--color-black</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-900);"></span>
+                            <span class="item-name">Gray 900</span>
+                            <span class="variable-code">--color-gray-900</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-800);"></span>
+                            <span class="item-name">Gray 800</span>
+                            <span class="variable-code">--color-gray-800</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-700);"></span>
+                            <span class="item-name">Gray 700</span>
+                            <span class="variable-code">--color-gray-700</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-600);"></span>
+                            <span class="item-name">Gray 600</span>
+                            <span class="variable-code">--color-gray-600</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-300);"></span>
+                            <span class="item-name">Gray 300</span>
+                            <span class="variable-code">--color-gray-300</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-200);"></span>
+                            <span class="item-name">Gray 200</span>
+                            <span class="variable-code">--color-gray-200</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-100);"></span>
+                            <span class="item-name">Gray 100</span>
+                            <span class="variable-code">--color-gray-100</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-gray-50);"></span>
+                            <span class="item-name">Gray 50</span>
+                            <span class="variable-code">--color-gray-50</span>
+                        </li>
+                        <li>
+                            <span class="color-chip" style="background-color: var(--color-white); border: 1px solid #eee;"></span>
+                            <span class="item-name">White</span>
+                            <span class="variable-code">--color-white</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="guide-section">
+                <h2 class="guide-title" id="icon">Icons</h2>
+                <div class="guide-cont flex-lay-col">
+                    <ul>
+                        <li><i class="ico ico-people"></i></li>
+                        <li><i class="ico ico-login"></i></li>
+                        <li><i class="ico ico-lock"></i></li>
+                        <li><i class="ico ico-home"><span class="ir-text">홈</span></i></li>
+                        <li><i class="ico ico-search"><span class="ir-text">검색</span></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="guide-section">
+                <h2 class="guide-title" id="button">Buttons</h2>
+                <div class="guide-cont flex-lay-col" style="gap: 40px;">
+                    <!-- Large Buttons -->
+                    <div class="flex-lay-col">
+                        <h3 style="margin-bottom: 10px; font-weight: 500;">Large (96px)</h3>
+                        <div class="flex gap10">
+                            <a href="#" class="btn btn-primary btn-lg">Primary</a>
+                            <a href="#" class="btn btn-primary btn-lg btn-rounded">Primary</a>
+                            <a href="#" class="btn btn-primary btn-lg btn-rounded">
+                                Primary
+                                <i class="ico ico-arrow-right-wt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Medium Buttons -->
+                    <div class="flex-lay-col">
+                        <h3 style="margin-bottom: 10px; font-weight: 500;">Medium (56px)</h3>
+                        <div class="flex gap10">
+                            <a href="#" class="btn btn-primary btn-md">Primary</a>
+                            <a href="#" class="btn btn-primary btn-md btn-rounded">Primary</a>
+                            <a href="#" class="btn btn-secondary btn-md">Secondary</a>
+                        </div>
+                    </div>
+                    <!-- Small Buttons -->
+                    <div class="flex-lay-col">
+                        <h3 style="margin-bottom: 10px; font-weight: 500;">Small (32px)</h3>
+                        <div class="flex gap10">
+                            <a href="#" class="btn btn-primary btn-sm">Primary</a>
+                            <a href="#" class="btn btn-secondary btn-sm">Secondary</a>
+                        </div>
+                    </div>
+                    <!-- Special Buttons -->
+                    <div class="flex-lay-col">
+                        <h3 style="margin-bottom: 10px; font-weight: 500;">Special Buttons</h3>
+                        <div class="flex gap10">
+                            <div class="button-area btn-load-more mt-0">
+                                <button type="button">
+                                    <i class="ico ico-plus"></i>
+                                    더보기
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="mt-32 flex gap10">
-                    <label class="radio-item">
-                        <input type="radio" name="education" value="all" checked>
-                        <span class="custom-radio"></span>
-                        전체
-                    </label>
-                    <label class="radio-item">
-                        <input type="radio" name="education" value="none">
-                        <span class="custom-radio"></span>
-                        없음
-                    </label>
-                    <label class="radio-item">
-                        <input type="radio" name="education" value="yes">
-                        <span class="custom-radio"></span>
-                        있음
-                    </label>
-                </div>
-                <div class="mt-32 flex gap10">
-                    <div class="check-wrap">
-                      <input type="checkbox" id="check1"/>
-                      <label for="check1"><span>개인정보의 수집․이용(개인식별정보)에 동의합니다.</span></label>
+            </div>
+
+            <hr>
+
+            <div class="guide-section">
+                <h2 class="guide-title" id="form">Forms</h2>
+                <div class="guide-cont" style="max-width: 500px; margin: 30px auto;">
+                    <div class="guide-cont flex-lay-col">
+                        <div class="search-wrap wid100p">
+                            <div class="input-group search">
+                                <div class="input-group-inner">
+                                    <input type="text" class="font-body-style3" placeholder="검색어를 입력해 주세요." />
+                                    <button type="button" class="btn-search">
+                                        <i class="ico ico-search"><span class="ir-text">검색</span></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-32 flex gap10">
+                            <label class="radio-item">
+                                <input type="radio" name="education" value="all" checked>
+                                <span class="custom-radio"></span>
+                                전체
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="education" value="none">
+                                <span class="custom-radio"></span>
+                                없음
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="education" value="yes">
+                                <span class="custom-radio"></span>
+                                있음
+                            </label>
+                        </div>
+                        <div class="mt-32 flex gap10">
+                            <div class="check-wrap">
+                                <input type="checkbox" id="check1" />
+                                <label for="check1"><span>개인정보의 수집․이용(개인식별정보)에 동의합니다.</span></label>
+                            </div>
+                        </div>
+
+                        <div class="mt-32 flex gap10">
+                            <div class="input-area">
+                                <input type="text" placeholder="답변을 입력해 주세요.">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="mt-32 flex gap10">
-                  <div class="input-area">
-                      <input type="text" placeholder="답변을 입력해 주세요.">
-                  </div>
-                </div>
-
             </div>
-          </div>
         </div>
     </div>
-  </div>
 </body>
+
 </html>

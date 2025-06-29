@@ -992,7 +992,8 @@ body {
     align-items: center;
     justify-content: flex-end;
     gap: 16px;
-    color: var(--color-333);
+    color: var(--color-gray-800);
+    margin-top: 60px;
 }
 
 .bottom-sns-area .sns-list {
@@ -1056,12 +1057,12 @@ body {
 }
 
 .footer-menu a {
-    color: var(--font-color-gray);
+    color: var(--color-gray-700);
     position: relative;
 }
 
 .footer-menu a.highlight-color {
-    color: var(--font-color-highlight);
+    color: var(--color-secondary);
     font-weight: 700;
 }
 
@@ -1095,7 +1096,7 @@ body {
 
 .footer-info-area .copy {
     margin-top: 16px;
-    color: var(--font-color-999);
+    color: var(--color-gray-600);
     letter-spacing: 0;
     font-weight: 400;
 }

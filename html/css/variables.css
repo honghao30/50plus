@@ -1,11 +1,11 @@
 /* 공통 value */
-:root {    
+:root {
     /* ## Primary Colors (주요 색상) */
     --color-primary: #4F6793;
     --color-secondary: #0178FF;
-    
+
     --color-accent: #FF4C4C;
-    
+
     /* ## Grayscale Colors (회색조) */
     --color-white: #FFFFFF;
     --color-gray-50: #F8F8F8;
@@ -25,7 +25,8 @@
 
     /* ## Font Family */
     --font-family-main: 'Pretendard', sans-serif;
-    --font-family-seoul: 'Nanum Gothic', sans-serif; /* 서울시 GNB용 폰트 */
+    --font-family-seoul: 'Nanum Gothic', sans-serif;
+    /* 서울시 GNB용 폰트 */
 
     /* ## Font Color */
     --font-color-primary: #151515;
@@ -35,6 +36,26 @@
     --font-color-accent: #0178FF;
     --font-color-white: #FFFFFF;
 
+
+    /* Font Size Scale */
+    --font-size-xxl: 40px;
+    /* H1 Title */
+    --font-size-xl: 32px;
+    /* H2 Title */
+    --font-size-lg: 24px;
+    /* H3 Title, Body Style 1 */
+    --font-size-md-2: 22px;
+    /* Body Style 2 */
+    --font-size-md: 20px;
+    /* Body Style 3 */
+    --font-size-base-2: 18px;
+    /* Body Style 4 */
+    --font-size-base: 16px;
+    /* Body Style 5 */
+    --font-size-sm: 15px;
+    /* Caption */
+    --font-size-xs: 14px;
+    /* Caption Small */
 
     /* -------------------------------------------------------------------------- */
     /* # Layout & Borders
@@ -46,6 +67,7 @@
 
     /* ## Border */
     --border-color-primary: #D8D9DA;
+
 }
 
 
