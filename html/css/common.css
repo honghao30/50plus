@@ -209,6 +209,34 @@ body {
     background-size: 100% auto;
 }
 
+.ico.ico-facebook {
+    background: url(../img/common/ico-facebook.svg) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+
+.ico.ico-kakaotalk {
+    background: url(../img/common/ico-kakao-m.svg) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+
+.ico.ico-x-box {
+    background: url(../img/common/ico-x-line.svg) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+
+.ico.ico-band {
+    background: url(../img/common/ico-band.svg) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+
 /* ==========================================================================
 	button
    ========================================================================== */
@@ -262,6 +290,12 @@ body {
     height: 42px;
     font-size: 14px;
     padding: 0 16px;
+}
+
+.btn-only-icon {
+    padding: 0;
+    margin: 0;
+    border-radius: initial;
 }
 
 .btn-rounded {

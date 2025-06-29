@@ -167,6 +167,44 @@
     color: var(--color-black);
 }
 
+/* 공유하기 */
+.board-sns-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.board-sns-share .sns-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.board-sns-share .btn-like-action {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.board-sns-share .btn-like-action .ico.ico-favor::after {
+    width: 28px;
+    height: 28px;
+}
+
+.board-sns-share .btn-like-action span {
+    vertical-align: middle;
+}
+
 .board-view-content {
     margin: 40px 0;
     padding: 40px 10px;
@@ -177,8 +215,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--font-color-placeholder);
-    border: 1px solid var(--color-gray-300);
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-600);
 }
 
 .board-view-info {
@@ -210,11 +248,55 @@
     gap: 8px;
 }
 
-.hashtag {
+.board-view-info dd .hashtag {
     color: var(--font-color-tertiary);
     font-size: var(--font-size-xs);
 }
 
+
+
+/* 연관컨텐츠 */
+.related-content-wrap {
+    margin-top: 40px;
+}
+
+.related-content-wrap h4 {
+    font-size: var(--font-size-base-2);
+    font-weight: 700;
+    color: var(--font-color-primary);
+    margin-bottom: 20px;
+}
+
+.related-content-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-gray-300);
+    padding: 15px 0;
+}
+
+.related-content-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.related-content-item .img-box {
+    height: 180px;
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-600);
+    margin-bottom: 12px;
+}
+
+.related-content-item .title {
+    font-size: var(--font-size-base);
+    color: var(--font-color-secondary);
+    line-height: 1.6;
+}
 
 /* faq */
 .faq-accordion {
