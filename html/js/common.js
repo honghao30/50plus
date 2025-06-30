@@ -15,10 +15,12 @@ const setupDropdowns = () => {
 
 // footer copy
 const copyDv = () => {
-    const origin = document.querySelector('.footer-info .copy')
-    origin.classList.add('mt-0');
-    document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
-    origin.remove();
+    if(window.innerWidth < 768) {
+        const origin = document.querySelector('.footer-info .copy')
+        origin.classList.add('mt-0');
+        document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
+        origin.remove();
+    }
 }
 
 //tab menu sort
@@ -200,7 +202,9 @@ function initializeFileInputs() {
     });
 }
 
-
+window.addEventListener('resize', () => {
+    copyDv();
+});
 document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
     copyDv();
