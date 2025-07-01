@@ -1205,7 +1205,7 @@
     justify-content: center;
 }
 
-.gray-box.yakguan-step ol li:not(:last-child) {
+.gray-box.yakguan-step ol li {
     position: relative;
     font-weight: 700;
     font-size: 18px;
@@ -1216,7 +1216,9 @@
     gap: 5px;
     padding-right: 56px;
 }
-
+.gray-box.yakguan-step ol li:last-child {
+    padding-right: 0;
+}
 .gray-box.yakguan-step ol li span {
     display: inline-flex;
     width: 24px;
@@ -1254,6 +1256,24 @@
 .gray-box.yakguan-step ol li.is-active span {
     background-color: var(--font-color-accent);
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .gray-box.yakguan-step ol li {
+        font-size: 14px;
+        line-height: 16px;        
+        padding-right: 32px;
+    }
+    .gray-box.yakguan-step ol li::after {
+        width: 16px;
+        right: 0;
+    }
+    .gray-box.yakguan-step ol li span {
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+        line-height: 20px;
+    }
 }
 
 /* text box */
@@ -1296,6 +1316,25 @@
 .yakguan-check-area {
     background-color: #E6EBF5;
     padding: 16px;
+}
+@media (max-width: 768px) {
+    .text-box-section {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text-area-wrap {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .title-bar-type {        
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .title-bar-type::before {        
+        height: 18px;
+    }
+    
 }
 
 /* 이력서 선택 */
@@ -1407,7 +1446,14 @@
     padding: 32px;
     margin-top: 40px;
 }
-
+.activity-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.activity-item .th-name {
+    margin-right: 6px;
+}
 .scroll-type {
     height: 680px;
     overflow-y: auto;
@@ -1459,6 +1505,171 @@
     padding-left: 32px;
 }
 
+.form-section .check-list li.column-items2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+    gap: 16px;
+}
+.form-section .check-list li.column-items2 .activity-item {
+    width: calc(100% / 3);
+    display: flex;
+    gap: 16px;
+}
+.form-section .check-list li.column-items2 .activity-item .input-area {
+    flex: 1;
+}
+
+.yakguan-table-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+.yakguan-table-wrap dl {
+    width: calc(100% / 4);
+    border-top: 2px solid var(--color-black);
+    border-bottom: 1px solid var(--color-gray-300);    
+    border-left: 1px solid var(--color-gray-300);  
+}
+.yakguan-table-wrap dl dt {
+    vertical-align: middle;
+    text-align: center;
+    background-color: #E6EBF5;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    height: 56px;
+    border-left: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yakguan-table-wrap dl:first-child {
+    border-left: 0;
+}
+.yakguan-table-wrap dl dd {
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    min-height: 56px;
+    padding: 16px;    
+}
+
+
+@media (max-width: 768px) {
+    .resume-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 47px;
+    }
+    .resume-wrap .resume-guide-text {
+        width: 100%;
+        margin-bottom: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .resume-wrap .resume-list-dropdown {
+        width: 100%;
+    }
+    .resume-list-dropdown .dropdown-wrap .btn-resume-select .title{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .resume-list-dropdown .dropdown-wrap .btn-resume-select .date {        
+        font-size: 14px;
+    }
+
+    .border-line-box {
+        padding: 32px 16px;
+        margin-top: 40px;
+    }
+    .form-section .section-title {
+        font-size: 16px;
+        line-height: 16px; 
+    }
+    .activity-item .th-name {        
+        display: inline-flex;
+        width: 56px;
+    }
+    .form-section .check-list .activity-container  .input-area.has-button input {
+        width: 80%;
+    }
+    .form-section .check-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+    .form-section .check-list li .tit {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .form-section .check-list li .tit strong {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .form-section .check-list li.sub-list {
+        gap: 10px;
+        padding-left: 0px;
+    }
+    .form-section .check-list li.sub-list .input-area {
+        display: block;
+        width: 100%;
+    }
+    .form-section .check-list li.sub-list .input-area .th-name {
+        margin-top: 16px;
+        display: block;
+        margin-bottom: 8px;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .form-section .check-list li.column-items2 {
+        flex-direction: column;        
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0px 16px;
+        border-bottom: 1px solid var(--color-gray-300);
+        gap: 16px;
+    }
+    .form-section .check-list li.column-items2 .activity-item {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+    }
+    .form-section .check-list li.column-items2 .activity-item .th-name {
+        width: 45px;
+        margin-right: 0;
+    }
+    .form-section .check-list li.column-items2 .activity-item .input-area {
+        flex: 1;
+    }
+
+    .yakguan-table-wrap {
+        flex-direction: column;
+    }
+    .yakguan-table-wrap dl {
+        width: 100%; 
+        border-top: 1px solid var(--color-gray-300); 
+        border-left: 0;
+    }
+    .yakguan-table-wrap dl dt {
+        font-size: 14px;
+        line-height: 14px;
+        height: 32px;        
+    }
+    .yakguan-table-wrap dl dd {
+        font-size: 14px;
+        line-height: 16px;      
+    }
+}
 
 /* 공통 */
 .mt-0 {
@@ -1511,14 +1722,14 @@
     justify-content: space-between;
 }
 .pc-cell {
-    display: table-caption;
+    display: table-column-group;
 }
 .mo-cell {
     display: none;
 }
 @media (max-width: 768px) {
     .mo-cell {
-        display: table-caption;
+        display: table-column-group;
     }
     .pc-cell {
         display: none;
