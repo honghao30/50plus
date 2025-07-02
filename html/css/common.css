@@ -367,6 +367,7 @@ body {
     background-color: var(--color-black);
     border: 1px solid var(--color-gray-600);
 }
+
 .btn-line-box {
     height: 56px;
     min-width: 79px;
@@ -447,6 +448,7 @@ body {
     .btn {
         border-radius: 4px;
     }
+
     .btn-md {
         height: 48px;
         font-size: 16px;
@@ -455,6 +457,7 @@ body {
     }
 
 }
+
 .dropdown-wrap {
     position: relative;
 }
@@ -534,7 +537,16 @@ body {
     color: var(--color-white);
 }
 
-
+@media (max-width: 768px) {
+    .tab-menu {
+        height: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 16px;
+        width: auto;
+    }
+}
 
 /* 페이지네이션 */
 .pagination-container {
@@ -669,12 +681,14 @@ body {
         font-size: 15px;
         line-height: 17px;
     }
+
     .check-wrap input[type="checkbox"]+label {
         font-size: 15px;
         line-height: 17px;
         display: flex;
         justify-content: space-between;
     }
+
     .check-wrap input[type="checkbox"]+label>span {
         flex: 1;
         padding-left: 6px;
@@ -777,16 +791,21 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
 }
-    @media (max-width: 768px) {
+
+@media (max-width: 768px) {
     .form-section .check-list li .file-input-wrapper input[type='text'] {
         width: 100%;
     }
+
     .form-section .check-list li .file-input-wrapper {
         width: 100%;
     }
-    .input-area input[type="text"], .input-area select {
+
+    .input-area input[type="text"],
+    .input-area select {
         width: 100%;
     }
+
     .btn-file-upload {
         min-width: 83px;
     }
@@ -828,8 +847,9 @@ body {
     width: 100%;
     min-width: 1400px;
 }
+
 @media (max-width: 768px) {
-    .wrap {        
+    .wrap {
         min-width: 100%;
     }
 
@@ -997,6 +1017,7 @@ body {
     .gnb-area-full {
         overflow-x: scroll;
     }
+
     .gnb-list li {
         border-right: 0;
         width: auto;
@@ -1052,12 +1073,14 @@ body {
     display: inline-flex;
     background: url(../img/common/ico-arrow-right.svg) no-repeat center center;
 }
+
 @media (max-width: 768px) {
     .location {
         padding: 0 16px;
     }
 
 }
+
 .page-title-wrap {
     display: flex;
     justify-content: space-between;
@@ -1137,9 +1160,10 @@ body {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        
+
     }
-    .sns-list {
+
+    .bottom-sns-area .sns-list {
         display: flex;
         justify-content: flex-end;
         width: 100%;
@@ -1287,12 +1311,14 @@ body {
         margin-top: 20px;
     }
 
-    .footer .footer-family > .btn-black {
+    .footer .footer-family>.btn-black {
         width: 48%;
     }
+
     .footer .dropdown-wrap .btn-black {
         width: 100%;
     }
+
     .footer .dropdown-wrap {
         width: 48%;
     }
@@ -1300,15 +1326,19 @@ body {
     .footer-mark-area {
         justify-content: space-between;
     }
+
     .footer-mark-area a {
         width: calc(100% / 3);
     }
+
     .footer-mark-area a:nth-child(1) img {
         width: 118px;
     }
+
     .footer-mark-area a:nth-child(2) img {
         width: 88px;
     }
+
     .footer-mark-area a:nth-child(3) img {
         width: 56px;
     }
@@ -1378,7 +1408,7 @@ body.modal-open {
 }
 
 .modal-body-container.ht-full {
-    overflow-y: auto;  
+    overflow-y: auto;
     height: 70vh;
 }
 
@@ -1411,22 +1441,26 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
-    .modal-wd1020 {        
+    .modal-wd1020 {
         max-width: calc(100% - 32px);
     }
+
     .modal-wrap-container {
         padding: 0 16px 30px;
         border-radius: 16px;
     }
+
     .modal-header .title {
         font-size: 18px;
         line-height: 20px;
         width: calc(100% - 50px);
     }
-    .modal-wrap-container .btn-close {        
+
+    .modal-wrap-container .btn-close {
         right: 16px;
         top: 16px;
     }
+
     .modal-footer {
         padding-top: 24px;
     }
@@ -1538,17 +1572,18 @@ body.modal-open {
     line-height: 16px;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .table-wrap table tbody th {
         font-size: 16px;
-        line-height: 16px;     
+        line-height: 16px;
     }
+
     /* .table-list tbody tr td {
         font-size: 15px;
         line-height: 23px;     
     } */
     .table-wrap table tbody td {
         font-size: 15px;
-        line-height: 23px;     
+        line-height: 23px;
     }
 }
