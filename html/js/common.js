@@ -104,6 +104,16 @@ const filtersSelect = () => {
     });
 }
 
+//하트
+const likeEvent = (el) => {
+    const likeButtons = document.querySelectorAll(el);    
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('is-active');
+        })
+    })
+}
+
 // modal
 const setModal = (target) => { // target : 모달 아이디
     target = document.getElementById(target);
@@ -202,8 +212,33 @@ function initializeFileInputs() {
     });
 }
 
+let timer; // 타이머 변수를 함수 외부에 선언
+
+const jobCardTitle = () => {
+    const titleArea = document.querySelector('.box-type.job-title');
+    if (!titleArea) return;
+    const titleOffset = titleArea.offsetTop;
+
+    if (window.scrollY > titleOffset) {
+        titleArea.classList.add('is-fixed');
+    } else {
+        titleArea.classList.remove('is-fixed');
+    }
+};
+
+// 스크롤 이벤트에 쓰로틀링 적용
+window.addEventListener('scroll', () => {
+    if (!timer) {
+        timer = setTimeout(() => {
+            timer = null; // 타이머 초기화
+            jobCardTitle(); // 함수 실행
+        }, 100); // 100ms(0.1초)마다 한 번씩만 실행
+    }
+});
+
 window.addEventListener('resize', () => {
     copyDv();
+    jobCardTitle();
 });
 document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
@@ -212,4 +247,5 @@ document.addEventListener('DOMContentLoaded', () => {
     accordion();
     filtersSelect();
     initializeFileInputs();
+    likeEvent('.like-button')
 });

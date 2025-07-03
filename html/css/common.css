@@ -243,7 +243,10 @@ body {
         height: 20px;
     }
 }
-
+.like-button.is-active .ico.ico-favor::after {
+    background: url(../img/common/icon-favoritor-ac.svg) no-repeat;
+    background-size: 100% auto;
+}
 /* ==========================================================================
 	button
    ========================================================================== */

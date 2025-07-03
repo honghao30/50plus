@@ -714,6 +714,7 @@
     justify-content: space-between;
     border-top: 1px solid var(--color-gray-300);
     border-bottom: 1px solid var(--color-gray-300);
+    font-family: var(--font-family-main);
 }
 
 .filter-options-top .filter-group {
@@ -774,6 +775,7 @@
     /* 컬럼 비율 조정 */
     border-top: 1px solid var(--color-gray-300);
     border-bottom: 1px solid var(--color-gray-300);
+    font-family: var(--font-family-main);
 }
 
 .filter-main-panel.column-items3 {
@@ -896,16 +898,19 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-gray-50);
-    height: 88px;
-    padding: 0 16px;
+    min-height: 88px;
+    padding: 16px;
     margin-top: 24px;
+    font-family: var(--font-family-main);
 }
 
 .select-list {
     display: flex;
     gap: 8px;
     align-items: center;
-    max-width: 60%;
+    /* max-width: 60%; */
+    flex: 1 1 480px;
+    flex-wrap: wrap;
 }
 
 .selected-option {
@@ -1168,6 +1173,15 @@
     justify-content: space-between;
     background-color: #E6EBF5;
     padding: 40px;
+    transition: all 0.3s;
+}
+.box-type.job-title.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    transition: all 0.3s;
 }
 
 .box-type.job-title .job-title-info {
