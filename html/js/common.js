@@ -17,7 +17,7 @@ const setupDropdowns = () => {
 const copyDv = () => {
     if(window.innerWidth < 768) {
         const origin = document.querySelector('.footer-info .copy')
-        origin.classList.add('mt-0');
+        origin && origin.classList.add('mt-0');
         document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
         origin.remove();
     }
@@ -183,6 +183,31 @@ const addCloseModalListeners = (target, openButton) => {
     });
 };
 
+// 모바일 버튼
+const moButton = () => {
+    const hamburger = document.querySelector('.btn-hambuger');
+
+    if (!hamburger) {
+        return; 
+    }
+    hamburger.addEventListener('click', () => {
+        const moGnb = document.querySelector('.gnb-area-full');
+        moGnb.classList.add('is-active');
+        document.body.classList.add('modal-open');
+    })
+}
+const moButtonClose = () => {
+    const hamburger = document.querySelector('.btn-close-hamburger');
+    if(!hamburger) {
+        return; 
+    }
+    hamburger.addEventListener('click', () => {
+        const moGnb = document.querySelector('.gnb-area-full');
+        moGnb.classList.remove('is-active');
+        document.body.classList.remove('modal-open');
+    })
+}
+
 // 파일첨부
 function initializeFileInputs() {
     // 모든 파일 입력(real-file-input) 요소를 찾습니다.
@@ -244,8 +269,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
     copyDv();
     tabMenu('sort');
+    tabMenu('full');
     accordion();
     filtersSelect();
     initializeFileInputs();
-    likeEvent('.like-button')
+    likeEvent('.like-button');
+    moButton();
+    moButtonClose()
 });

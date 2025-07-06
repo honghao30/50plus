@@ -3,6 +3,7 @@
     /* ## Primary Colors (주요 색상) */
     --color-primary: #4F6793;
     --color-secondary: #0178FF;
+    --color-secondary-01: #0178FF;
 
     --color-accent: #FF4C4C;
 
@@ -26,6 +27,7 @@
     /* ## Font Family */
     --font-family-main: 'Pretendard', sans-serif;
     --font-family-seoul: 'Nanum Gothic', sans-serif;
+    --font-family-gmarket: 'GmarketSansMedium', sans-serif;
     /* 서울시 GNB용 폰트 */
 
     /* ## Font Color */
