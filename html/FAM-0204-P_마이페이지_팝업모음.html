@@ -147,34 +147,22 @@
                         <li class="font-body-style4">
                             마이페이지
                         </li>
-                        <li class="font-body-style4">
-                            비밀번호 변경 안내
-                        </li>                        
                     </ol>
                 </div>
                 <!-- //location -->
                 <div class="page-title-wrap">
                     <div class="page-title">
-                        <div class="h1-title">비밀번호 변경 안내</div>
-                        <div class="font-body-style1 description">
-                            장기간 비밀번호를 변경하지 않은 회원을 대상으로 비밀번호 변경을 안내를 드립니다.
-                        </div>
+                        <div class="h1-title">마이페이지</div>
                     </div>
                 </div>
                 <!-- //page-title-wrap -->
-                <div class="content-section">                    
-                    <div class="box-type bg-primary">
-                        회원님은 3개월 이상 비밀번호를 변경하지 않았습니다.<br>
-개인정보보호를 위해 비밀번호를 변경해주세요.<br><br>
-
-변경 시, 타인이 추측하기 어렵도록<br>
-비밀번호는 영문,숫자,특수기호를 조합하고,<br>
-다른 사이트와 동일한 비밀번호를 사용하지 않는 것을 권장드립니다.
-                    </div>
-                    <div class="button-area flex-end gap10  mo-button-full mt-32">
-                        <a href="#" class="btn btn-secondary btn-md">다음에 변경</a>
-                        <a href="#" class="btn btn-primary  btn-md">                                
-                            비밀번호 변경
+                <div class="content-section">
+                    <div class="button-area flex-direction gap10">
+                        <a href="#" class="btn btn-primary btn-md" onclick="openModal(event)" modal-id="modal001">                
+                            FAM-0204-P_회원탈퇴팝업
+                        </a>
+                        <a href="#" class="btn btn-primary btn-md"  onclick="openModal(event)" modal-id="modal002">                
+                            FAM-0205-P_구직상태변경팝업
                         </a>
                     </div>
 
@@ -269,6 +257,94 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+
+    <!-- modal -->
+    <div class="modal__wrap--bg cmp-modal" id="modal001">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">회원탈퇴</div>      
+        </div>
+        <div class="modal-body-container">   
+            <h5 class="title-type mt-32">탈퇴하시겠습니까?</h5>
+            <div class="text-box-section mt-8">
+                회원탈퇴 시 아래 사항을 확인해주세요.
+            </div>
+            <div class="border-line-box">
+                <ol class="out-notice-list">
+                    <li>탈퇴 시 해당 아이디의 사용은 불가합니다. 50플러스 포털을 이용하시기 위해서는 다시 회원가입을 진행하셔야 합니다.</li>
+                    <li>회원탈퇴 후 개인정보는 개인정보 처리방침에 따라 즉시 폐기됩니다.</li>
+                    <li>활동정보(강좌 수강정보, 상담정보, 일자리 정보 등)는 활동확인서 등 증빙자료 출력 등을 위해 유지되며, 활동정보 외 데이터는 탈퇴 시 즉시 폐기되어, 새로 회원가입한 아이디로 연동은 불가합니다.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md button-wid150">
+                취소
+            </button>
+            <button type="button" class="btn btn-primary btn-md button-wid150">
+                탈퇴
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>    
+
+    <div class="modal__wrap--bg cmp-modal" id="modal002">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">구직상태 변경</div>      
+        </div>
+        <div class="modal-body-container ht-full">   
+            <div class="text-box-section mt-40">
+                현재 구직활동에 대한 자신의 상태를 설정해주세요.일자리 몽땅에서는 구직을 희망하시는 분들께 우선적으로 알맞은 일자리를 추천해드리고 있습니다.
+            </div>
+            <div class="border-line-box">
+                <ul class="job-search-check">
+                    <li>
+                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_yes" checked><span class="custom-radio"></span>구직 희망 중</label>
+                        <div class="box-type bg-primary">
+                            <ul class="list-type-dot">
+                                <li>“적극적으로 구직을 희망합니다!”</li>
+                                <li>일자리 몽땅에서 제공하는 일자리 추천 정보를 수신합니다.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_think"><span class="custom-radio"></span>이직 고려 중</label>
+                        <div class="box-type bg-primary">
+                            <ul class="list-type-dot">
+                                <li>“괜찮은 일자리가 있으면 생각해 볼게요”</li>
+                                <li>적극적으로 구직을 하고 있지 않지만, 일자리 몽땅에서 제공하는 일자리 추천 정보를 수신합니다.</li>
+                            </ul>
+                        </div>
+                    </li>      
+                    <li>
+                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_no"><span class="custom-radio"></span>구직 의사 없음</label>
+                        <div class="box-type bg-primary">
+                            <ul class="list-type-dot">
+                                <li>“현재 구직이 필요하지 않아요. 둘러만 볼게요.”</li>
+                                <li>일자리 몽땅에서 제공하는 일자리 추천 정보를 수신하지 않습니다.</li>
+                            </ul>
+                        </div>
+                    </li>                                   
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md button-wid150">
+                취소하기
+            </button>
+            <button type="button" class="btn btn-primary btn-md button-wid150">
+                저장하기
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>  
 </body>
 
 </html>

@@ -164,32 +164,40 @@
                     <div class="table-wrap">
                         <table class="table-body-only">
                             <caption class="ir-text">개인정보수정 표</caption>
-                            <colgroup>
+                            <colgroup class="pc-cell">
                                 <col style="width: 160px" />
                                 <col />
                             </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>  
                             <tbody>
                                 <tr>
                                     <th scope="row">아이디</th>
                                     <td>gildong0000</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">대표이메일</th>
+                                    <th scope="row">대표<br class="mo-only">이메일</th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid200">
-                                                <input type="text" placeholder="1234">
-                                            </div>   
-                                            <div class="dash">@</div> 
-                                            <div class="input-area wid200">
-                                                <select title="선택하세요">
-                                                    <option>직접입력</option>
-                                                </select>
-                                            </div>                                            
-                                            <div class="input-area wid200">
-                                                <input type="text" placeholder="email.com">
-                                            </div>                                                                                      
-                                        </div>                                        
+                                        <div class="input-group email-group">
+                                            <div class="items1">
+                                                <div class="input-area wid200">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                                <div class="dash">@</div> 
+                                            </div>
+                                            <div class="items2">
+                                                <div class="input-area wid200">
+                                                    <select title="선택하세요">
+                                                        <option>직접입력</option>
+                                                    </select>
+                                                </div>                                            
+                                                <div class="input-area wid200">
+                                                    <input type="text" placeholder="email.com">
+                                                </div>   
+                                            </div>                                                                                   
+                                        </div>                                         
                                     </td>
                                 </tr>                                 
                                 <tr>
@@ -212,13 +220,17 @@
                     <div class="table-wrap">
                         <table class="table-body-only">
                             <caption class="ir-text">기업정보수정 표</caption>
-                            <colgroup>
+                            <colgroup class="pc-cell">
                                 <col style="width: 160px" />
                                 <col />
                             </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>  
                             <tbody>
                                 <tr>
-                                    <th scope="row">사업자등록번호</th>
+                                    <th scope="row">사업자<br class="mo-only">등록번호</th>
                                     <td>123-45-68790</td>
                                 </tr>
                                 <tr>
@@ -226,17 +238,17 @@
                                     <td>길동 주식회사</td>
                                 </tr>                                
                                 <tr>
-                                    <th scope="row">기업 구분</th>
+                                    <th scope="row">기업<br class="mo-only">구분</th>
                                     <td>본사</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">지사(지점)명</th>
+                                    <th scope="row">지사<br class="mo-only">(지점)명</th>
                                     <td>-</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">업종</th>
                                     <td>
-                                        <div class="input-group">
+                                        <div class="input-group industry">
                                             <div class="input-area">
                                                 <input type="text" placeholder="선택" />
                                             </div>
@@ -247,7 +259,7 @@
                                     </td>
                                 </tr>                                 
                                 <tr>
-                                    <th scope="row">주요사업내용<span class="must">*</span></th>
+                                    <th scope="row">주요<br class="mo-only">사업<br class="mo-only">내용<span class="must">*</span></th>
                                     <td>
                                         <div class="input-area wid100p">
                                             <input type="text" placeholder="선택" />
@@ -255,7 +267,7 @@
                                     </td>
                                 </tr> 
                                 <tr>
-                                    <th scope="row">설립연월 <span class="must">*</span></th>
+                                    <th scope="row">설립<br class="mo-only">연월 <span class="must">*</span></th>
                                     <td>
                                         <div class="input-area wid160">
                                             <input type="date" placeholder="선택" />
@@ -265,11 +277,11 @@
                                 <tr>
                                     <th scope="row">근로자수 </th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid72">
+                                        <div class="input-group total-member">
+                                            <div class="input-area wid72 total">
                                                 <input type="text" placeholder="" /> 
                                             </div>
-                                            명
+                                            명 <br class="mo-only">
                                             (여
                                             <div class="input-area wid72">
                                                 <input type="text" placeholder="" /> 
@@ -285,15 +297,7 @@
                                     </td>
                                 </tr>                                 
                                 <tr>
-                                    <th scope="row">설립연월 <span class="must">*</span></th>
-                                    <td>
-                                        <div class="input-area wid160">
-                                            <input type="date" placeholder="선택" />
-                                        </div>
-                                    </td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">상장여부</th>
+                                    <th scope="row">상장<br class="mo-only">여부</th>
                                     <td>
                                         <div class="flex gap10">
                                             <label class="radio-item">
@@ -310,9 +314,9 @@
                                     </td>
                                 </tr>     
                                 <tr>
-                                    <th scope="row">4대보험 가입</th>
+                                    <th scope="row">4대보험  <br class="mo-only">가입</th>
                                     <td>
-                                        <div class="flex gap10">
+                                        <div class="flex gap10 insulan-check">
                                             <div class="check-wrap"><input type="checkbox" id="insurance01"><label for="insurance01"><span>국민연금</span></label></div>
                                             <div class="check-wrap"><input type="checkbox" id="insurance02"><label for="insurance02"><span>고용보험</span></label></div>
                                             <div class="check-wrap"><input type="checkbox" id="insurance03"><label for="insurance03"><span>산재보험</span></label></div>
@@ -323,7 +327,7 @@
                                 <tr>
                                     <th scope="row">기업유형</th>
                                     <td>
-                                        <div class="flex gap10">
+                                        <div class="flex gap10 mo-derection">
                                             <label class="radio-item">
                                                 <input type="radio" name="company" value="type1" checked="">
                                                 <span class="custom-radio"></span>
@@ -343,42 +347,50 @@
                                     </td>
                                 </tr>        
                                 <tr>
-                                    <th scope="row">대표 전화번호 <span class="must">*</span></th>
+                                    <th scope="row">대표  <br class="mo-only">전화 <br class="mo-only">번호 <span class="must">*</span></th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid120">
-                                                <select title="선택하세요">
-                                                    <option>02</option>
-                                                </select>
-                                            </div> 
-                                            <div class="dash">-</div> 
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
+                                        <div class="input-group phone-group">
+                                            <div class="items1">
+                                                <div class="input-area wid120">
+                                                    <select title="선택하세요">
+                                                        <option>02</option>
+                                                    </select>
+                                                </div> 
+                                                <div class="dash">-</div> 
                                             </div>
-                                            <div class="dash">-</div>  
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
-                                            </div>                                            
+                                            <div class="items2">
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>
+                                                <div class="dash">-</div>  
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                            </div>                                         
                                         </div>
                                     </td>
                                 </tr>    
                                 <tr>
                                     <th scope="row">팩스</th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid120">
-                                                <select title="선택하세요">
-                                                    <option>02</option>
-                                                </select>
-                                            </div> 
-                                            <div class="dash">-</div> 
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
+                                        <div class="input-group phone-group">
+                                            <div class="items1">
+                                                <div class="input-area wid120">
+                                                    <select title="선택하세요">
+                                                        <option>02</option>
+                                                    </select>
+                                                </div> 
+                                                <div class="dash">-</div> 
                                             </div>
-                                            <div class="dash">-</div>  
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
-                                            </div>                                            
+                                            <div class="items2">
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>
+                                                <div class="dash">-</div>  
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                            </div>                                         
                                         </div>
                                     </td>
                                 </tr>    
@@ -386,15 +398,15 @@
                                     <th scope="row">주소</th>
                                     <td>
                                         <div class="address-wrap">
-                                            <div class="input-group">
+                                            <div class="input-group post-code">
                                                 <div class="input-area wid200">
                                                     <input type="text" placeholder="">
                                                 </div>  
                                                 <button type="button" class=" btn btn-primary btn-xsm">
-                                                    우편번호
+                                                    우편번호 검색
                                                 </button>
                                             </div>
-                                            <div class="input-group">
+                                            <div class="input-group add-input">
                                                 <div class="input-area wid400">
                                                     <input type="text" disabled placeholder="">
                                                 </div>  
@@ -412,10 +424,14 @@
                     <div class="table-wrap">
                         <table class="table-body-only">
                             <caption class="ir-text">기업정보수정 표</caption>
-                            <colgroup>
+                            <colgroup class="pc-cell">
                                 <col style="width: 160px" />
                                 <col />
                             </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>  
                             <tbody>
                                 <tr>
                                     <th scope="row">홈페이지</th>
@@ -435,13 +451,17 @@
                     <div class="table-wrap">
                         <table class="table-body-only">
                             <caption class="ir-text">기업정보수정 표</caption>
-                            <colgroup>
+                            <colgroup class="pc-cell">
                                 <col style="width: 160px" />
                                 <col />
                             </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>  
                             <tbody>
                                 <tr>
-                                    <th scope="row">E-mail 수신</th>
+                                    <th scope="row">E-mail <br class="mo-only">수신</th>
                                     <td>
                                         <div class="flex gap10">
                                             <label class="radio-item">
@@ -458,7 +478,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">SMS 수신</th>
+                                    <th scope="row">SMS <br class="mo-only">수신</th>
                                     <td>
                                         <div class="flex gap10">
                                             <label class="radio-item">
@@ -477,7 +497,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="button-area flex-justify-between mt-32">
+                    <div class="button-area flex-justify-between mo-button-full mt-32">
                         <div>                            
                             <a href="#" class="btn btn-secondary btn-md">탈퇴하기</a>
                         </div>

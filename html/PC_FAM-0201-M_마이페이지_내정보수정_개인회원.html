@@ -160,13 +160,17 @@
                 </div>
                 <!-- //page-title-wrap -->
                 <div class="content-section">
-                    <div class="table-wrap">
+                    <div class="table-wrap mt-0">
                         <table class="table-body-only">
                             <caption class="ir-text">개인정보수정 표</caption>
-                            <colgroup>
+                            <colgroup class="pc-cell">
                                 <col style="width: 160px" />
                                 <col />
                             </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>                            
                             <tbody>
                                 <tr>
                                     <th scope="row">이름</th>
@@ -208,39 +212,47 @@
                                 <tr>
                                     <th scope="row">휴대폰</th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid120">
-                                                <select title="선택하세요">
-                                                    <option>010</option>
-                                                </select>
-                                            </div> 
-                                            <div class="dash">-</div> 
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
+                                        <div class="input-group phone-group">
+                                            <div class="items1">
+                                                <div class="input-area wid120">
+                                                    <select title="선택하세요">
+                                                        <option>010</option>
+                                                    </select>
+                                                </div> 
+                                                <div class="dash">-</div> 
                                             </div>
-                                            <div class="dash">-</div>  
-                                            <div class="input-area wid120">
-                                                <input type="text" placeholder="1234">
-                                            </div>                                            
+                                            <div class="items2">
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>
+                                                <div class="dash">-</div>  
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                            </div>                                         
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">이메일</th>
                                     <td>
-                                        <div class="input-group">
-                                            <div class="input-area wid200">
-                                                <input type="text" placeholder="1234">
-                                            </div>   
-                                            <div class="dash">@</div> 
-                                            <div class="input-area wid200">
-                                                <select title="선택하세요">
-                                                    <option>직접입력</option>
-                                                </select>
-                                            </div>                                            
-                                            <div class="input-area wid200">
-                                                <input type="text" placeholder="email.com">
-                                            </div>                                                                                      
+                                        <div class="input-group email-group">
+                                            <div class="items1">
+                                                <div class="input-area wid200">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                                <div class="dash">@</div> 
+                                            </div>
+                                            <div class="items2">
+                                                <div class="input-area wid200">
+                                                    <select title="선택하세요">
+                                                        <option>직접입력</option>
+                                                    </select>
+                                                </div>                                            
+                                                <div class="input-area wid200">
+                                                    <input type="text" placeholder="email.com">
+                                                </div>   
+                                            </div>                                                                                   
                                         </div>                                        
                                     </td>
                                 </tr>   
@@ -248,15 +260,15 @@
                                     <th scope="row">주소</th>
                                     <td>
                                         <div class="address-wrap">
-                                            <div class="input-group">
+                                            <div class="input-group post-code">
                                                 <div class="input-area wid200">
                                                     <input type="text" placeholder="">
                                                 </div>  
                                                 <button type="button" class=" btn btn-primary btn-xsm">
-                                                    우편번호
+                                                    우편번호 검색
                                                 </button>
                                             </div>
-                                            <div class="input-group">
+                                            <div class="input-group add-input">
                                                 <div class="input-area wid400">
                                                     <input type="text" disabled placeholder="">
                                                 </div>  
@@ -270,7 +282,7 @@
                                 <tr>
                                     <th scope="row">가입경로</th>
                                     <td>
-                                        <div class="input-area wid400">
+                                        <div class="input-area mo-size wid400">
                                             <select title="선택하세요">
                                                 <option>직접입력</option>
                                             </select>
@@ -279,10 +291,10 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        가입동기 및<br>희망 분야
+                                        가입동기 및<br>희망분야
                                     </th>
                                     <td>
-                                        <div class="input-area wid400">
+                                        <div class="input-area mo-size wid400">
                                             <select title="선택하세요">
                                                 <option>직접입력</option>
                                             </select>
@@ -300,7 +312,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">나의 관심 50+</th>
+                                    <th scope="row">나의<br class="mo-only"> 관심 50+</th>
                                     <td>
                                         <div class="interest-grid">
                                             <div class="check-wrap"><input type="checkbox" id="interest_all"><label for="interest_all"><span>전체</span></label></div>
@@ -329,7 +341,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">주된 직업군</th>
+                                    <th scope="row">주된 <br class="mo-only">직업군</th>
                                     <td>
                                         <div class="job-group-grid">
                                             <label class="radio-item">
@@ -423,7 +435,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="button-area flex-justify-between mt-32">
+                    <div class="button-area flex-justify-between mo-button-reverser mt-32">
                         <div>
                             <a href="#" class="btn btn-secondary btn-md">연계 철회하기</a>
                             <a href="#" class="btn btn-secondary btn-md">탈퇴하기</a>

@@ -573,10 +573,10 @@ body {
     background-color: #4F6793;
     color: var(--color-white);
 }
-.tab-content {
+.tab-container-full .tab-content {
     display: none;
 }
-.tab-content.is-active {
+.tab-container-full .tab-content.is-active {
     display: inline-flex;
 }
 @media (max-width: 768px) {
