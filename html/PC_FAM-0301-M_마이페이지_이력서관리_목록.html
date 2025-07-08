@@ -147,25 +147,167 @@
                         <li class="font-body-style4">
                             마이페이지
                         </li>
+                        <li class="font-body-style4">
+                            이력서 관리
+                        </li>                        
                     </ol>
                 </div>
                 <!-- //location -->
-                <div class="page-title-wrap">
-                    <div class="page-title">
-                        <div class="h1-title">마이페이지</div>
+                <div class="job-search-condition-board">
+                    <div class="sub-text">홍길동님은</div>
+                    <div class="main-text-wrap">
+                        현재 <strong>“구직 희망 중”</strong> 상태입니다. 
+                        <button type="button" class="btn btn-gray btn-md">
+                            구직상태 변경하기
+                        </button>
                     </div>
+                    <div class="job-keyword-wrap">
+                        <div class="job-keyword"><span>주된 직업군</span> 숙박/음식/여행/스포츠/경비청소</div>
+                        <div class="job-keyword"><span>주소지</span> 마포구</div>
+                    </div>
+                </div>
+                <div class="box-type bg-primary type-left mt-24">
+                    <ul class="list-type-dot">
+                        <li>구직상태가 “구직 희망 중” 또는 “이직 고려 중”일 경우 일자리 몽땅에서 제공하는 일자리 추천을 받으실 수 있습니다.</li>
+                        <li class="mt-16">“주된 직업 군”과 “거주지(주소지)”는 일자리 추천 시 활용되는 정보이므로 맞춤 일자리 추천을 위해 정확히 입력해 주세요.</li>
+                    </ul>
                 </div>
                 <!-- //page-title-wrap -->
                 <div class="content-section">
-                    <div class="button-area flex-direction gap10">
-                        <a href="#" class="btn btn-primary btn-md" onclick="openModal(event)" modal-id="modal001">                
-                            FAM-0204-P_회원탈퇴팝업
-                        </a>
-                        <a href="#" class="btn btn-primary btn-md"  onclick="openModal(event)" modal-id="modal002">                
-                            FAM-0205-P_구직상태변경팝업
-                        </a>
+                    <div class="resume-list-header">
+                        <h3>나의 이력서 목록</h3>
+                        <p class="resume-count">총 3건의 작성된 이력서가 있습니다.</p>
+                        <button class="btn btn-line-box btn-sm btn-updata">
+                            <i class="ico ico-refresh"></i>
+                            오늘 날짜로 업데이트
+                        </button>
                     </div>
-
+                    <section class="resume-list-section">    
+                        
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div class="last-updata-text">최근 업데이트 : 2023.04.01</div>
+                                <div class="resume-card-body-top">
+                                    <h4 class="resume-title">홍길동의 경영사무 이력서 입니다.</h4>
+                                    <div class="resume-controls">
+                                        <div class="representative-switch">
+                                            <span class="switch-label">대표</span>
+                                            <label class="switch-container">
+                                                <input type="radio" id="switch1" name="representative-resume" class="switch-input" checked>
+                                                <div class="switch-bg"><div class="switch-handle"></div></div>
+                                            </label>
+                                        </div>
+                                        <button class="btn btn-only-icon"><i class="ico ico-h-dot"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-card-body">
+                                <div class="resume-card-body-main">
+                                    <div class="progress-section">
+                                        <div class="progress-data">
+                                            <div class="progress-text">
+                                                완성도
+                                            </div>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 71%;"></div>
+                                            </div>
+                                            <div class="percentage">71%</div>
+                                        </div>
+                                        <div class="progress-subtext">(높은 이력서 완성도는 더 많은 맞춤형 일자리 추천을 받으실 수 있습니다.)</div>
+                                    </div>
+                                    <div class="keywords-section">
+                                        <p class="keywords-title">이력서 키워드</p>
+                                        <div class="keywords-tag-list">
+                                            <button type="button" class="keyword-tag">총 13년10개월</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-card-footer">
+                                <button class="btn btn-secondary btn-md">미리보기</button>
+                                <button class="btn btn-primary btn-md">
+                                    <i class="ico ico-pen-wt"></i>    
+                                    수정하기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div class="last-updata-text">최근 업데이트 : 2023.04.01</div>
+                                <div class="resume-card-body-top">
+                                    <h4 class="resume-title">홍길동의 경영사무 이력서 입니다.</h4>
+                                    <div class="resume-controls">
+                                        <div class="representative-switch">
+                                            <span class="switch-label">대표</span>
+                                            <label class="switch-container">
+                                                <input type="radio" id="switch1" name="representative-resume" class="switch-input" checked>
+                                                <div class="switch-bg"><div class="switch-handle"></div></div>
+                                            </label>
+                                        </div>
+                                        <button class="btn btn-only-icon"><i class="ico ico-h-dot"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-card-body">
+                                <div class="resume-card-body-main">
+                                    <div class="progress-section">
+                                        <div class="progress-data">
+                                            <div class="progress-text">
+                                                완성도
+                                            </div>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 71%;"></div>
+                                            </div>
+                                            <div class="percentage">71%</div>
+                                        </div>
+                                        <div class="progress-subtext">(높은 이력서 완성도는 더 많은 맞춤형 일자리 추천을 받으실 수 있습니다.)</div>
+                                    </div>
+                                    <div class="keywords-section">
+                                        <p class="keywords-title">이력서 키워드</p>
+                                        <div class="keywords-tag-list">
+                                            <button type="button" class="keyword-tag">총 13년10개월</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                            <button type="button" class="keyword-tag">서울/전체</button>
+                                            <button type="button" class="keyword-tag">강동구</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-card-footer">
+                                <button class="btn btn-secondary btn-md">미리보기</button>
+                                <button class="btn btn-primary btn-md">
+                                    <i class="ico ico-pen-wt"></i>    
+                                    수정하기
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Add Resume Card -->
+                        <div class="flex flex-direction align-items-center">
+                            <button type="button" class="add-resume-icon">
+                                <i class="ico ico-plus48"></i>
+                                <p>이력서 추가하기</p>
+                            </button>                           
+                            <p>이력서는 최대 3개까지 작성하실 수 있습니다.</p>
+                        </div>
+    
+                    </section>
+                    <div class="box-type bg-primary type-left mt-40">
+                        <ul class="list-type-dot">
+                            <li>이력서 등록은 최대 3개까지 가능하며, 지원 시 이력서를 선택하여 지원하실 수 있습니다.</li>
+                            <li>대표이력서로 선택된 이력서는 지원 시 자동으로 선택되며, 지원 시 다른 이력서를 선택하여 지원하실 수 있습니다.</li>
+                            <li>‘오늘날짜로 업데이트’버튼을 눌러 작성한 모든 이력서의 최근 업데이트일을 오늘 날짜로 변경하실 수 있습니다.</li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- //content-section -->
                 <div class="bottom-sns-area">
@@ -257,94 +399,6 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
-    <!-- modal -->
-    <div class="modal__wrap--bg cmp-modal" id="modal001">
-        <div class="modal-wrap-container modal-wd1020">
-        <div class="modal-header">
-            <div class="title">회원탈퇴</div>      
-        </div>
-        <div class="modal-body-container">   
-            <h5 class="title-type mt-32">탈퇴하시겠습니까?</h5>
-            <div class="text-box-section mt-8">
-                회원탈퇴 시 아래 사항을 확인해주세요.
-            </div>
-            <div class="border-line-box">
-                <ol class="out-notice-list">
-                    <li>탈퇴 시 해당 아이디의 사용은 불가합니다. 50플러스 포털을 이용하시기 위해서는 다시 회원가입을 진행하셔야 합니다.</li>
-                    <li>회원탈퇴 후 개인정보는 개인정보 처리방침에 따라 즉시 폐기됩니다.</li>
-                    <li>활동정보(강좌 수강정보, 상담정보, 일자리 정보 등)는 활동확인서 등 증빙자료 출력 등을 위해 유지되며, 활동정보 외 데이터는 탈퇴 시 즉시 폐기되어, 새로 회원가입한 아이디로 연동은 불가합니다.</li>
-                </ol>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-md button-wid150">
-                취소
-            </button>
-            <button type="button" class="btn btn-primary btn-md button-wid150">
-                탈퇴
-            </button>
-        </div>
-        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
-            <i class="ico ico-x-bl"></i>
-        </button>
-        </div>
-    </div>    
-
-    <div class="modal__wrap--bg cmp-modal" id="modal002">
-        <div class="modal-wrap-container modal-wd1020">
-        <div class="modal-header">
-            <div class="title">구직상태 변경</div>      
-        </div>
-        <div class="modal-body-container ht-full">   
-            <div class="text-box-section mt-40">
-                현재 구직활동에 대한 자신의 상태를 설정해주세요.일자리 몽땅에서는 구직을 희망하시는 분들께 우선적으로 알맞은 일자리를 추천해드리고 있습니다.
-            </div>
-            <div class="border-line-box">
-                <ul class="job-search-check">
-                    <li>
-                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_yes" checked><span class="custom-radio"></span>구직 희망 중</label>
-                        <div class="box-type bg-primary type-left">
-                            <ul class="list-type-dot">
-                                <li>“적극적으로 구직을 희망합니다!”</li>
-                                <li>일자리 몽땅에서 제공하는 일자리 추천 정보를 수신합니다.</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_think"><span class="custom-radio"></span>이직 고려 중</label>
-                        <div class="box-type bg-primary type-left">
-                            <ul class="list-type-dot">
-                                <li>“괜찮은 일자리가 있으면 생각해 볼게요”</li>
-                                <li>적극적으로 구직을 하고 있지 않지만, 일자리 몽땅에서 제공하는 일자리 추천 정보를 수신합니다.</li>
-                            </ul>
-                        </div>
-                    </li>      
-                    <li>
-                        <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_no"><span class="custom-radio"></span>구직 의사 없음</label>
-                        <div class="box-type bg-primary type-left">
-                            <ul class="list-type-dot">
-                                <li>“현재 구직이 필요하지 않아요. 둘러만 볼게요.”</li>
-                                <li>일자리 몽땅에서 제공하는 일자리 추천 정보를 수신하지 않습니다.</li>
-                            </ul>
-                        </div>
-                    </li>                                   
-                </ul>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-md button-wid150">
-                취소하기
-            </button>
-            <button type="button" class="btn btn-primary btn-md button-wid150">
-                저장하기
-            </button>
-        </div>
-        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
-            <i class="ico ico-x-bl"></i>
-        </button>
-        </div>
-    </div>  
 </body>
 
 </html>
