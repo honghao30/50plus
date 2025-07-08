@@ -2868,6 +2868,88 @@ sub page 체크후  */
     position: absolute;
 }
 
+
+/* 기업지원 */
+   /* 테이블 필수입력값 */
+th .must {
+margin-left: 4px;
+}
+
+/* input 사이즈 공통 */
+.input-size-md {
+width: 286px;
+}
+.input-size-sm {
+width: 120px;
+}
+.input-size-xs {
+width: 80px;
+}
+.input-size-sm input,
+.input-size-xs input,
+.input-size-md input {
+width: 100%;
+}
+
+/* textarea */
+.form-section .textarea-wrap {
+padding: 16px;
+}
+.form-section textarea {
+resize: none;
+font-size: 15px;
+display: block;
+width: 100%;
+height: 83px;
+padding: 16px 12px;
+border-color: var(--color-gray-300);
+border-style: solid;
+border-radius: 4px;
+font-family: var(--font-family-main);
+appearance: none;
+}
+
+/* flex 공통 */
+.align-items-center {
+align-items: center;
+}
+
+/* border 공통 */
+.no-border {
+border: none !important;
+}
+
+/* margin 공통 */
+.mt-16 {
+margin-top: 16px;
+}
+
+/* 추가입력사항 > 마이테이터 */
+.mydata-info-section .description {
+line-height: 24px;
+}
+.mydata-info-section .mydata-example-wrapper {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+.mydata-info-section .mydata-example-wrapper li {
+padding: 24px 16px;
+border-radius: 4px;
+font-weight: 500;
+color: var(--color-primary);
+border: 1px solid var(--color-primary);
+background-color: var(--color-gray-50);
+flex-basis: 280px;
+line-height: 18px;
+}
+.mydata-info-section .mydata-example-wrapper li span:not(:last-child) {
+display: block;
+margin-bottom: 4px;
+}
+
+
+
 /* 공통 */
 
 .mt-0 {
