@@ -30,6 +30,23 @@ const initTabs = (containerSelector, type) => {
 
     const tabMenus = container.querySelectorAll('.tab-menu');
     const tabContents = container.querySelectorAll('.tab-content__wrap .tab-content');
+    const tabMenuWrap = container.querySelector('.scroll-tab');
+
+    const scrollActiveTabIntoView = () => {
+        const activeTab = container.querySelector('.tab-menu.is-active');
+        if (activeTab && tabMenuWrap) {
+            // Only scroll if the container is actually scrollable (on mobile)
+            if (tabMenuWrap.scrollWidth > tabMenuWrap.clientWidth) {
+                activeTab.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        }
+    };
+
+    scrollActiveTabIntoView();
 
     tabMenus.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -47,6 +64,7 @@ const initTabs = (containerSelector, type) => {
                     targetContent.classList.add('is-active');
                 }
             }
+            scrollActiveTabIntoView();
         });
     });
 };

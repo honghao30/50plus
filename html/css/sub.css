@@ -615,7 +615,6 @@
     font-weight: 700;
     padding-bottom: 24px;
     border-bottom: 2px solid var(--color-black);
-    ;
     margin-bottom: 40px;
 }
 
@@ -2705,6 +2704,9 @@ sub page 체크후  */
     .mo-size.wid400 {
         width: 100%;
     }
+    .mo-size.wid200 {
+        width: 100%;
+    }
     .file-input-wrapper.type2 {
         flex-direction: column;
         align-items: flex-start;
@@ -3264,7 +3266,193 @@ appearance: none;
     margin-bottom: 4px;
 }
 
+/* 이력서 관리 팝업 */
+.modal-page-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+.modal-page-title span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+}
 
+.cover-letter-section {
+    font-size: 16px;
+    line-height: 24px;
+}
+.cover-letter-section + .cover-letter-section {
+    margin-top: 16px;
+}
+.cover-letter-section h4 {
+    font-weight: 700;
+}
+
+.cover-letter-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 18px;
+    gap: 10px;
+}
+.history-item-num {
+    font-weight: 700;
+}
+.progress-data.mypage-resumeform {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px auto;
+}
+
+.progress-bar {
+    background-color: #007aff;
+    height: 100%;
+}
+
+.progress-data.mypage-resumeform  .progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+.progress-data.mypage-resumeform .percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007aff;
+}
+.mypage-scroll-type.tab-container-full .tab-menu-wrap {
+    display: flex;
+    align-items: center;
+    gap:4px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+.mypage-scroll-type.tab-container-full .tab-menu-wrap button {
+    white-space: nowrap;
+}
+.box-type-line {
+    border: 1px solid #D8D9DA;
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    margin-top: 16px;    
+}
+.section-wrap {
+    width: 100%;
+}
+.input-group.period-setting .start-day {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.input-group.period-setting {
+    display: flex;
+}
+.progress-section.mypage-resumeform {
+    max-width: 70%;    
+    width: 100%;
+    margin: 40px auto;
+}
+@media (max-width: 768px) {
+    .input-group.period-setting {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    .input-group.period-setting .start-day {
+        width: calc(100% - 20px);
+    }
+    .progress-section.mypage-resumeform {
+        max-width: 100%;    
+        width: 100%;
+        margin: 40px auto;
+    }
+}
+
+.check-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+    padding-bottom: 16px;
+}
+.check-group .check-wrap {
+    width: calc(100% / 5);    
+}
+.check-util {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.multi-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-box-section.resume-area {
+    width: calc(100% - 16px);
+}
+.border-line-box.self-introduction-notice {
+    padding: 16px;
+}
+.self-introduction-notice .tit {
+    color: var(--color-black);    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+.self-introduction-notice .description {
+    color: #666666;
+    margin: 4px 0;
+}
+.self-introduction-notice .butotn-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .check-group .check-wrap {
+        width: calc(50% - 16px);    
+    }
+    .multi-item-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .multi-item-title .check-util {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .self-introduction-notice .butotn-area {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .self-introduction-notice .butotn-area .btn {        
+        font-weight: 400;
+        height: auto;
+        text-align: left;
+    }
+}
 
 /* 공통 */
 

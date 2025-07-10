@@ -309,31 +309,6 @@ body {
     text-decoration: none;
 }
 
-/* --- SIZES --- */
-.btn-lg {
-    height: 96px;
-    font-size: 24px;
-    padding: 0 60px;
-}
-
-.btn-md {
-    height: 56px;
-    font-size: 18px;
-    padding: 0 24px;
-    gap: 8px;
-}
-.btn-xsm {
-    height: 40px;
-    font-size: 14px;
-    padding: 0 16px;
-}
-
-.btn-sm {
-    height: 32px;
-    font-size: 14px;
-    padding: 0 16px;
-}
-
 .btn-form-size {
     height: 42px;
     font-size: 14px;
@@ -504,6 +479,31 @@ body {
     justify-content: center;
 }
 
+/* --- SIZES --- */
+.btn-lg {
+    height: 96px;
+    font-size: 24px;
+    padding: 0 60px;
+}
+
+.btn-md {
+    height: 56px;
+    font-size: 18px;
+    padding: 0 24px;
+    gap: 8px;
+}
+.btn-xsm {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
+.btn-sm {
+    height: 32px;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
 @media (max-width: 768px) {
     .btn {
         border-radius: 4px;
@@ -601,6 +601,7 @@ body {
 }
 .tab-container-full .tab-content.is-active {
     display: inline-flex;
+    width: 100%;
 }
 @media (max-width: 768px) {
     .tab-menu {
@@ -1713,7 +1714,9 @@ body.modal-open {
     word-break: break-word;
     border-bottom: 1px solid var(--color-gray-300);
 }
-
+.table-wrap table tbody th.no-bg {
+    background-color: #fff;
+}
 .table-wrap table tbody td {
     text-align: left;
     font-weight: 500;
