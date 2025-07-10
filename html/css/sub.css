@@ -3164,7 +3164,80 @@ appearance: none;
     gap: 8px;
     margin-bottom: 16px;
 }
+@media (max-width: 768px) {
+    .job-search-condition-board {
+        padding: 0 16px;
+    }
+    .job-search-condition-board .sub-text {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .job-search-condition-board .main-text-wrap {
+        font-size: 22px;
+        line-height: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .job-keyword-wrap {
+        flex-wrap: wrap;
+    }
+    .job-keyword-wrap .job-keyword {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 12px 16px;
+    }
+    .box-type.bg-primary.type-left.mt-24 {
+        margin: 24px 16px;
+    }
+    .btn-updata {
+        margin-top: 16px;
+        position: relative;
+        top: auto;
+    }
 
+    .resume-list-header h3 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .resume-card-header {
+        padding: 32px 0 20px;
+        margin: 0 20px;
+    }
+
+    .resume-card-body-top .resume-title {
+        font-size: 18px;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .resume-card-body {
+        padding: 20px 20px;
+    }
+    .resume-card-body-main {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .progress-section {
+        width: 100%;
+    }
+    .keywords-section {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .keyword-tag {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .add-resume-icon {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .ico.ico-plus48 {
+        width: 32px;
+        height: 32px;
+    }
+}    
 
 /* 추가입력사항 > 마이테이터 */
 .mydata-info-section .description {
