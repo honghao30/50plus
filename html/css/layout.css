@@ -294,6 +294,9 @@ body {
     justify-content: flex-end;
     margin-top: 40px;
 }
+.button-area.flex-start {
+    justify-content: flex-start;    
+}
 
 .btn {
     display: inline-flex;
@@ -385,7 +388,7 @@ body {
     border: 1px solid var(--color-gray-600);
 }
 
-.btn.btn-gray {
+.btn-gray {
     font-size: 18px;
     line-height: 54px;
     padding: 0 20px;
@@ -395,7 +398,7 @@ body {
     border: 0;
     font-weight: 500;
 }
-.btn.btn-gray.btn-md {
+.btn-gray.btn-md {
     font-size: 15px;
     line-height: 15px; 
     height: 40px;

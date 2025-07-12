@@ -68,6 +68,7 @@ const initTabs = (containerSelector, type) => {
         });
     });
 };
+
 const tabMenu = (type = 'full') => {
     if (type === 'sort') {
         // Initializes the tab system that only handles the active state of menus.
