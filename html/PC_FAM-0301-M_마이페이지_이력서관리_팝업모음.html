@@ -167,6 +167,9 @@
                         <a href="#" class="btn btn-primary btn-md"  onclick="openModal(event)" modal-id="modal003">                
                             FAM-0303-P_작성하기합업
                         </a>
+                        <a href="#" class="btn btn-primary  btn-md"  onclick="openModal(event)" modal-id="modal004">자기소개서 예시</a>
+                        <a href="#" class="btn btn-primary  btn-md"  onclick="openModal(event)" modal-id="modal005">사업참여이력</a>
+                        <a href="#" class="btn btn-primary  btn-md" onclick="openModal(event)" modal-id="modal006">교육이수 이력</a>
                     </div>
 
                 </div>
@@ -1528,8 +1531,8 @@
                                     <li>
                                         첫 글자를 시작하기 어려우면 다음 예시를 참고해보세요.
                                         <div class="butotn-area">
-                                            <a href="#" class="btn btn-line-box btn-sm">예시 : 자기소개서 (경영사무직, 재취업용)</a>
-                                            <a href="#" class="btn btn-line-box btn-sm">예시 : 자기소개서 (요양보호사, 중장년 남성, 신규 취업용)</a>
+                                            <button type="button" class="btn btn-line-box btn-sm"  onclick="openModal(event)" modal-id="modal004">예시 : 자기소개서 (경영사무직, 재취업용)</button>
+                                            <button type="button" class="btn btn-line-box btn-sm"  onclick="openModal(event)" modal-id="modal004">예시 : 자기소개서 (요양보호사, 중장년 남성, 신규 취업용)</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -1544,8 +1547,8 @@
                     <li>
                         ‘사업참여 이력’’ 및 ‘교육이수 이력’은 이력서에 자동으로 첨부됩니다.
                         <div class="butotn-area flex gap10 mt-8">
-                            <a href="#" class="btn btn-line-box btn-sm">사업참여이력</a>
-                            <a href="#" class="btn btn-line-box btn-sm">교육이수 이력</a>
+                            <a href="#" class="btn btn-line-box btn-sm"  onclick="openModal(event)" modal-id="modal005">사업참여이력</a>
+                            <a href="#" class="btn btn-line-box btn-sm" onclick="openModal(event)" modal-id="modal006">교육이수 이력</a>
                         </div>
                     </li>
                 </ul>
@@ -1563,7 +1566,237 @@
             <i class="ico ico-x-bl"></i>
         </button>
         </div>
-    </div>      
+    </div>  
+    
+    <div class="modal__wrap--bg cmp-modal" id="modal004">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">자기소개서 예시</div>      
+        </div>
+        <div class="modal-body-container ht-full">   
+            <div class="box-type bg-primary block text-l mt-40">
+                ※ 예시용 자기소개서는 백지에 첫 문장을 작성하시기 어려운 분들을 위한 참고용으로 가상의 조건을 설정해 작성된 내용이오니, <span class="color-hilight">반드시 참고용으로만 확인해</span> 주세요
+            </div>         
+            
+            <h3 class="section-title color-primary mt-40">자기소개서 예시 (경영사무직, 재취업용)</h3>
+            <div class="table-wrap mt-16">
+                <table class="table-body-only">
+                    <colgroup>
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cover-letter-section">
+                                    <h4>1. 성장과정 및 성격의 장단점</h4>
+                                    <p>20여 년 이상을 직장 생활 속에서 보내며 성실과 책임감을 가장 중요한 가치로 여겨왔습니다. 조직생활에 있어서 가장 필요한 자질은 신뢰와 책임이라 믿으며, 주어진 역할에 묵묵히 최선을 다하는 태도로 주변 동료 및 상사들과의 원만한 관계를 유지해왔습니다. 한편, 지나치게 꼼꼼하고 완벽을 추구하려는 성향은 때로는 의사결정을 지연시키기도 했지만, 다양한 프로젝트를 수행하며 속도와 효율의 균형을 맞추는 노하우도 함께 체득했습니다.</p>
+                                </div>
+                                <div class="cover-letter-section">
+                                    <h4>2. 경영사무 분야에서의 주요 경력 및 역량</h4>
+                                    <p>저는 OO기업 경영지원팀에서 15년 이상 근무하며 총무, 인사, 문서관리, 회계체 운영, 대외행정 대응 등 다양한 사무행정 업무를 수행해왔습니다. 특히 임직원 복리후생 제도 개선, 사내 업무 프로세스 매뉴얼화, 신규 인사시스템 도입 등의 주요 과제를 맡아 성공적으로 마무리하였습니다. 또한 타 부서와의 소통, 외부 기관과의 문서 소통, 예산 집행 업무에서도 꼼꼼하고 책임 있는 태도로 좋은 평가를 받아왔습니다.</p>
+                                </div>
+                                <div class="cover-letter-section">
+                                    <h4>3. 지원 동기 및 입사 후 포부</h4>
+                                    <p>오랜 시간 현장에서의 실무 경험을 바탕으로, 여전히 조직에 기여할 수 있는 부분이 많다고 생각합니다. 특히 귀사는 최근 조직 효율성과 내부 프로세스 정비에 힘을 쏟고 있는 것으로 알고 있으며, 이러한 시점에서 제가 갖고 있는 실행력과 조정 능력, 그리고 실무 중심의 경영지원 역량이 도움이 될 수 있을 것이라 판단하여 지원하게 되었습니다. 입사 후에는 기존 경력에만 의존하지 않고, 변화하는 업무 환경과 디지털 툴에도 유연하게 적응하며, 신뢰할 수 있는 경영사무 지원 파트너로 자리매김하겠습니다.</p>
+                                </div>
+                                <div class="cover-letter-section">
+                                    <h4>4. 지원 동기 및 포부</h4>
+                                    <p>귀 요양기관은 지역 내에서 정성과 인격을 중시하는 돌봄 철학으로 잘 알려져 있으며, 저 역시 사람을 소중히 여기는 마음을 바탕으로 어르신들에게 진심 어린 돌봄을 실천하고 싶습니다. 현장에서 필요한 역할을 겸손하게 배우고, 팀원들과 소통하며 어르신들의 건강하고 따뜻한 일상을 지원하는 든든한 요양보호사가 되겠습니다.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md mo-button-full button-wid150">
+                닫기
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>  
+    
+    <div class="modal__wrap--bg cmp-modal" id="modal005">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">사업참여 이력</div>      
+        </div>
+        <div class="modal-body-container ht-full">   
+            <div class="box-type bg-primary block text-l mt-40">
+                ※서울시 50플러스 재단에서 진행한 사업에 참여한 이력입니다.<br>참여한 이력이 보이지 않을 경우 대표전화 (02-460-5050)으로 문의하여주시기 바랍니다.
+            </div>         
+
+            <h3 class="section-title mt-40">사업 참여이력</h3>
+            <div class="table-wrap mt-16">
+                <table class="table-body-only">
+                    <colgroup class="pc-cell">
+                        <col style="width: 160px;" />
+                        <col />
+                    </colgroup>
+                    <colgroup class="mo-cell">
+                        <col style="width: 88px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" colspan="2">
+                                <div class="history-item">
+                                    <div class="history-item-num">01</div>
+                                    <div class="history-item-subject">
+                                        4050 직업훈련 (2024)
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">세부<br class="mo-only">사업명</th>
+                            <td>4050 직업훈련 (패션샵 매니저)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">공고명</th>
+                            <td>4050직업훈련 「쇼핑몰 패션MD & 샵매니저 과정」 참여자 모집</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">활동기간</th>
+                            <td>2025.04.01 ~ 2025.05.31</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-wrap mt-16">
+                <table class="table-body-only">
+                    <colgroup class="pc-cell">
+                        <col style="width: 160px;" />
+                        <col />
+                    </colgroup>
+                    <colgroup class="mo-cell">
+                        <col style="width: 88px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" colspan="2">
+                                <div class="history-item">
+                                    <div class="history-item-num">01</div>
+                                    <div class="history-item-subject">
+                                        4050 직업훈련 (2024)
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">세부<br class="mo-only">사업명</th>
+                            <td>4050 직업훈련 (패션샵 매니저)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">공고명</th>
+                            <td>4050직업훈련 「쇼핑몰 패션MD & 샵매니저 과정」 참여자 모집</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">활동기간</th>
+                            <td>2025.04.01 ~ 2025.05.31</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md mo-button-full button-wid150">
+                닫기
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>  
+
+    <div class="modal__wrap--bg cmp-modal" id="modal006">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">교육이수 내역</div>      
+        </div>
+        <div class="modal-body-container ht-full">   
+            <div class="box-type bg-primary block text-l mt-40">
+                ※서울시 50플러스 재단에서 진행한 교육에 참여하여 이수완료한 목록입니다.이수를 완료하지 않은 교육 목록(교육 진행 중, 미 이수)은 목록에서 보여지지 않습니다. 참여한 이력이 보이지 않을 경우 대표전화 (02-460-5050)으로 문의하여주시기 바랍니다.
+            </div>         
+
+            
+            <h3 class="section-title mt-40">교육 이수이력</h3>
+            <div class="table-wrap mt-16">
+                <table class="table-body-only">
+                    <colgroup class="pc-cell">
+                        <col style="width: 160px;" />
+                        <col />
+                    </colgroup>
+                    <colgroup class="mo-cell">
+                        <col style="width: 88px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" colspan="2">
+                                <div class="history-item">
+                                    <div class="history-item-num">01</div>
+                                    <div class="history-item-subject">
+                                        [나눔교실] 드론 체험 교실
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">기관</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">
+                                사업년도<br>(학기)
+                            </th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">
+                                학부<br>(이수여부)
+                            </th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">
+                                교육기간
+                            </th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="no-bg">
+                                강사
+                            </th>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md mo-button-full button-wid150">
+                닫기
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>  
+
 </body>
 
 </html>

@@ -3240,6 +3240,9 @@ appearance: none;
         width: 32px;
         height: 32px;
     }
+    .box-type.bg-primary {
+        padding: 16px;
+    }
 }    
 
 /* 추가입력사항 > 마이테이터 */
@@ -3451,7 +3454,140 @@ appearance: none;
         font-weight: 400;
         height: auto;
         text-align: left;
+        padding: 8px 16px;
     }
+    .mo-button-full.button-wid150 {
+        width: 100%;
+    }
+}
+
+/* 상담내역 */
+.consult-container {
+    display: flex;
+    border-top: 2px solid var(--color-black);    
+    gap: 20px;
+    margin: 24px 0;
+    padding-top: 40px;
+    flex-wrap: nowrap;
+}
+
+.consult-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color-primary);
+    border-radius: 32px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(25% - 14px);
+}
+
+.consult-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.consult-header {
+    margin-bottom: 4px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.status-green { 
+    border: 1px solid #00A85A;    
+    background: rgba(0, 168, 90, 0.10);
+    color: #00A85A;
+}
+.status-orange { 
+    border: 1px solid #F1764C;
+    color: #F1764C;
+    background: rgba(241, 118, 76, 0.10);
+}
+.status-blue { 
+    color: #0178FF;
+    border: 1px solid #0178FF;
+    background: rgba(1, 120, 255, 0.10);
+}
+.consult-body {
+    padding: 20px 0;
+}
+.consult-body h4 {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;     
+}
+.consult-date {
+    color: #151515;
+    text-overflow: ellipsis;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px; 
+}
+
+.consult-info {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    border-top: 1px solid #1515154D;
+    padding-top: 16px;
+}
+
+.info-item {
+    display: flex;    
+    align-items: center;
+    gap: 4px;
+}
+
+.info-item .label {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    width: 67px;
+}
+
+.info-item .value {
+    color: #151515;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; 
+}
+.info-item .value::before {
+    content: '';
+    width: 1px;
+    display: inline-flex;
+    height: 12px;
+    background: rgba(21, 21, 21, 0.30);
+    margin-right: 8px;
+}
+@media (max-width: 768px) {
+    .consult-container {
+        overflow-x: auto;
+    }
+    .consult-card {
+        min-width: 330px;        
+    }
+    .table-wrap.scroll-table {
+        overflow-x: auto;
+    }
+    .button-area.mo-harf {
+        justify-content: space-between;
+    }
+    .button-area.mo-harf .btn {
+        width: calc(50% - 3px);
+    }
+}
+.page-title.bottom-line {
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 16px;
+    width: 100%;
 }
 
 /* 공통 */
@@ -3473,11 +3609,15 @@ appearance: none;
 .mt-24 {
     margin-top: 24px;
 }
-
+.mt-64 {
+    margin-top: 64px;
+}
 .mt-32 {
     margin-top: 32px;
 }
-
+.pt-0 {
+    padding-top: 0;
+}
 .gap10 {
     gap: 10px;
 }
@@ -3505,6 +3645,13 @@ appearance: none;
     padding: 0;
 }
 
+
+.block {
+    display: block !important;
+}
+.text-l {
+    text-align: left !important;
+}
 .flex {
     display: flex;
 }
@@ -3518,10 +3665,6 @@ appearance: none;
     border: none !important;
 }
 
-/* margin 공통 */
-.mt-16 {
-    margin-top: 16px;
-}
 
 .font-bold {
     font-weight: 800;
@@ -3575,4 +3718,11 @@ appearance: none;
     .mo-only {
         display: inline-flex;
     }
+}
+
+.color-hilight {
+    color:#FF4C4C;
+}
+.color-primary {
+    color: var(--color-primary);
 }

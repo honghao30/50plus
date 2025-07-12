@@ -145,7 +145,10 @@ const setModal = (target) => { // target : 모달 아이디
 
 
     setTimeout(() => {
-        target.classList.add('is-active');                
+        target.classList.add('is-active');   
+        if(document.body.classList.contains('modal-open')) {
+            return;
+        }             
         document.body.classList.add('modal-open');
     }, 300);
 }
@@ -155,7 +158,7 @@ const openModal = (event, type) => {
     event.preventDefault();
     const btn = event.currentTarget;
     const modalId = btn.getAttribute('modal-id');
-    console.log(modalId)
+    
     const target = document.getElementById(modalId);
 
     if (target) {     
@@ -182,9 +185,15 @@ document.addEventListener("click", function(e) {
 const closeModal = (event, openButton) => {
     const btn = event.currentTarget;      
     const activeModal = btn.closest('.cmp-modal');  
-    console.log(activeModal)  
+    
+    const totalModal = document.querySelectorAll('.cmp-modal.is-active');
+    const modalLeith = totalModal.length
+
     if (activeModal) {
-        activeModal.classList.remove('is-active')        
+        activeModal.classList.remove('is-active')   
+        if(modalLeith>1) {
+            return;
+        }     
         document.body.classList.remove('modal-open');
         
         setTimeout(() => {

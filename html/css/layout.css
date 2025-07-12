@@ -1723,7 +1723,7 @@ body.modal-open {
     font-size: 16px;
     line-height: 16px;
     vertical-align: middle;
-    padding: 20px 0 20px 16px;
+    padding: 20px 16px;
     border-bottom: 1px solid var(--color-gray-300);
 }
 
