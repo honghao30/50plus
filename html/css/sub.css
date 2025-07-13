@@ -2134,18 +2134,23 @@ sub page 체크후  */
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid var(--color-gray-300);
-    height: 56px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 12px;
     color: var(--font-color-primary);
     font-family: Pretendard;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
+    gap: 8px;
+    overflow: hidden;
 }
-
+.resume-list-dropdown .dropdown-wrap .btn.btn-resume-select:hover {
+    border: 1px solid #D8D9DA;
+    background: #F7F7F7;
+}
 .resume-list-dropdown .dropdown-wrap .btn-resume-select span {
     position: relative;
     color: var(--font-color-accent);
@@ -2174,9 +2179,9 @@ sub page 체크후  */
 .resume-list-dropdown .dropdown-wrap .btn-resume-select::after {
     content: '';
     display: inline-flex;
-    width: 32px;
-    height: 31px;
-    background: url('../img/common/ico-arrow-down-bl.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+    background: url('../img/common/ico_h24_arrow2_down.svg') no-repeat center;
     transition: all 0.3s;
 }
 
@@ -2188,13 +2193,58 @@ sub page 체크후  */
 .dropdown-list.is-open {
     display: flex;
     width: 100%;
+    border-radius: 8px;
     background-color: #fff;
     position: absolute;
     top: 56px;
     left: 0;
     border: 1px solid var(--color-gray-300);
+    overflow: hidden;
+}
+.dropdown-list.mx-ht100 {
+    max-height: 100px;
+    overflow-y: auto;
+}
+.dropdown-list ul {
+    width: 100%;
 }
 
+.dropdown-list ul li button {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    cursor: pointer;
+}
+.dropdown-list ul li:hover,
+.dropdown-list ul li.is-active {
+    background: #F2F8FF;
+}
+.dropdown-list ul li .title {
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.dropdown-list ul li .title span {
+    color: var(--color-secondary-01);
+}
+.dropdown-list ul li .title span::before {
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: var(--color-gray-300);
+    display: inline-flex;
+    margin: 0 8px;
+}
+.dropdown-list ul li .date {
+    color: #999999;
+}
 .must {
     color: var(--color-accent);
     font-weight: 400;

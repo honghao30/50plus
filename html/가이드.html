@@ -392,7 +392,7 @@
                                 없음
                             </label>
                             <label class="radio-item">
-                                <input type="radio" name="education" value="yes">
+                                <input type="radio" name="education" disabled value="yes">
                                 <span class="custom-radio"></span>
                                 있음
                             </label>
@@ -403,7 +403,16 @@
                                 <label for="check1"><span>개인정보의 수집․이용(개인식별정보)에 동의합니다.</span></label>
                             </div>
                         </div>
-
+                        <div class="mt-32 flex gap10 check-list">
+                            <div class="check-wrap">
+                                <input type="checkbox" id="check4" />
+                                <label for="check4"><span>동의</span></label>
+                            </div>
+                            <div class="check-wrap">
+                                <input type="checkbox" disabled id="check2" />
+                                <label for="check2"><span>비동의</span></label>
+                            </div>                            
+                        </div>
                         <div class="mt-32 flex gap10">
                             <div class="input-area">
                                 <input type="text" placeholder="답변을 입력해 주세요.">

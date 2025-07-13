@@ -697,9 +697,16 @@ body {
     border: 1px solid #C2CADB;
     border-radius: 50%;
     position: relative;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s;    
 }
-
+.radio-item.is-dissabled .custom-radio {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.radio-item input[type="radio"]:disabled+.custom-radio {
+    opacity: 0.4;
+    pointer-events: none;
+}
 .radio-item input[type="radio"]:checked+.custom-radio::after {
     content: '';
     position: absolute;
@@ -740,11 +747,12 @@ body {
 
 /* label:before에 체크 된 상태 CSS */
 .check-wrap input[type="checkbox"]:checked+label:before {
-    content: "";
-    border: 1px solid red;
-    background: #fff url(../img/common/icon-check-off.svg) no-repeat center center;
+    content: "";    
+    background: var(--color-secondary) url(../img/common/icon-check-off.svg) no-repeat center center;
 }
-
+.check-wrap input[type="checkbox"]:disabled+label:before {
+    opacity: 0.3;
+}
 @media (max-width: 768px) {
     .radio-item {
         font-size: 15px;

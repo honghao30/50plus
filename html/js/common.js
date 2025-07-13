@@ -13,6 +13,23 @@ const setupDropdowns = () => {
     });
 }
 
+// dropdown list 
+const dropdownList = () => {
+    const dropdownLists = document.querySelectorAll('.dropdown-list li button'); 
+    if(!dropdownLists) {
+        return;
+    }
+    dropdownLists.forEach(list=> {
+        list.addEventListener('click', () => {
+            const listData = list.innerHTML;
+            list.closest('.dropdown-wrap').querySelector('.btn-resume-select').innerHTML = listData;
+            list.closest('.dropdown-wrap').querySelector('.btn-resume-select').classList.remove('is-active');
+            list.closest('.dropdown-list').classList.remove('is-open');
+        })
+    })
+}
+
+
 // footer copy
 const copyDv = () => {
     if(window.innerWidth < 768) {
@@ -304,4 +321,5 @@ document.addEventListener('DOMContentLoaded', () => {
     likeEvent('.like-button');
     moButton();
     moButtonClose()
+    dropdownList()
 });
