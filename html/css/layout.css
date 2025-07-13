@@ -1483,20 +1483,27 @@ body {
     display: none;
 }
 
-.dropdown-list.is-open.is-up {
+.dropdown-list.is-open.footer-family-dropup {
     position: absolute;
     left: 0;
-    bottom: 54px;
+    top: auto;
+    bottom: 59px;
     display: flex;
     flex-direction: column;
-    background: var(--color-white);
+    background: var(--color-black);
+    max-height: 480px;
     width: 100%;
-    gap: 3px;
+    gap: 0px;
+    overflow-y: auto;
 }
 
-.dropdown-list.is-open.is-up a {
+.dropdown-list.is-open.footer-family-dropup a {
     display: block;
-    padding: 7px 13px;
+    padding: 16px 13px;
+    color: var(--color-white);
+    font-size: 16px;    
+    font-weight: 400;
+    line-height: 16px;
 }
 
 .footer .btn-black {
@@ -1565,6 +1572,18 @@ body {
     .footer-mark-area a:nth-child(3) img {
         width: 56px;
     }
+    .footer .footer-family .btn {
+        height: 48px;
+    }
+    .dropdown-list.is-open.footer-family-dropup {
+        left: auto;
+        top: auto;
+        bottom: 59px;
+        max-height: 240px;
+        width: 130%;
+        right: 0;
+    }
+    
 }
 
 /* 팝업 */
