@@ -35,7 +35,7 @@ const copyDv = () => {
     if(window.innerWidth < 768) {
         const origin = document.querySelector('.footer-info .copy')
         origin && origin.classList.add('mt-0');
-        document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
+        document.querySelector('.footer-link') && document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
         origin.remove();
     }
 }

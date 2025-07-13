@@ -1111,7 +1111,10 @@
     background-color: #E3E7FF;
     color: #6566EB;
 }
-
+.job-card .job-tag.type-a {
+    background: #F54B84;
+    color: var(--color-white);
+}
 /* main tag type
 sub page 체크후  */
 .board-section .job-card .job-tag.type4 {
@@ -3417,7 +3420,7 @@ appearance: none;
     font-weight: 700;
     color: #007aff;
 }
-.mypage-scroll-type.tab-container-full .tab-menu-wrap {
+.tab-menu-wrap {
     display: flex;
     align-items: center;
     gap:4px;
@@ -3427,7 +3430,8 @@ appearance: none;
     -ms-overflow-style: none; /* 인터넷 익스플로러 */
     scrollbar-width: none; /* 파이어폭스 */
 }
-.mypage-scroll-type.tab-container-full .tab-menu-wrap button {
+.mypage-scroll-type.tab-container-full .tab-menu-wrap button,
+.tab-menu-wrap.scroll-tab button {
     white-space: nowrap;
 }
 .box-type-line {
@@ -3596,6 +3600,12 @@ appearance: none;
     border: 1px solid #0178FF;
     background: rgba(1, 120, 255, 0.10);
 }
+.status-pink { 
+    color: #FF4C4C;
+    border: 1px solid #FF4C4C;
+    background: rgba(255, 76, 76, 0.10);a(1, 120, 255, 0.10);
+}
+.sta
 .status-darkblue {
     color: #35558F;
     border: 1px solid #35558F;
@@ -3711,6 +3721,11 @@ appearance: none;
 }
 .tab-wid-full.tab-container-full .tab-head {
     gap: 0;
+}
+.tab-menu-wrap.has-bottom-line {
+    border-bottom: 2px solid var(--color-black);
+    width: 100%;
+    padding-bottom: 24px;
 }
 .tab-wid-full.tab-container-full .tab-menu-wrap {
     display: flex;
