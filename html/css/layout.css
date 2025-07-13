@@ -692,6 +692,7 @@ body {
 /* 커스텀 라디오 버튼 스타일 */
 .radio-item .custom-radio {
     display: inline-block;
+    min-width: 20px;
     width: 20px;
     height: 20px;
     border: 1px solid #C2CADB;
@@ -706,6 +707,10 @@ body {
 .radio-item input[type="radio"]:disabled+.custom-radio {
     opacity: 0.4;
     pointer-events: none;
+}
+.radio-item.no-text {
+    width: 24px;
+    margin: 0 auto;
 }
 .radio-item input[type="radio"]:checked+.custom-radio::after {
     content: '';
@@ -985,7 +990,29 @@ body {
     margin-top: -3px;
 }
 
+/* 루띠 애니메이션 */
+#lottie-pc, #lottie-mo {
+    width: 100%;
+    height: auto;
+}
 
+#lottie-mo {
+    display: none;
+}
+#lottie-pc {
+    display: block;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 768px) {
+    #lottie-pc {
+        display: none;
+    }
+    #lottie-mo {
+        display: block;
+    }
+}
+/* //루띠 애니메이션 */
 /* //레이아웃 */
 .header-top__inner {
     width: 100%;
@@ -1806,7 +1833,9 @@ body.modal-open {
 .table-list tbody tr td:first-child {
     border-left: 0;
 }
-
+.table-list tbody tr td.text-c {
+    text-align: center;
+}
 .attachment-link {
     color: #4F6793;
     display: block;

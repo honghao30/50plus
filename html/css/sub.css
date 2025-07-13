@@ -3923,7 +3923,7 @@ appearance: none;
 .align-items-center {
     align-items: center;
 }
-
+.text-l {text-align: left;}
 /* border 공통 */
 .no-border {
     border: none !important;
@@ -3949,6 +3949,10 @@ appearance: none;
 }
 .justify-center {
     justify-content: center;
+}
+.justify-start {
+    justify-content: start;
+    align-items: flex-start !important;
 }
 .pc-cell {
     display: table-column-group;

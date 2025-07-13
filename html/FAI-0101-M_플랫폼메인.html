@@ -17,7 +17,7 @@
   <meta property="og:type" content="post">
   <meta property="og:title" content="2025년 집단상담 프로그램 한눈에 보기">
   <meta property="og:description" content="2025 집단상담 프로그램 한눈에 보기">
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
   <!-- REQUIRED SCRIPTS -->
   <!-- <script src="js/jquery-3.2.1.js"></script> -->
   <!-- Swiper JS -->
@@ -60,11 +60,43 @@
           </nav>
         </div>
         <div class="top-banner-area mo-only">
-          <img src="img/temp/temp-img.png" alt="" />
+              <!-- 모바일용 Lottie 애니메이션 컨테이너 -->
+              <div id="lottie-mo" aria-label="교육 · 문화 모든 정보! 중장년 정보몽땅으로 이동해볼까요?"></div>
         </div>
         <ul class="top-utilmenu">
-          <li>
-            <img src="img/temp/main-ani.svg" alt="" />
+          <li>          
+              <!-- PC용 Lottie 애니메이션 컨테이너 -->
+              <div id="lottie-pc" aria-label="교육 · 문화 모든 정보! 중장년 정보몽땅으로 이동해볼까요?"></div>
+
+              <script>
+                // PC용 Lottie 애니메이션 설정
+                var animationPc = lottie.loadAnimation({
+                    container: document.getElementById('lottie-pc'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    // 제공된 PC JSON 데이터를 여기에 붙여넣으세요.
+                    // 데이터가 너무 길어 여기에 직접 포함하지 않았습니다.
+                    // 아래 path 속성에 JSON 파일 경로를 대신 사용할 수도 있습니다.
+                    path: 'css/50plus_banner_pc.json' // 예시 경로
+                    // animationData: { ... PC JSON 데이터 ... }
+                });
+        
+                // 모바일용 Lottie 애니메이션 설정
+                var animationMo = lottie.loadAnimation({
+                    container: document.getElementById('lottie-mo'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    // 제공된 모바일 JSON 데이터를 여기에 붙여넣으세요.
+                    // 데이터가 너무 길어 여기에 직접 포함하지 않았습니다.
+                    // 아래 path 속성에 JSON 파일 경로를 대신 사용할 수도 있습니다.
+                    path: 'css/50plus_banner_mo.json' // 예시 경로
+                    // animationData: { ... 모바일 JSON 데이터 ... }
+                }); 
+        
+            </script>  
+            <!-- <img src="img/temp/main-ani.svg" alt="" /> -->
           </li>
           <!-- 로그인 전
           <li>

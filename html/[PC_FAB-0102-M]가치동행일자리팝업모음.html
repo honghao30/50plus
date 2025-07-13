@@ -170,6 +170,9 @@
                         <a href="#" class="btn btn-primary btn-md" onclick="openModal(event)" modal-id="modal003">
                             FAB-0205-M_가치동행일자리팝업_3추가입력사항
                         </a>
+                        <a href="#" class="btn btn-primary btn-md" onclick="openModal(event)" modal-id="modal004">
+                            FAB-0205-M_가치동행일자리팝업_3추가입력사항_희망활동처검색팝업
+                        </a>
                     </div>
 
 
@@ -691,6 +694,15 @@
                             </table>
                         </div>
                     </div>
+                    <div class="box-type bg-primary mt-32 flex-direction justify-start">
+                        <h3 class="section-title">공공마이데이터</h3>
+                        <div class="description text-l mt-16">
+                            공공마이데이터 인증과정을 통해 각종 증빙서류들을 파일첨부없이 증빙합니다.(4대 사회보험료 완납증명서, 사업자등록증명,<br class="mo-only"> 표준재무제표증명(개인), 주민등록표 등초본)
+                        </div>
+                        <div class="button-area mt-8">
+                            <a href="#" class="btn btn-line-box btn-sm">신청하기</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -705,6 +717,211 @@
                 <i class="ico ico-x-bl"></i>
             </button>
         </div>
+    </div>
+
+    <div class="modal__wrap--bg cmp-modal " id="modal004">
+        <div class="modal-wrap-container modal-wd1020">
+            <div class="modal-header">
+                <div class="title">희망 활동처 검색</div>
+            </div>
+            <div class="modal-body-container ht-full">
+                <div class="border-line-box">
+                    <div class="table-wrap mt-0">
+                        <table class="table-body-only">
+                            <colgroup class="pc-cell">
+                                <col style="width: 160px" />
+                                <col />
+                            </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="row">시설 분야</th>
+                                    <td>
+                                        <div class="input-area mo-size wid200">
+                                            <select title="선택하세요">
+                                                <option value="">선택해주 세요</option>
+                                                <option value="1">활동처 A</option>
+                                                <option value="2">활동처 B</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="row">주소지</th>
+                                    <td>
+                                        <div class="input-area wid100p">
+                                            <input type="text" placeholder="답변을 입력해 주세요.">
+                                        </div>
+                                    </td>
+                                </tr>        
+                                <tr>
+                                    <th class="row">활동처명</th>
+                                    <td>
+                                        <div class="input-area wid100p">
+                                            <input type="text" placeholder="답변을 입력해 주세요.">
+                                        </div>
+                                    </td>
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-32">
+                    <h3 class="section-title">활동처 목록추가</h3>
+                    <div class="table-wrap scroll-table">
+                        <table class="table-list">
+                            <colgroup class="pc-cell">
+                                <col style="width: 10%;" />
+                                <col style="width: 10%;" />
+                                <col style="width: 25%;" />                                
+                                <col style="width: 15%;" />                                
+                                <col style="width: 15%;" />                                
+                                <col style="width: 25%;" />                                
+                            </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 80px;" />
+                                <col style="width: 100px;"  />
+                                <col style="width: 280px;"  />        
+                                <col style="width: 100px;" />
+                                <col style="width: 100px;"  />
+                                <col style="width: 280px;"  />                          
+                            </colgroup>                            
+                            <thead>
+                                <tr>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">활동처명</th>
+                                    <th scope="col">시설 분류</th>
+                                    <th scope="col">권역</th>
+                                    <th scope="col">주소지</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-c">
+                                        <label class="radio-item no-text">
+                                            <input type="radio" name="active" value="1" id="" checked>
+                                            <span class="custom-radio"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-c">1</td>
+                                    <td>구세군 강북종합사회복지관</td>
+                                    <td class="text-c">복지관</td>
+                                    <td class="text-c">북부</td>
+                                    <td>서울특별시 강북구 인수봉로20가길 24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-md button-wid150">
+                    닫기
+                </button>
+                <button type="button" class="btn btn-primary btn-md button-wid150">
+                    등록
+                </button>
+            </div>
+            <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+                <i class="ico ico-x-bl"></i>
+            </button>
+        </div>
+        
     </div>
     <!-- --modal -->
 </body>
