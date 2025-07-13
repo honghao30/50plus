@@ -190,6 +190,133 @@ td .list-style-type-none li {
 }
 
 
+/* 공통 */
+.pb-24 {
+  padding-bottom: 24px !important;
+}
+.text-color-gray-700 {
+  color: #666 !important;
+}
+
+
+/* 캠퍼스위치 */
+.center-table td:nth-last-child(1),
+.center-table td:nth-last-child(2),
+.center-table td:nth-last-child(4) {
+  text-align: center;
+}
+.subway-line {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.s-line-1 {
+  background-color: #153275;
+}
+.s-line-2 {
+
+}
+.s-line-3 {
+  background-color: #EC7E35;
+}
+.s-line-4 {
+  background-color: #3795CB;
+}
+.s-line-5 {
+  background-color: #67348F;
+}
+.s-line-6 {
+  background-color: #8E4D2E;
+}
+.s-line-7 {
+  background-color: #516E3F;
+}
+.s-line-kyung {
+  background-color: #53B5BD;
+}
+.s-line-airline {
+  background-color: #39507D;
+}
+
+td.no-padding {
+  padding: 0 !important;
+}
+td .bus-map {
+  padding-top: 0 !important;
+}
+td .bus-map li {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0 !important;
+}
+td .bus-map li.col {
+  flex-direction: column;
+  padding: 16px;
+  align-items: flex-start;
+}
+td .bus-map li.col div::before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #333;
+  vertical-align: middle;
+}
+td .bus-map li:not(:last-child) {
+  border-bottom: 1px solid #D8D9DA;
+}
+.bus-map li::before {
+  display: none;
+}
+.bus-line {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.b-line-1 {
+  background-color: #0178FF;
+}
+.b-line-1-text {
+  color: #0178FF;
+}
+.b-line-2 {
+  background-color: #0C9C4D;
+}
+.b-line-2-text {
+  color: #0C9C4D;
+}
+.b-line-3 {
+  background-color: #53C75B;
+}
+.b-line-3-text {
+  color: #53C75B;
+}
+.b-line-4 {
+  background-color: #FF4C4C;
+}
+.b-line-4-text {
+  color: #FF4C4C;
+}
+.bus-map span[class*='-text']::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #D8D9DA;
+  margin: 0 8px;
+}
+
 @media (max-width: 768px) {  
   /* 기업 - 기업지원 안내 */
   .corporation-area {
