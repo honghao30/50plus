@@ -3827,7 +3827,12 @@ appearance: none;
     font-weight: 700;
     line-height: 18px;
 }
-
+.highlight-num {
+    color: var(--color-secondary-01);
+}
+.table-wrap table tbody td.text-r {
+    text-align: right;
+}
 @media (max-width: 768px) {
     .active-board-container {
         margin-top: 60px;        
@@ -3889,6 +3894,9 @@ appearance: none;
 }
 .pt-0 {
     padding-top: 0;
+}
+.pdl-16 {
+    padding-left: 16px;
 }
 .gap10 {
     gap: 10px;
