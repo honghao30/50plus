@@ -3888,6 +3888,111 @@ appearance: none;
     max-width: 300px;
 }
 
+/* 캘린더 초기화 */
+.fc-button-group {
+    gap: 4px;
+}
+.fc-button-group .fc-button {
+    display: flex;
+    height: 48px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #D8D9DA;
+    background: #FFF;
+    color: #151515;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.fc-button-group .fc-button:hover {
+    border-radius: 8px;
+    border: 1px solid #D8D9DA;
+    background: #FFF;
+    color: var(--color-black);
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-left: 0px;
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.fc-button-group .fc-button.fc-button-active {
+    border-radius: 8px;
+    background-color: var(--color-primary);
+}
+.fc .fc-today-button,
+.fc .fc-next-button,
+.fc .fc-prev-button {
+    background-color: #E1E6F1;
+    color: #151515;
+}
+.fc .fc-button-primary:focus {
+    box-shadow: none;
+}
+.fc-theme-standard th .fc-scrollgrid-sync-inner a  {
+    display: flex;
+    height: 48px;
+    padding: 12px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fc-day.fc-day-sat,
+.fc-day.fc-day-sun {
+    background: #F8F8F8;
+}
+.fc .fc-daygrid-day-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.fc-theme-standard th {
+    border-top: 0;
+}
+.fc-theme-standard .fc-scrollgrid {
+    border: 0;
+}
+.fc-theme-standard td, .fc-theme-standard th {
+    border-right: 0;
+}
+.fc-daygrid-event-dot {
+    display: none;
+}
+.fc-event {    
+    padding: 8px;
+    border-radius: 4px;
+    background: rgba(205, 229, 255, 0.70);    
+    /* margin-left: 12px;
+    margin-right: 12px; */
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    width: calc(100% - 12px);
+    margin: 0 auto;
+}
+
+.fc-event-time {
+    color: #4F6793;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.fc-event-title {
+    color: #4F6793;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.fc-event-title.fc-sticky {
+    color: #fff;
+}
+
 /* 공통 */
 .mt-0 {
     margin-top: 0;
