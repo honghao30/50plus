@@ -1069,7 +1069,12 @@
 .job-card.is-ing:hover .status-button.apply {
     background-color: #F1764C;
 }
-
+.job-card-grid.grid-3 {
+    padding-left: 12px;
+}
+.job-card-grid.grid-3 .job-card {
+    width: calc((100% / 3) - 20px);
+}
 .job-card .card-header {
     display: flex;
     /* justify-content: space-between; */
@@ -2279,7 +2284,7 @@ sub page 체크후  */
 
 /* 폼 섹션 스타일 */
 
-.form-section .section-title {
+.section-title {
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
@@ -3864,6 +3869,24 @@ appearance: none;
     }
 }
 
+.search-my-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 505px;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.input-group.jumin {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+}
 
 /* 공통 */
 .mt-0 {
@@ -3919,6 +3942,9 @@ appearance: none;
 }
 .wid200 {
     width: 200px;
+}
+.wid300 {
+    width: 300px;
 }
 .wid400 {
     width: 400px;
