@@ -398,11 +398,11 @@ body {
     border: 0;
     font-weight: 500;
 }
-.btn-gray.btn-md {
+/* .btn-gray.btn-md {
     font-size: 15px;
     line-height: 15px; 
     height: 40px;
-}
+} */
 .btn-line-box {
     height: 56px;
     min-width: 79px;
@@ -1748,6 +1748,9 @@ body.modal-open {
 .table-wrap.no-line-mg {
     border-top: 0;
     margin-top: 0;
+}
+.table-wrap.top-line-light  table{
+    border-top: 1px solid #D8D9DA;    
 }
 
 .table-wrap.no-line-mg table {

@@ -7,6 +7,7 @@
     <title>서울시 50플러스포털 | [50+포털]2025년 집단상담 프로그램 한눈에 보기</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/seoul-common-gnb.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <link rel="icon" type="image/png" sizes="192x192" href="img/common/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/common/favicon-32x32.png">
@@ -24,6 +25,7 @@
     <!-- <script src="js/swiper-bundle.min.js"></script> -->
     <!-- common.js -->
     <script src="js/common.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -148,170 +150,267 @@
                             마이페이지
                         </li>
                         <li class="font-body-style4">
-                            이력서 관리
+                            내 커뮤니티
                         </li>                        
                     </ol>
                 </div>
                 <!-- //location -->
-                <div class="job-search-condition-board">
-                    <div class="sub-text">홍길동님은</div>
-                    <div class="main-text-wrap">
-                        <span class="text">
-                            현재 <strong>“구직 희망 중”</strong> 상태입니다. 
-                        </span>
-                        <button type="button" class="btn btn-gray btn-xsm">
-                            구직상태 변경하기
-                        </button>
+                <div class="page-title-wrap">
+                    <div class="page-title">
+                        <div class="h1-title">내 커뮤니티</div>
                     </div>
-                    <div class="job-keyword-wrap">
-                        <div class="job-keyword"><span>주된 직업군</span> 숙박/음식/여행/스포츠/경비청소</div>
-                        <div class="job-keyword"><span>주소지</span> 마포구</div>
-                    </div>
-                </div>
-                <div class="box-type bg-primary type-left mt-24">
-                    <ul class="list-type-dot">
-                        <li>구직상태가 “구직 희망 중” 또는 “이직 고려 중”일 경우 일자리 몽땅에서 제공하는 일자리 추천을 받으실 수 있습니다.</li>
-                        <li class="mt-16">“주된 직업 군”과 “거주지(주소지)”는 일자리 추천 시 활용되는 정보이므로 맞춤 일자리 추천을 위해 정확히 입력해 주세요.
-                            <a href="#" class="btn btn-secondary btn-sm">회원정보 수정</a>
-                        </li>
-                    </ul>
                 </div>
                 <!-- //page-title-wrap -->
                 <div class="content-section">
-                    <div class="resume-list-header">
-                        <h3>나의 이력서 목록</h3>
-                        <p class="resume-count">총 3건의 작성된 이력서가 있습니다.</p>
-                        <button class="btn btn-line-box btn-sm btn-updata">
-                            <i class="ico ico-refresh"></i>
-                            오늘 날짜로 업데이트
-                        </button>
+                    <div class="box-community-top">
+                        <div class="tit">디지털 시니어 봉사단</div>
+                        <div class="description">
+                            디지털 시대, 우리는 멈추지 않습니다! 서울시 50플러스 서부캠퍼스의 '디지털 시니어 봉사단'은 풍부한 경험과 지혜를 바탕으로 디지털 격차 해소에 앞장서는 액티브 시니어들의 모임입니다.
+                        </div>
+                        <div class="button-section">
+                        <a href="#" class="btn btn-primary btn-md">
+                            <i class="ico ico-pen-wt"></i>
+                            커뮤니티 관리
+                        </a>
+                        </div>
                     </div>
-                    <section class="resume-list-section">    
-                        
-                        <div class="resume-card">
-                            <div class="resume-card-header">
-                                <div class="last-updata-text">최근 업데이트 : 2023.04.01</div>
-                                <div class="resume-card-body-top">
-                                    <h4 class="resume-title">홍길동의 경영사무 이력서 입니다.</h4>
-                                    <div class="resume-controls">
-                                        <div class="representative-switch">
-                                            <span class="switch-label">대표</span>
-                                            <label class="switch-container">
-                                                <input type="radio" id="switch1" name="representative-resume" class="switch-input" checked>
-                                                <div class="switch-bg"><div class="switch-handle"></div></div>
-                                            </label>
-                                        </div>
-                                        <button class="btn btn-only-icon"><i class="ico ico-h-dot"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="resume-card-body">
-                                <div class="resume-card-body-main">
-                                    <div class="progress-section">
-                                        <div class="progress-data">
-                                            <div class="progress-text">
-                                                완성도
-                                            </div>
-                                            <div class="progress-bar-container">
-                                                <div class="progress-bar" style="width: 71%;"></div>
-                                            </div>
-                                            <div class="percentage">71%</div>
-                                        </div>
-                                        <div class="progress-subtext">(높은 이력서 완성도는 더 많은 맞춤형 일자리 추천을 받으실 수 있습니다.)</div>
-                                    </div>
-                                    <div class="keywords-section">
-                                        <p class="keywords-title">이력서 키워드</p>
-                                        <div class="keywords-tag-list">
-                                            <button type="button" class="keyword-tag">총 13년10개월</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="resume-card-footer">
-                                <button class="btn btn-secondary btn-md">미리보기</button>
-                                <button class="btn btn-primary btn-md">
-                                    <i class="ico ico-pen-wt"></i>    
-                                    수정하기
-                                </button>
+
+                    <div class="tab-container-full mt-40">
+                        <div class="tab-head">
+                            <div class="tab-menu-wrap box-type">
+                                <button type="button" class="font-body-style3 tab-menu"  data-tab="tab1-con1">Home</button>
+                                <button type="button" class="font-body-style3 tab-menu is-active"  data-tab="tab1-con2">활동소식</button>
+                                <button type="button" class="font-body-style3 tab-menu"  data-tab="tab1-con3">커뮤니티 구성원</button>
                             </div>
                         </div>
-                        <div class="resume-card">
-                            <div class="resume-card-header">
-                                <div class="last-updata-text">최근 업데이트 : 2023.04.01</div>
-                                <div class="resume-card-body-top">
-                                    <h4 class="resume-title">홍길동의 경영사무 이력서 입니다.</h4>
-                                    <div class="resume-controls">
-                                        <div class="representative-switch">
-                                            <span class="switch-label">대표</span>
-                                            <label class="switch-container">
-                                                <input type="radio" id="switch1" name="representative-resume" class="switch-input" checked>
-                                                <div class="switch-bg"><div class="switch-handle"></div></div>
-                                            </label>
+                        <div class="tab-content__wrap box-line">
+                            <div class="tab-content flex-direction"  id="tab1-con1">
+                                <div class="swiper mySwiper type02">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="slider-inner-box">
+                                                <div class="mem-title">지치지 않는 열정의 프로펠러</div>
+                                                <div class="mem-name">홍길동</div>
+                                            </div>
                                         </div>
-                                        <button class="btn btn-only-icon"><i class="ico ico-h-dot"></i></button>
+                                        <div class="swiper-slide">
+                                            <div class="slider-inner-box">
+                                                <div class="mem-title">지치지 않는 열정의 프로펠러</div>
+                                                <div class="mem-name">홍길동</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button">
+                                    <button type="button" class="swiper-button-next"><img src="img/common/btn_arrow_right.svg" alt="오른쪽으로"></button>
+                                    <button type="button" class="swiper-button-prev"><img src="img/common/btn_arrow_left.svg" alt="왼쪽으로"></button>              
                                     </div>
                                 </div>
-                            </div>
-                            <div class="resume-card-body">
-                                <div class="resume-card-body-main">
-                                    <div class="progress-section">
-                                        <div class="progress-data">
-                                            <div class="progress-text">
-                                                완성도
-                                            </div>
-                                            <div class="progress-bar-container">
-                                                <div class="progress-bar" style="width: 71%;"></div>
-                                            </div>
-                                            <div class="percentage">71%</div>
+                                <script>
+                                    const swiper1 = new Swiper(".type02", {
+                                    slidesPerView: 1, // 한번에 보여지는 슬라이드 숫자                                    
+                                    spaceBetween: 0,
+                                    loop: true,
+                                    navigation: {
+                                        nextEl: ".type02 .swiper-button-next",
+                                        prevEl: ".type02 .swiper-button-prev",
+                                    },
+                                    });            
+                                </script>
+
+                                <div class="member-detail-wrap">
+                                    <div class="member-photo"></div>
+                                    <div class="member-detail">
+                                        <div class="area-cate">남부캠퍼스</div>
+                                        <div class="tltle">
+                                            디지털 시니어 봉사단
                                         </div>
-                                        <div class="progress-subtext">(높은 이력서 완성도는 더 많은 맞춤형 일자리 추천을 받으실 수 있습니다.)</div>
-                                    </div>
-                                    <div class="keywords-section">
-                                        <p class="keywords-title">이력서 키워드</p>
-                                        <div class="keywords-tag-list">
-                                            <button type="button" class="keyword-tag">총 13년10개월</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
-                                            <button type="button" class="keyword-tag">서울/전체</button>
-                                            <button type="button" class="keyword-tag">강동구</button>
+                                        <div class="table-wrap mt-16 top-line-light">
+                                            <table class="table-body-only">
+                                                <colgroup class="pc-cell">
+                                                    <col style="width: 160px;" />
+                                                    <col />
+                                                </colgroup>
+                                                <colgroup class="mo-cell">
+                                                    <col style="width: 88px;" />
+                                                    <col />                                    
+                                                </colgroup>                            
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">구성원 수</th>
+                                                        <td>
+                                                        
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">대표자</th>
+                                                        <td>
+                                                        
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">홈페이지</th>
+                                                        <td>
+                                                        
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">SNS</th>
+                                                        <td>
+                                                        
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="section-title flex flex-justify-between align-items-center mt-40">
+                                    <div class="font-body-style1">커뮤니티 활동 소식</div>
+                                    <a href="#" class="btn btn-gray btn-sm">더보기</a>
+                                </div>
+                                <div class="related-gallery">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <div class="thumbnail"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="thumbnail"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="thumbnail"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="thumbnail"></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="section-title flex flex-justify-between align-items-center mt-64">
+                                    <div class="font-body-style1">커뮤니티 게시판</div>
+                                    <a href="#" class="btn btn-gray btn-sm">글쓰기</a>
+                                </div>
+                                <div class="table-wrap no-line-mg scroll-table">
+                                    <table class="table-list">
+                                        <caption>수강 강좌 목록</caption>
+                                        <colgroup class="pc-cell">
+                                            <col style="width:10%">
+                                            <col>
+                                            <col style="width:15%">
+                                            <col style="width:15%">
+                                        </colgroup>
+                                        <colgroup class="mo-cell">
+                                            <col style="width:80px">
+                                            <col style="width:450px">
+                                            <col style="width:150px">                                            
+                                            <col style="width:150px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">연번</th>
+                                                <th scope="col">제목</th>
+                                                <th scope="col">작성자</th>
+                                                <th scope="col">작성일</th>                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-c">10</td>
+                                                <td class="text-c">전문가 초청 강연</td>
+                                                <td class="text-c">홍길동</td>
+                                                <td class="text-c">2023-08-22</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-c">10</td>
+                                                <td class="text-c">전문가 초청 강연</td>
+                                                <td class="text-c">홍길동</td>
+                                                <td class="text-c">2023-08-22</td>
+                                            </tr>                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav class="pagination-container mt-24">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled"><a class="page-link btn-page" href="#">&laquo;</a></li>
+                                        <li class="page-item disabled"><a class="page-link btn-page" href="#">&lsaquo;</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item pc-only"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item pc-only"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item pc-only"><a class="page-link" href="#">8</a></li>
+                                        <li class="page-item pc-only"><a class="page-link" href="#">9</a></li>
+                                        <li class="page-item pc-only"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item"><a class="page-link btn-page" href="#">&rsaquo;</a></li>
+                                        <li class="page-item"><a class="page-link btn-page" href="#">&raquo;</a></li>
+                                    </ul>
+                                </nav>  
                             </div>
-                            <div class="resume-card-footer">
-                                <button class="btn btn-secondary btn-md">미리보기</button>
-                                <button class="btn btn-primary btn-md">
-                                    <i class="ico ico-pen-wt"></i>    
-                                    수정하기
-                                </button>
+                            <div class="tab-content flex-direction  is-active" id="tab1-con2">
+                                                    <!-- 게시글 상세 내용 -->
+                                <article class="board-view-wrap">
+                                    <div class="board-view-header">
+                                        <h3>50플러스캠퍼스, 센터 6월 휴관 안내</h3>
+                                    </div>
+                                    <div class="board-sns-share">
+                                        <div class="sns-list">
+                                            <button type="button" class="btn btn-only-icon">
+                                                <i class="ico ico-facebook">
+                                                    <span class="ir-text">페이스북</span></i>
+                                            </button>
+                                            <button type="button" class="btn btn-only-icon">
+                                                <i class="ico ico-kakaotalk">
+                                                    <span class="ir-text">카카오톡</span></i>
+                                            </button>
+                                            <button type="button" class="btn btn-only-icon">
+                                                <i class="ico ico-x-box">
+                                                    <span class="ir-text">X</span></i>
+                                            </button>
+                                            <button type="button" class="btn btn-only-icon">
+                                                <i class="ico ico-band">
+                                                    <span class="ir-text">밴드</span></i>
+                                            </button>
+                                        </div>
+                                        <div class="button-area mt-0 gap10">
+                                            <a href="#" class="btn btn-gray btn-xsm">삭제하기</a>
+                                            <a href="#" class="btn btn-primary btn-xsm">수정하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="board-view-content">
+                                        Editor
+                                    </div>
+                                </article>
+
+                                <!-- 태그, 키워드 정보 -->
+                                <div class="board-view-info">
+                                    <dl>
+                                        <dt>첨부파일</dt>
+                                        <dd>
+                                            <a href="#" class="file-color">파일첨부.hwp</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>TAG</dt>
+                                        <dd><span class="hashtag">#서울시50플러스재단</span></dd>
+                                    </dl>
+                                </div>
+
                             </div>
                         </div>
-                        
-                        <!-- Add Resume Card -->
-                        <div class="flex flex-direction align-items-center">
-                            <button type="button" class="add-resume-icon">
-                                <i class="ico ico-plus48"></i>
-                                <p>이력서 추가하기</p>
-                            </button>                           
-                            <p>이력서는 최대 3개까지 작성하실 수 있습니다.</p>
-                        </div>
-    
-                    </section>
-                    <div class="box-type bg-primary type-left mt-40">
-                        <ul class="list-type-dot">
-                            <li>이력서 등록은 최대 3개까지 가능하며, 지원 시 이력서를 선택하여 지원하실 수 있습니다.</li>
-                            <li>대표이력서로 선택된 이력서는 지원 시 자동으로 선택되며, 지원 시 다른 이력서를 선택하여 지원하실 수 있습니다.</li>
-                            <li>‘오늘날짜로 업데이트’버튼을 눌러 작성한 모든 이력서의 최근 업데이트일을 오늘 날짜로 변경하실 수 있습니다.</li>
-                        </ul>
                     </div>
+
+
                 </div>
                 <!-- //content-section -->
                 <div class="bottom-sns-area">
