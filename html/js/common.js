@@ -296,6 +296,165 @@ const jobCardTitle = () => {
     }
 };
 
+//gnb nav
+// gnb-sub-list 높이 설정 함수
+const setGnbSubListHeight = () => {
+    const gnbSubLists = document.querySelectorAll('.gnb-sub-list');
+    if(!gnbSubLists.length) {
+        return;
+    }
+    
+    // 각 gnb-sub-list의 자식 li 개수를 구해서 최대값 찾기
+    let maxChildren = 0;
+    gnbSubLists.forEach(subList => {
+        const childrenCount = subList.querySelectorAll('li').length;
+        if(childrenCount > maxChildren) {
+            maxChildren = childrenCount;
+        }
+    });
+    
+    // 최대 자식 개수 × 53px로 높이 계산
+    const calculatedHeight = maxChildren * 53;
+    
+    // 모든 gnb-sub-list에 높이 적용
+    gnbSubLists.forEach(subList => {
+        subList.style.height = `${calculatedHeight}px`;
+    });
+}
+
+const gnbMenu = () => {
+    const gnbList = document.querySelector('.gnb-list');
+    const gnbAreaFull = document.querySelector('.gnb-area-full');
+    const gnbDimBg = document.querySelector('.gnb-dim-bg');
+    
+    if(!gnbList || !gnbAreaFull || !gnbDimBg) {
+        return;
+    }
+
+    // 서브메뉴 열기 함수
+    const openSubMenu = (target) => {
+        gnbDimBg.classList.add('is-active');
+        gnbDimBg.style.top = `${target.offsetTop + 63}px`;
+        gnbList.classList.add('is-active');
+        const subList = document.querySelectorAll('.gnb-sub-list');
+        subList.forEach(item => {
+            item.classList.add('is-active');
+            document.querySelector('.mo-search-area').classList.remove('is-active');
+        });
+    };
+
+    // 서브메뉴 닫기 함수
+    const closeSubMenu = () => {
+        gnbDimBg.classList.remove('is-active');
+        const subList = document.querySelectorAll('.gnb-sub-list');
+        gnbList.classList.remove('is-active');
+        subList.forEach(item => {
+            item.classList.remove('is-active');
+            document.querySelector('.btn-close-search').click();
+        });
+    };
+
+    // 각 GNB 메뉴 항목에 이벤트 추가
+    const gnbItems = gnbList.querySelectorAll('li');
+    gnbItems.forEach(item => {
+        const subMenu = item.querySelector('.gnb-sub-list');
+        if(subMenu) {
+            // 메뉴 항목에 마우스 오버 시 서브메뉴 열기
+            item.addEventListener('mouseenter', () => {
+                openSubMenu(item);
+                document.querySelector('.btn-close-search').click();
+            });
+            item.addEventListener('focusin', () => {
+                openSubMenu(item);
+                document.querySelector('.btn-close-search').click();
+            });
+        }
+    });
+
+    // 전체 GNB 영역에서 마우스가 벗어나면 서브메뉴 닫기
+    gnbAreaFull.addEventListener('mouseleave', () => {
+        closeSubMenu();
+    });
+
+    // GNB dim 배경에서 마우스가 벗어나도 서브메뉴 닫기
+    gnbDimBg.addEventListener('mouseleave', () => {
+        closeSubMenu();
+    });
+}
+
+const gnbSearch = () => {
+    const gnbSearchBtn = document.querySelector('.gnb-list li.search-item button');
+    if(!gnbSearchBtn) {
+        return;
+    }
+    gnbSearchBtn.addEventListener('click', () => {
+        // gnb가 열려있는 상태면 닫기
+        const gnbList = document.querySelector('.gnb-list');
+        const gnbDimBg = document.querySelector('.gnb-dim-bg');
+        
+        if(gnbList && gnbList.classList.contains('is-active')) {
+            // gnb 닫기
+            gnbDimBg.classList.remove('is-active');
+            gnbList.classList.remove('is-active');
+            const subList = document.querySelectorAll('.gnb-sub-list');
+            subList.forEach(item => {
+                item.classList.remove('is-active');
+            });
+        }
+        
+        // 검색창 열기
+        gnbSearchBtn.parentElement.classList.toggle('is-active');
+        document.querySelector('.mo-search-area').classList.toggle('is-active');        
+    })
+}
+const moSearchClose = () => {
+    const moSearchCloseBtn = document.querySelector('.btn-close-search');
+    if(!moSearchCloseBtn) {
+        return;
+    }
+    moSearchCloseBtn.addEventListener('click', () => {
+        document.querySelector('.mo-search-area').classList.remove('is-active');
+        document.querySelector('.gnb-list li.search-item').classList.remove('is-active');
+    })
+}
+
+const moGnb = () => {
+    const moGnbList = document.querySelectorAll('.gnb-list li a');
+    if(!moGnbList) {
+        return;
+    }
+    
+    // 첫 번째 메뉴의 하위메뉴를 기본적으로 열린 상태로 설정
+    const firstMenuItem = document.querySelector('.gnb-list li:first-child');
+    if(firstMenuItem) {
+        firstMenuItem.classList.add('is-active');
+        const firstSubMenu = firstMenuItem.querySelector('.gnb-sub-list');
+        if(firstSubMenu) {
+            firstSubMenu.classList.add('is-active');
+        }
+    }
+    
+    moGnbList.forEach(item => {
+        item.addEventListener('click', () => {
+            // 모든 메뉴의 is-active 클래스 제거
+            const allMenuItems = document.querySelectorAll('.gnb-list li');
+            allMenuItems.forEach(menuItem => {
+                menuItem.classList.remove('is-active');
+                const subMenu = menuItem.querySelector('.gnb-sub-list');
+                if(subMenu) {
+                    subMenu.classList.remove('is-active');
+                }
+            });
+            
+            // 클릭한 메뉴만 활성화
+            item.parentElement.classList.add('is-active');    
+            if(item.nextElementSibling) {
+                item.nextElementSibling.classList.add('is-active');
+            }        
+        })
+    })
+}
+
 // 스크롤 이벤트에 쓰로틀링 적용
 window.addEventListener('scroll', () => {
     if (!timer) {
@@ -309,6 +468,25 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
     copyDv();
     jobCardTitle();
+    if(window.innerWidth > 768) {
+        // PC 모드로 전환 시 모바일 GNB 클래스 제거
+        const allMenuItems = document.querySelectorAll('.gnb-list li');
+        allMenuItems.forEach(menuItem => {
+            menuItem.classList.remove('is-active');
+            const subMenu = menuItem.querySelector('.gnb-sub-list');
+            if(subMenu) {
+                subMenu.classList.remove('is-active');
+            }
+        });
+        
+        gnbMenu()
+        setGnbSubListHeight()
+        gnbSearch()
+        moSearchClose()
+    }
+    if(window.innerWidth < 768) {
+        moGnb()
+    }
 });
 document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
@@ -322,4 +500,13 @@ document.addEventListener('DOMContentLoaded', () => {
     moButton();
     moButtonClose()
     dropdownList()
+    if(window.innerWidth > 768) {
+        gnbMenu()
+        setGnbSubListHeight()
+        gnbSearch()
+        moSearchClose()
+    }
+    if(window.innerWidth < 768) {
+        moGnb()
+    }
 });

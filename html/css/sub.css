@@ -212,7 +212,8 @@
 }
 @media (max-width: 768px) {
     .content-inner-fix.main-job-card-section  {
-        padding: 0 16px;
+        padding: 0 0 0 16px;
+        position: relative;
     }
     .login-guide-msg .main-text {
         font-size: 30px;
@@ -221,12 +222,13 @@
     .login-guide-msg .sub-text {
         font-size: 18px;
         line-height: 24px;
+        padding-right: 16px;
     }
     .login-guide-msg .main-text a {
         line-height: 32px;
     }
     .main-job-card-section .job-card-grid {
-        padding: 24px 6px;        
+        padding: 24px 16px 24px 0;        
     }
     .main-job-card-section .job-card-grid .job-card {
         gap: 0;
@@ -881,6 +883,8 @@
 .filter-column ul li.is-active a,
 .filter-column ul li:hover a {
     color: var(--font-color-accent);
+    display: block;
+    width: 100%;
 }
 
 .filter-column ul li.is-active::before,
@@ -1264,7 +1268,7 @@ sub page 체크후  */
     }
     .main-quick-link .quick-link {
         margin-left: 0;
-        gap: 8px;
+        gap: 16px;
     }
     .main-quick-link .quick-link a {
         width: calc(50% - 9px);
@@ -1278,6 +1282,16 @@ sub page 체크후  */
     .main-quick-link .quick-link a i {
         width: 31px;
         height: 36px;
+    }
+    .main-job-card-section .job-card-grid::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 31px;
+        top:0;
+        right:0;
+        bottom: 0;
+        background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     }
 
 }
@@ -1328,6 +1342,8 @@ sub page 체크후  */
     background-color: #F8F8F8;
     border: 1px solid #D8D9DA;
     border-radius: 20px;
+    padding-bottom: 0;
+    overflow: visible;
 }
 .main-tab .tab-head .tab-menu-wrap button {
     border: 0;
@@ -1373,16 +1389,16 @@ sub page 체크후  */
     height: 30px;
 }
 .main-tab .tab-head .tab-menu-wrap button .ico-main-tab02 {
-    background: url(../img/common/icon-main-tab02.svg) no-repeat;
+    background: url(../img/common/icon-main-tab02.svg) no-repeat center center;
     background-size: 100% auto;
     width: 32px;
     height: 28px;
 }
 .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab01 {
-    background: url(../img/common/icon-main-tab01-on.svg) no-repeat;
+    background: url(../img/common/icon-main-tab01-on.svg) no-repeat center center;
 }
 .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab02 {
-    background: url(../img/common/icon-main-tab02-on.svg) no-repeat;
+    background: url(../img/common/icon-main-tab02-on.svg) no-repeat center center;
 }
 .main-tab .tab-content {
     padding-top: 48px;
@@ -1405,6 +1421,7 @@ sub page 체크후  */
     border-radius: 30px;
     padding: 60px 40px;
     position: relative;
+    width: calc(50% - 19px);
 }
 .content-inner-full.main-board-list .section-inner .main-board-box .title {
     font-family: var(--font-family-gmarket);
@@ -1447,6 +1464,7 @@ sub page 체크후  */
     white-space: nowrap;
     width: 100%;
     display: block;
+    text-overflow: ellipsis;
 }
 .content-inner-full.main-board-list  .board-list li a span {
     display: inline-flex;
@@ -1474,6 +1492,7 @@ sub page 체크후  */
         gap: 30px;
     }
     .content-inner-full.main-board-list .section-inner .main-board-box {
+        width: 100%;
         padding: 48px 16px;
     }
     .content-inner-full.main-board-list .section-inner .main-board-box .btn-more {
@@ -1513,23 +1532,28 @@ sub page 체크후  */
         font-size: 24px;
         line-height: 100%;
     }
-
+    .main-tab .tab-head .tab-menu-wrap button.is-active::after {
+        width: 28px;
+        height: 20px;
+        background-size: contain;
+    }
     .main-tab .tab-head .tab-menu-wrap {
-        border-radius: 16px;
+        border-radius: 20px;
         width: 100%;
     }
     .content-inner-fix.board-section {
-        padding: 48px 16px;
+        padding: 48px 0px;
     }
     .main-tab .tab-head {
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 8px;
+        padding: 0 16px;
     }
     .main-tab .tab-head .tab-menu-title {
         margin-left: 0;
         font-size: 30px;
-        line-height: 50px;
+        line-height: 50px;        
     }
     .main-tab .tab-head .tab-menu-wrap button {
         font-size: 20px;
@@ -1537,20 +1561,37 @@ sub page 체크후  */
         padding: 15px 0;
         width: 50%;
     }
-    .main-tab .tab-head .tab-menu-wrap button .ico-main-tab01,
-    .main-tab .tab-head .tab-menu-wrap button .ico-main-tab02 {
+    .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab01 {
         width: 22px;
+        height: 22px;
+        background-size: contain;
+    }
+    .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab02 {
+        width: 32px;
+        height: 28px;
+        background-size: contain;
     }
     .main-tab .tab-content {
+        position: relative;
         width: 100%;
         overflow-x: auto;
         padding-top: 16px;
     }
     .main-tab .job-card-grid {
-        padding: 24px 0 24px 16px;
+        padding: 24px 24px 16px 16px;        
+    }
+    .main-tab .job-card-grid::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 31px;
+        top:0;
+        right:0;
+        bottom: 0;
+        background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     }
     .main-tab .tab-content .btn-load-more {
-        padding-bottom: 6px;
+        padding-bottom: 16px;
     }
 
 }
