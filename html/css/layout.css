@@ -957,8 +957,13 @@ body {
 .wrap {
     width: 100%;
     min-width: var(--layout-max-width);
+    margin: 0 auto;
 }
-
+@media (max-width: 1440px) {
+    .wrap {
+        min-width: 100%;
+    }
+}    
 @media (max-width: 768px) {
     .wrap {
         min-width: 100%;
@@ -1601,7 +1606,9 @@ body {
     .content-section {
         padding: 64px 20px 64px;
     }
-
+    .content-section.no-padding {
+        padding: 64px 0px 64px;
+    }
     .location {
         height: 48px;
     }

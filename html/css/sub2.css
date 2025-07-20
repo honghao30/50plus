@@ -172,7 +172,14 @@
   flex-basis: 50%;
   margin-top: 0;
 }
-
+.filter-wrapper .filter-options-top .filter-group .filter-list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 160px);
+  background: #fff;   
+}
 /* 줄바꿈 3 line */
 .card-body .title-line.clamp-3-line {
   -webkit-line-clamp: 3;
@@ -373,5 +380,33 @@ td .bus-map li:not(:last-child) {
     background-color: #333;
     vertical-align: middle;
     margin-right: 2px;
+  }
+  .filter-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .filter-wrapper .filter-options-top {
+    display: block;
+    width: 100%;
+  }
+  .filter-wrapper .filter-options-top .filter-group {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .filter-wrapper .filter-options-top .filter-group .filter-list {
+    width: calc(100% - 88px);    
+    padding: 16px;    
+  }
+  .filter-wrapper .filter-options-top .filter-group .filter-list .radio-item {
+    display: inline-flex;
+    width: 90px;
+    white-space: nowrap;
+    align-items: center;
+  }
+  .filter-wrapper .input-group.search {
+    display: block;
+    width: 100%;
   }
 }
