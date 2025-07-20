@@ -1,49 +1,145 @@
+// =========================
+// UTILITY FUNCTIONS
+// =========================
+
+// DOM 유틸리티 - 안전한 element 선택
+const safeQuerySelector = (selector, context = document) => {
+    try {
+        return context.querySelector(selector);
+    } catch (error) {
+        console.warn(`Invalid selector: ${selector}`, error);
+        return null;
+    }
+};
+
+const safeQuerySelectorAll = (selector, context = document) => {
+    try {
+        return context.querySelectorAll(selector);
+    } catch (error) {
+        console.warn(`Invalid selector: ${selector}`, error);
+        return [];
+    }
+};
+
+// 클래스 조작 유틸리티
+const toggleClass = (elements, className, force = undefined) => {
+    if (!elements) return;
+    
+    const elementsArray = Array.isArray(elements) ? elements : [elements];
+    elementsArray.forEach(el => {
+        if (el && el.classList) {
+            if (force !== undefined) {
+                el.classList.toggle(className, force);
+            } else {
+                el.classList.toggle(className);
+            }
+        }
+    });
+};
+
+const addClass = (elements, className) => {
+    toggleClass(elements, className, true);
+};
+
+const removeClass = (elements, className) => {
+    toggleClass(elements, className, false);
+};
+
+// 이벤트 리스너 유틸리티
+const addEventListeners = (elements, event, handler, options = {}) => {
+    if (!elements || !handler) return;
+    
+    const elementsArray = Array.isArray(elements) ? elements : 
+                        elements.length !== undefined ? Array.from(elements) : [elements];
+    
+    elementsArray.forEach(el => {
+        if (el && typeof el.addEventListener === 'function') {
+            el.addEventListener(event, handler, options);
+        }
+    });
+};
+
+// 메뉴 상태 관리 유틸리티
+const resetMenuStates = (menuSelector, activeClass = 'is-active') => {
+    const menus = safeQuerySelectorAll(menuSelector);
+    menus.forEach(menu => {
+        removeClass(menu, activeClass);
+        const subMenu = menu.querySelector('.gnb-sub-list');
+        if (subMenu) {
+            removeClass(subMenu, activeClass);
+        }
+    });
+};
+
+// 조건부 실행 유틸리티
+const executeIfExists = (selector, callback) => {
+    const element = safeQuerySelector(selector);
+    if (element && typeof callback === 'function') {
+        return callback(element);
+    }
+    return null;
+};
+
+// =========================
+// ORIGINAL FUNCTIONS (REFACTORED)
+// =========================
+
 //toggle button
 const setupDropdowns = () => {
-    const toggleTriggers = document.querySelectorAll('.dropdown-wrap button');
-
-    toggleTriggers.forEach(el => {
-        el.addEventListener('click', () => {
-        el.classList.toggle('is-active');
-
-        if (el.nextElementSibling) {
-            el.nextElementSibling.classList.toggle('is-open');
+    const toggleTriggers = safeQuerySelectorAll('.dropdown-wrap button');
+    
+    addEventListeners(toggleTriggers, 'click', (event) => {
+        const button = event.currentTarget;
+        toggleClass(button, 'is-active');
+        
+        if (button.nextElementSibling) {
+            toggleClass(button.nextElementSibling, 'is-open');
         }
-        });
     });
 }
 
 // dropdown list 
 const dropdownList = () => {
-    const dropdownLists = document.querySelectorAll('.dropdown-list li button'); 
-    if(!dropdownLists) {
-        return;
-    }
-    dropdownLists.forEach(list=> {
-        list.addEventListener('click', () => {
-            const listData = list.innerHTML;
-            list.closest('.dropdown-wrap').querySelector('.btn-resume-select').innerHTML = listData;
-            list.closest('.dropdown-wrap').querySelector('.btn-resume-select').classList.remove('is-active');
-            list.closest('.dropdown-list').classList.remove('is-open');
-        })
-    })
+    const dropdownLists = safeQuerySelectorAll('.dropdown-list li button'); 
+    
+    addEventListeners(dropdownLists, 'click', (event) => {
+        const button = event.currentTarget;
+        const listData = button.innerHTML;
+        const dropdownWrap = button.closest('.dropdown-wrap');
+        
+        if (dropdownWrap) {
+            const selectBtn = dropdownWrap.querySelector('.btn-resume-select');
+            const dropdownListEl = dropdownWrap.querySelector('.dropdown-list');
+            
+            if (selectBtn) {
+                selectBtn.innerHTML = listData;
+                removeClass(selectBtn, 'is-active');
+            }
+            if (dropdownListEl) {
+                removeClass(dropdownListEl, 'is-open');
+            }
+        }
+    });
 }
-
 
 // footer copy
 const copyDv = () => {
     if(window.innerWidth < 768) {
-        const origin = document.querySelector('.footer-info .copy')
-        origin && origin.classList.add('mt-0');
-        document.querySelector('.footer-link') && document.querySelector('.footer-link').appendChild(origin.cloneNode(true));
-        origin.remove();
+        const origin = safeQuerySelector('.footer-info .copy');
+        const footerLink = safeQuerySelector('.footer-link');
+        
+        if (origin && footerLink) {
+            addClass(origin, 'mt-0');
+            footerLink.appendChild(origin.cloneNode(true));
+            origin.remove();
+        }
     }
 }
 
 //tab menu sort
 const initTabs = (containerSelector, type) => {
-    const container = document.querySelector(containerSelector);
-    if (!container) return; // Exit if container not found
+    const container = safeQuerySelector(containerSelector);
+    if (!container) return;
 
     const tabMenus = container.querySelectorAll('.tab-menu');
     const tabContents = container.querySelectorAll('.tab-content__wrap .tab-content');
@@ -51,151 +147,125 @@ const initTabs = (containerSelector, type) => {
 
     const scrollActiveTabIntoView = () => {
         const activeTab = container.querySelector('.tab-menu.is-active');
-        if (activeTab && tabMenuWrap) {
-            // Only scroll if the container is actually scrollable (on mobile)
-            if (tabMenuWrap.scrollWidth > tabMenuWrap.clientWidth) {
-                activeTab.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest',
-                    inline: 'center'
-                });
-            }
+        if (activeTab && tabMenuWrap && tabMenuWrap.scrollWidth > tabMenuWrap.clientWidth) {
+            activeTab.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
         }
     };
 
     scrollActiveTabIntoView();
 
-    tabMenus.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Step 1: Always handle the active state for the clicked tab menu.
-            tabMenus.forEach(el => el.classList.remove('is-active'));
-            tab.classList.add('is-active');
+    addEventListeners(tabMenus, 'click', (event) => {
+        const tab = event.currentTarget;
+        
+        // 모든 탭 메뉴에서 active 클래스 제거
+        removeClass(Array.from(tabMenus), 'is-active');
+        addClass(tab, 'is-active');
 
-            // Step 2: Conditionally handle the content panels based on type.
-            if (type !== 'sort') {
-                const targetId = tab.getAttribute('data-tab');
-                const targetContent = container.querySelector(`#${targetId}`);
+        // 탭 콘텐츠 처리 (type이 'sort'가 아닌 경우만)
+        if (type !== 'sort') {
+            const targetId = tab.getAttribute('data-tab');
+            const targetContent = container.querySelector(`#${targetId}`);
 
-                tabContents.forEach(el => el.classList.remove('is-active'));
-                if (targetContent) {
-                    targetContent.classList.add('is-active');
-                }
+            removeClass(Array.from(tabContents), 'is-active');
+            if (targetContent) {
+                addClass(targetContent, 'is-active');
             }
-            scrollActiveTabIntoView();
-        });
+        }
+        scrollActiveTabIntoView();
     });
 };
 
 const tabMenu = (type = 'full') => {
     if (type === 'sort') {
-        // Initializes the tab system that only handles the active state of menus.
         initTabs('.tab-container-sort', 'sort');
     } else {
-        // Initializes the full-featured tab system by default.
         initTabs('.tab-container-full', 'full');
     }
 };
+
 // faq
 const accordion = () => {
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = safeQuerySelectorAll('.faq-item');
+    
     faqItems.forEach(item => {
         const questionButton = item.querySelector('.faq-question');
-        questionButton.addEventListener('click', () => {
-            const isActive = item.classList.contains('is-active');
-            
-            // Optional: Close all other items
-            // faqItems.forEach(otherItem => {
-            //     otherItem.classList.remove('is-active');
-            // });
-
-            // Toggle the clicked item
-            if (!isActive) {
-                item.classList.add('is-active');
-            } else {
-                item.classList.remove('is-active');
-            }
-        });
+        if (questionButton) {
+            questionButton.addEventListener('click', () => {
+                toggleClass(item, 'is-active');
+            });
+        }
     });
 }
 
 // filters
 const filtersSelect = () => {
-    const filterLinks = document.querySelectorAll('.filter-option li a');
+    const filterLinks = safeQuerySelectorAll('.filter-option li a');
 
-    filterLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            const clickedLi = link.parentElement;
-            const parentUl = clickedLi.parentElement;
+    addEventListeners(filterLinks, 'click', (event) => {
+        event.preventDefault();
+        
+        const clickedLi = event.currentTarget.parentElement;
+        const parentUl = clickedLi.parentElement;
 
-            // 같은 그룹(ul) 내의 다른 li에서 is-active 클래스 제거
-            parentUl.querySelectorAll('li').forEach(siblingLi => {
-                siblingLi.classList.remove('is-active');
-            });
-            
-            // 클릭된 li에 is-active 클래스 추가
-            clickedLi.classList.add('is-active');
-        });
+        // 같은 그룹(ul) 내의 다른 li에서 is-active 클래스 제거
+        const siblingLis = parentUl.querySelectorAll('li');
+        removeClass(Array.from(siblingLis), 'is-active');
+        
+        // 클릭된 li에 is-active 클래스 추가
+        addClass(clickedLi, 'is-active');
     });
 }
 
 //하트
-const likeEvent = (el) => {
-    const likeButtons = document.querySelectorAll(el);    
-    likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('is-active');
-        })
-    })
+const likeEvent = (selector) => {
+    const likeButtons = safeQuerySelectorAll(selector);    
+    
+    addEventListeners(likeButtons, 'click', (event) => {
+        toggleClass(event.currentTarget, 'is-active');
+    });
 }
 
 // modal
-const setModal = (target) => { // target : 모달 아이디
-    target = document.getElementById(target);
-    target.style.display = 'flex';
-    // if(target.classList.contains('type-bottom')) {
-    //     const modalHeadHeight = target.querySelector('.modal-header') ? target.querySelector('.modal-header').offsetHeight : 0;
-    //     const modalFootHeight = target.querySelector('.modal-footer') ? target.querySelector('.modal-footer').offsetHeight : 0;
-    //     let modalHeight = modalHeadHeight + modalFootHeight + 50;
-    //     target.querySelector('.modal-cont').style = `--modal-cont-height:${modalHeight}px`;
-    // };
-
+const setModal = (target) => {
+    const targetElement = typeof target === 'string' ? safeQuerySelector(`#${target}`) : target;
+    if (!targetElement) return;
+    
+    targetElement.style.display = 'flex';
 
     setTimeout(() => {
-        target.classList.add('is-active');   
-        if(document.body.classList.contains('modal-open')) {
-            return;
-        }             
-        document.body.classList.add('modal-open');
+        addClass(targetElement, 'is-active');   
+        if (!document.body.classList.contains('modal-open')) {             
+            addClass(document.body, 'modal-open');
+        }
     }, 300);
 }
 window.setModal = setModal;
-// / 모달 열기
+
+// 모달 열기
 const openModal = (event, type) => {    
     event.preventDefault();
     const btn = event.currentTarget;
     const modalId = btn.getAttribute('modal-id');
     
-    const target = document.getElementById(modalId);
-
+    const target = safeQuerySelector(`#${modalId}`);
     if (target) {     
-        setModal(modalId); // ID =`${modal-id}` 에 해당되는 모달 열기
+        setModal(modalId);
     }
 };
 window.openModal = openModal;
+
 // 모달 외부 클릭 이벤트 핸들러
 document.addEventListener("click", function(e) {      
     if (e.target.classList.contains('modal__wrap--bg')) {        
-        // const activeModal = e.target;
         setTimeout(() => {
-            e.target.classList.remove('is-active');
-
-            // activeModal.classList.remove('is-active');
-            document.body.classList.remove('modal-open');     
+            removeClass(e.target, 'is-active');
+            removeClass(document.body, 'modal-open');     
         }, 300);         
         e.target.style.display = 'none';
-        // activeModal.style.display = 'none';
     }
 });
 
@@ -204,111 +274,96 @@ const closeModal = (event, openButton) => {
     const btn = event.currentTarget;      
     const activeModal = btn.closest('.cmp-modal');  
     
-    const totalModal = document.querySelectorAll('.cmp-modal.is-active');
-    const modalLeith = totalModal.length
+    const totalModal = safeQuerySelectorAll('.cmp-modal.is-active');
+    const modalLength = totalModal.length;
 
     if (activeModal) {
-        activeModal.classList.remove('is-active')   
-        if(modalLeith>1) {
-            return;
-        }     
-        document.body.classList.remove('modal-open');
+        removeClass(activeModal, 'is-active');
         
-        setTimeout(() => {
-            activeModal.style.display = 'none';
-        }, 300);
+        if (modalLength <= 1) {     
+            removeClass(document.body, 'modal-open');
+            
+            setTimeout(() => {
+                activeModal.style.display = 'none';
+            }, 300);
+        }
     }
 };
 window.closeModal = closeModal;
 
 const addCloseModalListeners = (target, openButton) => {
     const closeButtons = target.querySelectorAll('.close-modal');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', (event) => closeModal(event, openButton));
-    });
+    addEventListeners(closeButtons, 'click', (event) => closeModal(event, openButton));
 };
 
 // 모바일 버튼
 const moButton = () => {
-    const hamburger = document.querySelector('.btn-hambuger');
-
-    if (!hamburger) {
-        return; 
-    }
-    hamburger.addEventListener('click', () => {
-        const moGnb = document.querySelector('.gnb-area-full');
-        moGnb.classList.add('is-active');
-        document.body.classList.add('modal-open');
-    })
+    executeIfExists('.btn-hambuger', (hamburger) => {
+        hamburger.addEventListener('click', () => {
+            const moGnb = safeQuerySelector('.gnb-area-full');
+            if (moGnb) {
+                addClass(moGnb, 'is-active');
+                addClass(document.body, 'modal-open');
+            }
+        });
+    });
 }
+
 const moButtonClose = () => {
-    const hamburger = document.querySelector('.btn-close-hamburger');
-    if(!hamburger) {
-        return; 
-    }
-    hamburger.addEventListener('click', () => {
-        const moGnb = document.querySelector('.gnb-area-full');
-        moGnb.classList.remove('is-active');
-        document.body.classList.remove('modal-open');
-    })
+    executeIfExists('.btn-close-hamburger', (hamburger) => {
+        hamburger.addEventListener('click', () => {
+            const moGnb = safeQuerySelector('.gnb-area-full');
+            if (moGnb) {
+                removeClass(moGnb, 'is-active');
+                removeClass(document.body, 'modal-open');
+            }
+        });
+    });
 }
 
 // 파일첨부
 function initializeFileInputs() {
-    // 모든 파일 입력(real-file-input) 요소를 찾습니다.
-    const fileInputs = document.querySelectorAll('.real-file-input');
+    const fileInputs = safeQuerySelectorAll('.real-file-input');
 
-    // 찾은 각 파일 입력 요소에 대해 반복 작업을 수행합니다.
-    fileInputs.forEach(function(input) {
-        // 파일 입력 값이 변경될 때(파일이 선택될 때) 'change' 이벤트 리스너를 추가합니다.
-        input.addEventListener('change', function(e) {
-            // 파일이 선택되었는지 확인합니다.
-            if (e.target.files && e.target.files.length > 0) {
-                // 선택된 파일의 이름을 가져옵니다.
-                const fileName = e.target.files[0].name;
-                
-                // 현재 파일 입력 요소의 부모(.file-input-wrapper)를 찾습니다.
-                const wrapper = e.target.closest('.file-input-wrapper');
-                
-                // 부모 요소 내에서 파일 이름을 표시할 텍스트 필드(.display-file-name)를 찾습니다.
-                const display = wrapper.querySelector('.display-file-name');
-                
-                // 텍스트 필드의 값을 선택된 파일 이름으로 변경합니다.
-                if (display) {
-                    display.value = fileName;
-                }
+    addEventListeners(fileInputs, 'change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+            const fileName = e.target.files[0].name;
+            const wrapper = e.target.closest('.file-input-wrapper');
+            const display = wrapper ? wrapper.querySelector('.display-file-name') : null;
+            
+            if (display) {
+                display.value = fileName;
             }
-        });
+        }
     });
 }
 
 let timer; // 타이머 변수를 함수 외부에 선언
 
 const jobCardTitle = () => {
-    const titleArea = document.querySelector('.box-type.job-title');
+    const titleArea = safeQuerySelector('.box-type.job-title');
     if (!titleArea) return;
+    
     const titleOffset = titleArea.offsetTop;
 
     if (window.scrollY > titleOffset) {
-        titleArea.classList.add('is-fixed');
+        addClass(titleArea, 'is-fixed');
     } else {
-        titleArea.classList.remove('is-fixed');
+        removeClass(titleArea, 'is-fixed');
     }
 };
 
 //gnb nav
 // gnb-sub-list 높이 설정 함수
 const setGnbSubListHeight = () => {
-    const gnbSubLists = document.querySelectorAll('.gnb-sub-list');
-    if(!gnbSubLists.length) {
-        return;
-    }
+    const gnbSubLists = safeQuerySelectorAll('.gnb-sub-list');
+    if (!gnbSubLists.length) return;
     
     // 각 gnb-sub-list의 자식 li 개수를 구해서 최대값 찾기
     let maxChildren = 0;
     gnbSubLists.forEach(subList => {
         const childrenCount = subList.querySelectorAll('li').length;
-        if(childrenCount > maxChildren) {
+        if (childrenCount > maxChildren) {
             maxChildren = childrenCount;
         }
     });
@@ -323,171 +378,282 @@ const setGnbSubListHeight = () => {
 }
 
 const gnbMenu = () => {
-    const gnbList = document.querySelector('.gnb-list');
-    const gnbAreaFull = document.querySelector('.gnb-area-full');
-    const gnbDimBg = document.querySelector('.gnb-dim-bg');
+    const gnbList = safeQuerySelector('.gnb-list');
+    const gnbAreaFull = safeQuerySelector('.gnb-area-full');
+    const gnbDimBg = safeQuerySelector('.gnb-dim-bg');
     
-    if(!gnbList || !gnbAreaFull || !gnbDimBg) {
-        return;
-    }
+    if (!gnbList || !gnbAreaFull || !gnbDimBg) return;
 
     // 서브메뉴 열기 함수
     const openSubMenu = (target) => {
-        gnbDimBg.classList.add('is-active');
+        addClass(gnbDimBg, 'is-active');
         gnbDimBg.style.top = `${target.offsetTop + 63}px`;
-        gnbList.classList.add('is-active');
-        const subList = document.querySelectorAll('.gnb-sub-list');
-        subList.forEach(item => {
-            item.classList.add('is-active');
-            document.querySelector('.mo-search-area').classList.remove('is-active');
-        });
+        addClass(gnbList, 'is-active');
+        
+        const subLists = safeQuerySelectorAll('.gnb-sub-list');
+        addClass(Array.from(subLists), 'is-active');
+        
+        // 검색창이 열려있으면 닫기
+        const moSearchArea = safeQuerySelector('.mo-search-area');
+        const searchItem = safeQuerySelector('.gnb-list li.search-item');
+        if (moSearchArea && moSearchArea.classList.contains('is-active')) {
+            removeClass(moSearchArea, 'is-active');
+            if (searchItem) removeClass(searchItem, 'is-active');
+        }
     };
 
-    // 서브메뉴 닫기 함수
+    // 서브메뉴 닫기 함수 (검색창은 별도 처리)
     const closeSubMenu = () => {
-        gnbDimBg.classList.remove('is-active');
-        const subList = document.querySelectorAll('.gnb-sub-list');
-        gnbList.classList.remove('is-active');
-        subList.forEach(item => {
-            item.classList.remove('is-active');
-            document.querySelector('.btn-close-search').click();
-        });
+        removeClass(gnbDimBg, 'is-active');
+        removeClass(gnbList, 'is-active');
+        
+        const subLists = safeQuerySelectorAll('.gnb-sub-list');
+        removeClass(Array.from(subLists), 'is-active');
+    };
+
+    // 검색창이 열려있는지 확인하는 함수
+    const isSearchActive = () => {
+        const moSearchArea = safeQuerySelector('.mo-search-area');
+        return moSearchArea && moSearchArea.classList.contains('is-active');
+    };
+
+    // 마우스가 검색 영역에 있는지 확인하는 함수
+    const isMouseInSearchArea = (event) => {
+        const moSearchArea = safeQuerySelector('.mo-search-area');
+        const searchItem = safeQuerySelector('.gnb-list li.search-item');
+        
+        if (!moSearchArea || !searchItem) return false;
+        
+        // 검색 버튼과 검색 레이어의 경계 상자를 확인
+        const searchRect = moSearchArea.getBoundingClientRect();
+        const buttonRect = searchItem.getBoundingClientRect();
+        
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        
+        // 검색 레이어 영역 또는 검색 버튼 영역에 마우스가 있는지 확인
+        const inSearchArea = (mouseX >= searchRect.left && mouseX <= searchRect.right && 
+                            mouseY >= searchRect.top && mouseY <= searchRect.bottom);
+        const inButtonArea = (mouseX >= buttonRect.left && mouseX <= buttonRect.right && 
+                            mouseY >= buttonRect.top && mouseY <= buttonRect.bottom);
+        
+        return inSearchArea || inButtonArea;
     };
 
     // 각 GNB 메뉴 항목에 이벤트 추가
     const gnbItems = gnbList.querySelectorAll('li');
     gnbItems.forEach(item => {
         const subMenu = item.querySelector('.gnb-sub-list');
-        if(subMenu) {
-            // 메뉴 항목에 마우스 오버 시 서브메뉴 열기
-            item.addEventListener('mouseenter', () => {
+        if (subMenu) {
+            addEventListeners([item], 'mouseenter', () => {
                 openSubMenu(item);
-                document.querySelector('.btn-close-search').click();
             });
-            item.addEventListener('focusin', () => {
+            
+            addEventListeners([item], 'focusin', () => {
                 openSubMenu(item);
-                document.querySelector('.btn-close-search').click();
             });
         }
     });
 
-    // 전체 GNB 영역에서 마우스가 벗어나면 서브메뉴 닫기
-    gnbAreaFull.addEventListener('mouseleave', () => {
+    // GNB 영역에서 마우스가 벗어날 때 처리
+    addEventListeners([gnbAreaFull], 'mouseleave', (event) => {
+        // 검색창이 열려있고 마우스가 검색 영역으로 이동하는 경우 서브메뉴만 닫기
+        if (isSearchActive() && isMouseInSearchArea(event)) {
+            closeSubMenu(); // 서브메뉴만 닫고 검색창은 유지
+            return;
+        }
+        
+        // 일반적인 경우 모든 메뉴 닫기
         closeSubMenu();
+        if (isSearchActive()) {
+            executeIfExists('.btn-close-search', (btn) => btn.click());
+        }
     });
 
-    // GNB dim 배경에서 마우스가 벗어나도 서브메뉴 닫기
-    gnbDimBg.addEventListener('mouseleave', () => {
+    // Dim 배경에서 마우스가 벗어날 때
+    addEventListeners([gnbDimBg], 'mouseleave', (event) => {
+        // 검색창이 열려있는 경우 검색 영역 확인
+        if (isSearchActive() && isMouseInSearchArea(event)) {
+            return; // 검색 영역으로 이동하는 경우 아무것도 하지 않음
+        }
         closeSubMenu();
     });
 }
 
 const gnbSearch = () => {
-    const gnbSearchBtn = document.querySelector('.gnb-list li.search-item button');
-    if(!gnbSearchBtn) {
-        return;
-    }
-    gnbSearchBtn.addEventListener('click', () => {
-        // gnb가 열려있는 상태면 닫기
-        const gnbList = document.querySelector('.gnb-list');
-        const gnbDimBg = document.querySelector('.gnb-dim-bg');
-        
-        if(gnbList && gnbList.classList.contains('is-active')) {
-            // gnb 닫기
-            gnbDimBg.classList.remove('is-active');
-            gnbList.classList.remove('is-active');
-            const subList = document.querySelectorAll('.gnb-sub-list');
-            subList.forEach(item => {
-                item.classList.remove('is-active');
+    executeIfExists('.gnb-list li.search-item button', (gnbSearchBtn) => {
+        gnbSearchBtn.addEventListener('click', () => {
+            // gnb가 열려있는 상태면 닫기
+            const gnbList = safeQuerySelector('.gnb-list');
+            const gnbDimBg = safeQuerySelector('.gnb-dim-bg');
+            
+            if (gnbList && gnbList.classList.contains('is-active')) {
+                removeClass(gnbDimBg, 'is-active');
+                removeClass(gnbList, 'is-active');
+                const subLists = safeQuerySelectorAll('.gnb-sub-list');
+                removeClass(Array.from(subLists), 'is-active');
+            }
+            
+            // 검색창 열기/닫기 토글
+            toggleClass(gnbSearchBtn.parentElement, 'is-active');
+            const moSearchArea = safeQuerySelector('.mo-search-area');
+            if (moSearchArea) {
+                toggleClass(moSearchArea, 'is-active');
+                
+                // 검색창이 열린 후 검색 입력 필드에 포커스
+                if (moSearchArea.classList.contains('is-active')) {
+                    setTimeout(() => {
+                        const searchInput = moSearchArea.querySelector('input');
+                        if (searchInput) {
+                            searchInput.focus();
+                        }
+                    }, 100);
+                }
+            }
+        });
+    });
+
+    // 검색 레이어에 마우스 이벤트 추가
+    executeIfExists('.mo-search-area', (moSearchArea) => {
+        // 검색 레이어에서 마우스가 벗어날 때 일정 시간 후 검색창 닫기
+        let searchCloseTimer = null;
+
+        moSearchArea.addEventListener('mouseleave', (event) => {
+            // PC 모드에서만 적용
+            if (window.innerWidth > 768) {
+                const searchItem = safeQuerySelector('.gnb-list li.search-item');
+                const gnbAreaFull = safeQuerySelector('.gnb-area-full');
+                
+                // 마우스가 검색 버튼이나 GNB 영역으로 돌아가는지 확인
+                const relatedTarget = event.relatedTarget;
+                if (relatedTarget && (
+                    searchItem?.contains(relatedTarget) || 
+                    gnbAreaFull?.contains(relatedTarget)
+                )) {
+                    return; // 관련 영역으로 이동하는 경우 닫지 않음
+                }
+
+                // 300ms 지연 후 검색창 닫기
+                searchCloseTimer = setTimeout(() => {
+                    if (moSearchArea.classList.contains('is-active')) {
+                        removeClass(moSearchArea, 'is-active');
+                        const searchItem = safeQuerySelector('.gnb-list li.search-item');
+                        if (searchItem) removeClass(searchItem, 'is-active');
+                    }
+                }, 300);
+            }
+        });
+
+        // 검색 레이어에 마우스가 들어오면 타이머 취소
+        moSearchArea.addEventListener('mouseenter', () => {
+            if (searchCloseTimer) {
+                clearTimeout(searchCloseTimer);
+                searchCloseTimer = null;
+            }
+        });
+
+        // 검색 입력 필드에서 ESC 키 처리
+        const searchInput = moSearchArea.querySelector('input');
+        if (searchInput) {
+            searchInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    executeIfExists('.btn-close-search', (btn) => btn.click());
+                }
             });
         }
+    });
+
+    // 문서 전체에서 클릭 이벤트 처리 (검색창 외부 클릭 시 닫기)
+    document.addEventListener('click', (event) => {
+        const moSearchArea = safeQuerySelector('.mo-search-area');
+        const searchItem = safeQuerySelector('.gnb-list li.search-item');
         
-        // 검색창 열기
-        gnbSearchBtn.parentElement.classList.toggle('is-active');
-        document.querySelector('.mo-search-area').classList.toggle('is-active');        
-    })
+        if (moSearchArea && moSearchArea.classList.contains('is-active')) {
+            // 클릭된 요소가 검색 관련 요소가 아닌 경우 검색창 닫기
+            if (!moSearchArea.contains(event.target) && 
+                !searchItem?.contains(event.target)) {
+                removeClass(moSearchArea, 'is-active');
+                if (searchItem) removeClass(searchItem, 'is-active');
+            }
+        }
+    }, { capture: true });
 }
+
 const moSearchClose = () => {
-    const moSearchCloseBtn = document.querySelector('.btn-close-search');
-    if(!moSearchCloseBtn) {
-        return;
-    }
-    moSearchCloseBtn.addEventListener('click', () => {
-        document.querySelector('.mo-search-area').classList.remove('is-active');
-        document.querySelector('.gnb-list li.search-item').classList.remove('is-active');
-    })
+    executeIfExists('.btn-close-search', (moSearchCloseBtn) => {
+        moSearchCloseBtn.addEventListener('click', () => {
+            const moSearchArea = safeQuerySelector('.mo-search-area');
+            const searchItem = safeQuerySelector('.gnb-list li.search-item');
+            
+            if (moSearchArea) {
+                removeClass(moSearchArea, 'is-active');
+                // 검색 입력 필드 내용 초기화 (선택사항)
+                const searchInput = moSearchArea.querySelector('input');
+                if (searchInput) {
+                    searchInput.value = '';
+                    searchInput.blur(); // 포커스 제거
+                }
+            }
+            if (searchItem) removeClass(searchItem, 'is-active');
+        });
+    });
 }
 
 const moGnb = () => {
-    const moGnbList = document.querySelectorAll('.gnb-list li a');
-    if(!moGnbList) {
-        return;
-    }
+    const moGnbList = safeQuerySelectorAll('.gnb-list li a');
+    if (!moGnbList.length) return;
     
     // 첫 번째 메뉴의 하위메뉴를 기본적으로 열린 상태로 설정
-    const firstMenuItem = document.querySelector('.gnb-list li:first-child');
-    if(firstMenuItem) {
-        firstMenuItem.classList.add('is-active');
+    executeIfExists('.gnb-list li:first-child', (firstMenuItem) => {
+        addClass(firstMenuItem, 'is-active');
         const firstSubMenu = firstMenuItem.querySelector('.gnb-sub-list');
-        if(firstSubMenu) {
-            firstSubMenu.classList.add('is-active');
+        if (firstSubMenu) {
+            addClass(firstSubMenu, 'is-active');
         }
-    }
+    });
     
-    moGnbList.forEach(item => {
-        item.addEventListener('click', () => {
-            // 모든 메뉴의 is-active 클래스 제거
-            const allMenuItems = document.querySelectorAll('.gnb-list li');
-            allMenuItems.forEach(menuItem => {
-                menuItem.classList.remove('is-active');
-                const subMenu = menuItem.querySelector('.gnb-sub-list');
-                if(subMenu) {
-                    subMenu.classList.remove('is-active');
-                }
-            });
-            
-            // 클릭한 메뉴만 활성화
-            item.parentElement.classList.add('is-active');    
-            if(item.nextElementSibling) {
-                item.nextElementSibling.classList.add('is-active');
-            }        
-        })
-    })
+    addEventListeners(moGnbList, 'click', (event) => {
+        // 모든 메뉴의 is-active 클래스 제거
+        resetMenuStates('.gnb-list li');
+        
+        // 클릭한 메뉴만 활성화
+        const clickedItem = event.currentTarget.parentElement;
+        addClass(clickedItem, 'is-active');
+        
+        const subMenu = event.currentTarget.nextElementSibling;
+        if (subMenu) {
+            addClass(subMenu, 'is-active');
+        }
+    });
 }
 
 // 스크롤 이벤트에 쓰로틀링 적용
 window.addEventListener('scroll', () => {
     if (!timer) {
         timer = setTimeout(() => {
-            timer = null; // 타이머 초기화
-            jobCardTitle(); // 함수 실행
-        }, 100); // 100ms(0.1초)마다 한 번씩만 실행
+            timer = null;
+            jobCardTitle();
+        }, 100);
     }
 });
 
 window.addEventListener('resize', () => {
     copyDv();
     jobCardTitle();
-    if(window.innerWidth > 768) {
+    
+    if (window.innerWidth > 768) {
         // PC 모드로 전환 시 모바일 GNB 클래스 제거
-        const allMenuItems = document.querySelectorAll('.gnb-list li');
-        allMenuItems.forEach(menuItem => {
-            menuItem.classList.remove('is-active');
-            const subMenu = menuItem.querySelector('.gnb-sub-list');
-            if(subMenu) {
-                subMenu.classList.remove('is-active');
-            }
-        });
-        
-        gnbMenu()
-        setGnbSubListHeight()
-        gnbSearch()
-        moSearchClose()
+        resetMenuStates('.gnb-list li');
+        gnbMenu();
+        setGnbSubListHeight();
+        gnbSearch();
+        moSearchClose();
     }
-    if(window.innerWidth < 768) {
-        moGnb()
+    if (window.innerWidth < 768) {
+        moGnb();
     }
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
     copyDv();
@@ -498,15 +664,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeFileInputs();
     likeEvent('.like-button');
     moButton();
-    moButtonClose()
-    dropdownList()
-    if(window.innerWidth > 768) {
-        gnbMenu()
-        setGnbSubListHeight()
-        gnbSearch()
-        moSearchClose()
+    moButtonClose();
+    dropdownList();
+    
+    if (window.innerWidth > 768) {
+        gnbMenu();
+        setGnbSubListHeight();
+        gnbSearch();
+        moSearchClose();
     }
-    if(window.innerWidth < 768) {
-        moGnb()
+    if (window.innerWidth < 768) {
+        moGnb();
     }
 });
