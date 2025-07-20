@@ -3112,6 +3112,7 @@ appearance: none;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 12px;
 }
 
 .resume-card-body-top .resume-title {
@@ -3314,6 +3315,7 @@ appearance: none;
     }
     .progress-section {
         width: 100%;
+        gap: 0;
     }
     .keywords-section {
         align-items: flex-start;
@@ -3333,6 +3335,9 @@ appearance: none;
     }
     .box-type.bg-primary {
         padding: 16px;
+    }
+    .resume-card-footer{
+        padding: 20px;
     }
 }    
 
@@ -3547,6 +3552,7 @@ appearance: none;
         height: auto;
         text-align: left;
         padding: 8px 16px;
+        white-space: normal;
     }
     .mo-button-full.button-wid150 {
         width: 100%;
@@ -3709,6 +3715,7 @@ appearance: none;
     padding: 4px 16px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 .label-status.is-dissabled {
     background: #E6EBF5;
