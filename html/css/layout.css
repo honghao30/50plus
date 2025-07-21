@@ -1027,23 +1027,42 @@ body {
     width: 100%;
     height: auto;
 }
+.top-banner-area #lottie-mo {
+    display: none;
+}
+@media (max-width: 768px) {
+    .top-banner-area {
+        margin-right: 58px;
+    }
 
-#lottie-mo {
+}
+@media (max-width: 480px) {
+    .top-banner-area {
+        margin: 0;
+    }
+    .top-banner-area #lottie-pc {
+        display: none;
+    }
+    .top-banner-area #lottie-mo {
+        display: block;
+    }
+}
+/* #lottie-mo {
     display: none;
 }
 #lottie-pc {
     display: block;
 }
 
-/* 모바일 화면 스타일 */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     #lottie-pc {
         display: none;
     }
+    .top-banner-area,
     #lottie-mo {
         display: block;
     }
-}
+} */
 /* //루띠 애니메이션 */
 /* //레이아웃 */
 .header-top__inner {
@@ -1060,6 +1079,7 @@ body {
     display: flex;
     align-items: center;
     gap: 33px;
+    flex:1;
 }
 
 .center-group {
@@ -1107,16 +1127,19 @@ body {
 }
 @media (max-width: 768px) {
     .header-top__inner {
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        align-items: center;
         height: auto;
         max-width: 100%;
+        position: relative;
+        
     }
     .header-top-left {
         padding: 0 16px;
         height: 74px;
         position: relative;
         width: calc(100% - 16px);
+        flex: inherit;
     }
     .center-group { 
         display: none;
@@ -1133,9 +1156,8 @@ body {
         background-color: transparent;
         border: 0;
         position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        right: 16px;
+        top: 20px;        
     }
     .gnb-area-full {
         display: none;
@@ -1205,7 +1227,12 @@ body {
         height: 20px;
     }
 }
-
+@media (max-width: 480px) {
+    .header-top__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 /* gnb */
 .gnb-area-full {
     width: 100%;
