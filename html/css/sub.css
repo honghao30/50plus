@@ -3840,6 +3840,7 @@ appearance: none;
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    gap: 0;
 }
 .tab-wid-full.tab-container-full .tab-menu-wrap .tab-menu {
     border: 0;

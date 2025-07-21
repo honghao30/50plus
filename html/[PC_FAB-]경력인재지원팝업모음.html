@@ -699,7 +699,7 @@
             </div>
 
             <div class="form-section mt-32">
-                <h3 class="section-title">추가 입력 내용4</h3>
+                <h3 class="section-title">첨부파일 등록</h3>
                 <div class="table-wrap no-line-mg">
                   <table class="table-body-only">
                         <colgroup class="pc-cell">
@@ -713,16 +713,95 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    질문                              
+                                    주민등록초본
+                                    <span class="description">(공공마이데이터 활용 미동의 시) 성명, 생년월일, 거주지 외 비공개 필수</span>                          
                                 </th>
                                 <td>
-                                  모집 공고일 기준 고용보험 가입 중이신가요?
+                                    <div class="file-input-wrapper">
+                                        <div class="file-input-display">파일을 추가해 주세요.</div>
+                                        <button class="btn-file-upload">파일추가</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    (선택) 자유 이력서                              
+                                </th>
+                                <td>
+                                    <div class="file-input-wrapper">
+                                        <div class="file-input-display">파일을 추가해 주세요.</div>
+                                        <button class="btn-file-upload">파일추가</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="form-section mt-32">
+                <h3 class="section-title">추가 입력 내용</h3>
+                <div class="table-wrap no-line-mg">
+                  <table class="table-body-only">
+                        <colgroup class="pc-cell">
+                            <col style="width: 160px;" />
+                            <col />
+                        </colgroup>
+                        <colgroup class="mo-cell">
+                            <col style="width: 88px;" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    질문<span class="must">*</span>                            
+                                </th>
+                                <td>
+                                  신청서 기재내용이 사실과 다를 경우 재단 사업 참여 불가 등 불이익 조치를 감수할 것을 확인하며, 동 사업에 참여하기를 희망합니다.
                                 </td>
                             </tr>
                             <tr>
                                 <th>
                                     답변                              
                                 </th>
+                                <td>
+                                    <div class="input-area radio-group">
+                                        <label><input type="radio" name="confirm_agree" value="yes" checked><span></span> 예</label>
+                                        <label><input type="radio" name="confirm_agree" value="no"><span></span> 아니오</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    질문                              
+                                </th>
+                                <td>
+                                  중장년 경력 인재 지원(채용형)사업은 지원기간 이후 해당 기업으로의 고용 유지를 목적으로 하고 있습니다. 해당 사실을 인지하고 있습니까?
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    답변                              
+                                </th>
+                                <td>
+                                    <div class="input-area checkbox-group">
+                                        <label>
+                                          <input type="checkbox" checked disabled>
+                                          예
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>질문<span class="description">모집 공고일 기준 고용보험 가입 중이신가요?</span></th>
+                                <td>
+                                    <div class="input-area">
+                                        <input type="text" placeholder="답변을 입력해 주세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>질문<span class="description">모집 공고일 기준 고용보험 가입 중이신가요?</span></th>
                                 <td>
                                     <div class="input-area">
                                         <input type="text" placeholder="답변을 입력해 주세요.">
