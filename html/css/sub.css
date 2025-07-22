@@ -3840,7 +3840,7 @@ appearance: none;
 }
 .page-title.bottom-line {
     border-bottom: 2px solid var(--color-black);
-    padding-bottom: 16px;
+    padding-bottom: 24px;
     width: 100%;
 }
 .label-status {
@@ -3927,6 +3927,9 @@ appearance: none;
     line-height: 27px;
 }
 @media (max-width: 768px) {
+    .page-title.bottom-line {
+        padding-bottom: 16px;
+    }
     .time-select-group {
         flex-wrap: wrap;
     }
