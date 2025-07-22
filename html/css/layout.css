@@ -281,6 +281,13 @@ body {
     height: 24px;
 }
 
+.ico.ico-share {
+    background: url(../img/common/ico-share.svg) no-repeat;
+    background-size: 100% auto;
+    width: 28px;
+    height: 28px;
+}
+
 @media (max-width: 768px) {
     .ico.ico-pen-wt {
         width: 20px;

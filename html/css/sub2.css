@@ -409,4 +409,7 @@ td .bus-map li:not(:last-child) {
     display: block;
     width: 100%;
   }
+  .total-count {
+    margin: 0 16px 20px;
+  }
 }

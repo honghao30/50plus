@@ -787,6 +787,10 @@
     font-family: var(--font-family-main);
 }
 
+.filter-options-top + .filter-options-top {
+    border-top: 0;
+}
+
 .filter-options-top .filter-group {
     display: flex;
     align-items: center;
@@ -1785,7 +1789,7 @@ sub page 체크후  */
         display: block;
         position: absolute;
         width: 31px;
-        top:24px;
+        top:30px;
         right:0;
         bottom: 0;
         background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
@@ -1946,7 +1950,13 @@ sub page 체크후  */
 .box-type.job-title .job-title-info {
     flex: 1;
 }
-
+.box-type.job-title.type02 {
+    align-items: flex-start;
+}
+.box-type.job-title.type02 .job-util {
+    justify-content: space-between;
+    height: 150px;
+}
 .box-type.job-title .job-title-info .title-area {
     font-weight: 800;
     font-size: 32px;
@@ -1965,6 +1975,7 @@ sub page 체크후  */
     padding: 8px 12px;
     margin-left: 5px;
     vertical-align: middle;
+    white-space: nowrap;
 }
 
 .box-type.job-title .job-title-info .description {
@@ -1974,6 +1985,18 @@ sub page 체크후  */
     color: var(--font-color-primary);
     margin-top: 18px;
 }
+.box-type.job-title .job-title-info .keyword-area {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.box-type.job-title .job-title-info .keyword-area .keyword-tit {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--color-primary);
+}
 
 .box-type.job-title .job-util {
     display: flex;
@@ -1982,7 +2005,19 @@ sub page 체크후  */
     align-items: flex-end;
     gap: 16px;
 }
-
+.box-type.job-title .job-util .util-group {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+.box-type.job-title .job-util .util-group button:first-child::after {
+    content: '';
+    display: inline-flex;
+    width: 1px;
+    height: 13px;
+    background-color: var(--color-gray-300);
+    margin: 0 16px;
+}
 .btn-like-text {
     border: 0;
     background-color: transparent;
@@ -2022,6 +2057,15 @@ sub page 체크후  */
         align-items: center;
         width: 100%;
         margin-top: 16px;
+    }
+    .box-type.job-title .job-title-info .keyword-area {
+        display: none;
+    }
+    .box-type.job-title.type02 .job-util {
+        justify-content: flex-end;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
@@ -4409,6 +4453,122 @@ appearance: none;
     width: 80px;
     height: 80px;
     margin: 0 auto;
+}
+
+.search-form-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 0;
+    margin-top: 24px;
+}
+.search-form-top .input-group {
+    max-width: 432px;
+}
+@media (max-width: 768px) {
+    .search-form-top {
+        justify-content: center;
+    }
+    .search-form-top  {
+        padding: 0 16px;
+        max-width: 100%;
+    }
+}
+
+.card-list-section {
+    margin-top: 24px;
+    width: 100%;
+    position: relative;
+}
+.card-list-section .card-list-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.card-list-section .card-list-wrap li {
+    width: calc(100% / 4);
+}
+.card-list-section .card-list-wrap li .card-link {
+    border-radius: 32px;
+    border: 1px solid #D8D9DA;
+    background: #FFF;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px;
+    overflow: hidden;
+}
+.card-list-section .card-list-wrap li .card-link .thumb {
+    border-radius: 8px;
+    border: 1px solid #D8D9DA;
+    background: #F8F8F8;
+    width: 100%;
+    aspect-ratio: 1 / 0.7;
+    overflow: hidden;
+}
+.card-list-section .card-list-wrap li .card-link .thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.card-list-section .card-list-wrap li .card-link .text-wrap {
+    width: 100%;
+    margin-top: 24px;
+}
+.card-list-section .card-list-wrap li .card-link .text-wrap .title {    
+    font-size: 22px;    
+    font-weight: 700;
+    line-height: 32px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-list-section .card-list-wrap li .card-link .text-wrap .desc {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+}
+@media (max-width: 768px) {
+    .card-list-section {
+        overflow-x: auto;    
+        padding: 16px 24px 16px 16px;    
+    }
+    .card-list-section .card-list-wrap {
+        flex-wrap: nowrap;
+    }
+    .card-list-section .card-list-wrap li {        
+        min-width: 75vw;     
+        width: 75vw;        
+    }
+
+    .content-section.mo-no-padding {
+        padding: 64px 0px 64px;
+    }
+    .content-section.mo-no-padding .box-type.job-title.type02 {
+        margin: 0 16px;
+    }
+    .content-section.mo-no-padding .h3-title {
+        margin: 40px 16px 0;
+    }
+    .content-section.mo-no-padding .table-wrap,
+    .content-section.mo-no-padding .editor-content-area {
+        margin: 24px 16px 0;
+        width: auto;
+    }
+    .content-section.mo-no-padding .button-area.flex-end {
+        margin: 24px 16px 0;
+    }
+
 }
 
 /* 공통 */
