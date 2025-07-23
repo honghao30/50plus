@@ -287,6 +287,36 @@ body {
     width: 28px;
     height: 28px;
 }
+.ico.ico-facebook::after {
+    background: url(../img/common/ico-facebook.png) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+.ico.ico-twitter::after {
+    background: url(../img/common/ico-sns-x.png) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+.ico.ico-band::after {
+    background: url(../img/common/ico-sns-band.png) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+.ico.ico-blog::after {
+    background: url(../img/common/ico-sns-blog.png) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
+.ico.ico-kakao::after {
+    background: url(../img/common/ico-sns-kakao.png) no-repeat;
+    background-size: 100% auto;
+    width: 40px;
+    height: 40px;
+}
 
 @media (max-width: 768px) {
     .ico.ico-pen-wt {

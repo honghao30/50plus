@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">    
+    <title>서울시 50플러스포털 | [50+포털]2025년 집단상담 프로그램 한눈에 보기</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/seoul-common-gnb.css">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="img/common/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/common/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/common/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/common/favicon-16x16.png">
+
+    <meta property="og:url" content="">
+    <meta property="og:type" content="post">
+    <meta property="og:title" content="2025년 집단상담 프로그램 한눈에 보기">
+    <meta property="og:description" content="2025 집단상담 프로그램 한눈에 보기">
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- <script src="js/jquery-3.2.1.js"></script> -->
+    <!-- Swiper JS -->
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+    <!-- common.js -->
+    <script src="js/common.js"></script>
+    <style>
+        .print-wrap {
+            width: 1080px;
+            height: 1554px;
+            background: #fff;
+            border: 2px solid #D8D9DA;            
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .print-content {
+            width: 100%;
+            max-width: 640px;            
+        }
+        .print-header {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 56px;
+            letter-spacing: 1.3px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--color-black);
+        }
+        .print-content-wrap {
+            margin-top: 120px;
+        }
+        .print-content-title {
+            font-family: Pretendard;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 22px;            
+            line-height: 22px;
+            letter-spacing: -2%;
+            color: var(--color-black);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .print-content-title  .text {
+            font-weight: 700;
+        }
+        .print-table-wrap {
+            margin-top: 40px;
+            border: 1px solid #D8D9DA;
+        }
+        .print-table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .print-table-wrap table th,
+        .print-table-wrap table td {
+            padding: 16px 0;
+            border-bottom: 1px solid #D8D9DA;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: -2%;
+            color: var(--color-black);
+            vertical-align: middle;
+            text-align: left;
+            padding-left: 16px;
+        }
+        .print-table-wrap table th {
+            width: 120px;
+            background-color: #F5F5F5;
+            font-family: Pretendard;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: -2%;
+        }
+        .print-table-wrap table td {
+            padding-left: 16px;
+            font-family: Pretendard;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: -2%;
+        }
+        .print-table-wrap table tr:last-child th,
+        .print-table-wrap table tr:last-child td {
+            border-bottom: none;            
+        }
+        .print-desc {
+            font-family: Pretendard;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 22px;
+            leading-trim: NONE;
+            line-height: 32px;
+            letter-spacing: -2%;
+            color: var(--color-black);
+            text-align: center;
+            margin-top: 40px;
+        }
+        .print-desc span {
+            font-weight: 700;
+            color: #4F6793;
+        }
+        .print-footer {
+            margin-top: 120px;
+            display: flex;
+            color: var(--color-black);
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            font-family: Pretendard;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 18px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: -2%;
+        }
+        .print-footer .date {
+            font-family: Pretendard;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 18px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: -2%;
+        }
+        .print-footer .sign {
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: Pretendard;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 22px;
+            leading-trim: NONE;
+            line-height: 22px;
+            letter-spacing: -2%;
+
+        }
+        .print-footer .sign-name {
+            font-weight: 700;
+        }
+        @media print {
+            .print-wrap {
+            width: 1080px;
+            height: 1554px;
+            background: #fff;
+            border: 2px solid #D8D9DA;            
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+            .print-content {
+                width: 100%;
+                max-width: 640px;            
+            }
+            .print-header {
+                font-size: 56px;
+                font-weight: 800;
+                line-height: 56px;
+                letter-spacing: 1.3px;
+                text-align: center;
+                margin-bottom: 40px;
+                color: var(--color-black);
+            }
+            .print-content-wrap {
+                margin-top: 120px;
+            }
+            .print-content-title {
+                font-family: Pretendard;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 22px;            
+                line-height: 22px;
+                letter-spacing: -2%;
+                color: var(--color-black);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .print-content-title  .text {
+                font-weight: 700;
+            }
+            .print-table-wrap {
+                margin-top: 40px;
+                border: 1px solid #D8D9DA;
+            }
+            .print-table-wrap table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .print-table-wrap table th,
+            .print-table-wrap table td {
+                padding: 16px 0;
+                border-bottom: 1px solid #D8D9DA;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: -2%;
+                color: var(--color-black);
+                vertical-align: middle;
+                text-align: left;
+                padding-left: 16px;
+            }
+            .print-table-wrap table th {
+                width: 120px;
+                background-color: #F5F5F5;
+                font-family: Pretendard;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: -2%;
+            }
+            .print-table-wrap table td {
+                padding-left: 16px;
+                font-family: Pretendard;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: -2%;
+            }
+            .print-table-wrap table tr:last-child th,
+            .print-table-wrap table tr:last-child td {
+                border-bottom: none;            
+            }
+            .print-desc {
+                font-family: Pretendard;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 22px;
+                leading-trim: NONE;
+                line-height: 32px;
+                letter-spacing: -2%;
+                color: var(--color-black);
+                text-align: center;
+                margin-top: 40px;
+            }
+            .print-desc span {
+                font-weight: 700;
+                color: #4F6793;
+            }
+            .print-footer {
+                margin-top: 120px;
+                display: flex;
+                color: var(--color-black);
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                font-family: Pretendard;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 18px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: -2%;
+            }
+            .print-footer .date {
+                font-family: Pretendard;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 18px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: -2%;
+            }
+            .print-footer .sign {
+                margin-top: 48px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-family: Pretendard;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 22px;
+                leading-trim: NONE;
+                line-height: 22px;
+                letter-spacing: -2%;
+
+            }
+            .print-footer .sign-name {
+                font-weight: 700;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="print-wrap">
+        <div class="print-content">
+            <div class="print-header">
+                이 수 증
+            </div>
+            <div class="print-content-wrap">
+                <div class="print-content-title">
+                    <div class="tit">수료번호</div>
+                    <div class="text">
+                        0000-01
+                    </div>
+                </div>
+                <div class="print-table-wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>성명</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th>생년월일</th>
+                                <td>1990.01.01</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="print-table-wrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>교육과정명</th>
+                                <td>내 사진, 직접 판매하기: 기획부터 실행까지</td>
+                            </tr>
+                            <tr>
+                                <th>교육 기간</th>
+                                <td>2025.05.12. ~ 2025.06.02.</td>
+                            </tr>
+                            <tr>
+                                <th>교육 시간</th>
+                                <td>07시간 00분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="print-desc">
+                    위 사람은 <span>내 사진, 직접 판매하기: 기획부터 실행까지</span> <br>과정을 수료하였으므로 이 증서를 수여합니다.
+                </div>
+                <div class="print-footer">
+                    <div class="date">
+                        2025.06.02
+                    </div>
+                    <div class="sign">
+                        <div class="sign-company">서울시 50플러스</div>
+                        <div class="sign-name">서부캠퍼스</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
