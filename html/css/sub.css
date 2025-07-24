@@ -253,6 +253,14 @@
     color: var(--color-black);
 }
 
+.board-view-header-desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;  
+    color: var(--color-black);
+}
+
 
 /* 공유하기 */
 
@@ -2865,6 +2873,41 @@ sub page 체크후  */
     background-color: #D8D9DA;
     margin-right: 12px;
 }
+.job-seeking-status.type-02 {
+    flex-direction: column;
+    gap: 8px;
+}
+.job-seeking-status.type-02 .radio-item-desc {
+    border-bottom: 1px solid var(--color-gray-300);
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.job-seeking-status.type-02 .radio-item-desc label {
+    min-width: 0;
+}
+.job-seeking-status.type-02 .radio-item-desc:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+@media (max-width: 768px) {
+    .job-seeking-status.type-02 .radio-item-desc {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    .job-seeking-status.type-02 .radio-item-desc label {
+        min-width: 100%;
+    }
+    .job-seeking-status.type-02 .description {
+        padding-left: 0;
+    }
+    .job-seeking-status.type-02 .description::before {
+        display: none;
+    }
+}
+
 .note-text {
     margin-top: 16px;
     color: #666;
@@ -4768,6 +4811,9 @@ appearance: none;
 }
 .file-color {
     color: var(--color-primary);
+}
+.color-highlight {
+    color:#FF4C4C;
 }
 .color-hilight {
     color:#FF4C4C;
