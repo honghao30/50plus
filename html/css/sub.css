@@ -2887,10 +2887,23 @@ sub page 체크후  */
 .job-seeking-status.type-02 .radio-item-desc label {
     min-width: 0;
 }
+.job-seeking-status.type-02 .radio-item-desc:first-child {    
+    padding-top: 0;  
+}
 .job-seeking-status.type-02 .radio-item-desc:last-child {
     border-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 0;  
 }
+
+.job-seeking-status.type-02 .description.job-type {
+    display: flex;
+    align-items: center;    
+    gap: 16px;
+}
+.job-seeking-status.type-02 .description.job-type::before {
+    margin-right: 0;
+}
+
 @media (max-width: 768px) {
     .job-seeking-status.type-02 .radio-item-desc {
         flex-direction: column;
@@ -2905,6 +2918,20 @@ sub page 체크후  */
     }
     .job-seeking-status.type-02 .description::before {
         display: none;
+    }
+    .job-seeking-status.type-02 .description.job-type {
+        flex-wrap: wrap;
+    }
+    .job-seeking-status.type-02 .description.job-type::before {
+        margin-right: 0;
+    }
+    .job-seeking-status.type-02 .description.job-type label {
+        min-width: 45%;
+    }
+    .job-seeking-status.type-02 .input-group.phone-group {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
 
@@ -4644,6 +4671,26 @@ appearance: none;
 .share-sns-list button {
     width: calc((100% - 16px) / 3);
 }
+
+.box-organ-wrap {
+    background-color: #E6EBF5;    
+    padding: 12px 16px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 400px;    
+    font-weight: 400;    
+    font-size: 15px;
+    line-height: 15px;    
+    letter-spacing: -2%;
+}
+.box-type-inner-title {
+    border-bottom: 1px solid #C0CADD;
+    padding-bottom: 8px;
+}
+.box-type-inner-content {
+    padding: 8px 0;
+    line-height: 26px;
+}
 @media (max-width: 768px) {
     .share-sns-list {
         flex-direction: column;
@@ -4653,7 +4700,11 @@ appearance: none;
         padding: 16px 0;
         height: auto;
     }
+    .box-organ-wrap {
+        max-width: 100%;
+    }
 }
+
 
 /* 공통 */
 .mt-0 {
@@ -4747,7 +4798,14 @@ appearance: none;
     border: none !important;
 }
 
-
+.text-link-underline {
+    text-decoration: underline;
+    color: #666;    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -2%;
+}
 .font-bold {
     font-weight: 800;
 }
@@ -4811,6 +4869,9 @@ appearance: none;
 }
 .file-color {
     color: var(--color-primary);
+}
+.color-gray {
+    color: #666;
 }
 .color-highlight {
     color:#FF4C4C;

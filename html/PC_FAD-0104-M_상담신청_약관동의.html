@@ -148,7 +148,7 @@
                             상담
                         </li>
                         <li class="font-body-style4">
-                            상담신청
+                            약관동의
                         </li>
                     </ol>
                 </div>
@@ -163,230 +163,42 @@
                                 대면과 비대면 상담 모두 가능하며 50+컨설턴트가 분야별 전문상담을 제공합니다.
                             </div>
                         </div>
-                        <div class="subpage-tit2 mt-64">
-                            원활한 상담을 위해 상담자 정보를 입력해 주세요.
+                        <div class="text-box-section mt-64">
+                            <div class="check-wrap">
+                                <input type="checkbox" id="check0"/>
+                                <label for="check0"><span><strong>전체 동의</strong></span></label>
+                            </div>
+                            <p class="mt-16 color-gray">※ 아래의 개인정보 수집 ∙ 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 원활한 상담서비스 제공에 일부 제한을 받을 수 있습니다.</p>
                         </div>
-                        <div class="table-wrap mt-16">
-                            <table class="table-body-only">
-                                <caption class="ir-text">개인정보수정 표</caption>
-                                <colgroup class="pc-cell">
-                                    <col style="width: 160px" />
-                                    <col />
-                                </colgroup>
-                                <colgroup class="mo-cell">
-                                    <col style="width: 88px" />
-                                    <col />
-                                </colgroup>                            
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">이름 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="input-area mo-size wid400">
-                                                <input type="text" placeholder="이름">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">생년월일
-                                        <td>
-                                            <div class="input-group phone-group">
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>010</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="dash">-</div> 
-                                                </div>
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>010</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="dash">-</div> 
-                                                </div>
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>010</option>
-                                                        </select>
-                                                    </div>                                                     
-                                                </div>                                        
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">성별</th>
-                                        <td>
-                                            <div class="flex gap10">
-                                                <label class="radio-item">
-                                                    <input type="radio" name="education" value="all" checked="">
-                                                    <span class="custom-radio"></span>
-                                                    남자
-                                                </label>
-                                                <label class="radio-item">
-                                                    <input type="radio" name="education" value="none">
-                                                    <span class="custom-radio"></span>
-                                                    여자
-                                                </label>
-                                            </div>                                        
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">연락처 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="input-group phone-group">
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>010</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="dash">-</div> 
-                                                </div>
-                                                <div class="items2">
-                                                    <div class="input-area wid120">
-                                                        <input type="text" placeholder="1234">
-                                                    </div>
-                                                    <div class="dash">-</div>  
-                                                    <div class="input-area wid120">
-                                                        <input type="text" placeholder="1234">
-                                                    </div>   
-                                                </div>                                         
-                                            </div>
-                                            <div class="mt-16 color-highlight">※ 연락처 정보는 반드시 정확하게 입력해주세요</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">희망 <br class="mo-only">상담 <br class="mo-only">일자 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="input-area mo-size wid160">
-                                                <input type="date" placeholder="상담일자">
-                                            </div>
-                                        </td>
-                                    </tr>   
-                                    <tr>
-                                        <th scope="row">희망 상담 시간
-                                        <td>
-                                            <div class="input-group phone-group">
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>선택</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="dash">-</div> 
-                                                </div>
-                                                <div class="items1">
-                                                    <div class="input-area wid120">
-                                                        <select title="선택하세요">
-                                                            <option>선택</option>
-                                                        </select>
-                                                    </div>                                                     
-                                                </div>                                      
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <th scope="row">재직 여부 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="job-seeking-status type-02">
-                                                <div class="radio-item-desc">
-                                                    <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_yes" checked><span class="custom-radio"></span>재직</label>                                                    
-                                                </div>
-                                                <div class="radio-item-desc">
-                                                    <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_considering"><span class="custom-radio"></span>퇴직</label>
-                                                    <p class="description">
-                                                        <span class="item-title">퇴직년월</span>
-                                                        <div class="input-group phone-group">
-                                                            <div class="input-area wid120">
-                                                                <select title="선택하세요" disabled>
-                                                                    <option>선택</option>
-                                                                </select>
-                                                            </div>                                                        
-                                                            <div class="input-area wid120">
-                                                                <select title="선택하세요" disabled>
-                                                                    <option>선택</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </p>
-                                                </div>
-                                                <div class="radio-item-desc">
-                                                    <label class="radio-item"><input type="radio" name="job_seeking" id="seeking_no"><span class="custom-radio"></span>재직 해당사항 없음</label>
-                                                    <p class="description job-type">
-                                                        <label class="radio-item">
-                                                            <input type="radio" name="job_group" disabled id="job_group_1">
-                                                            <span class="custom-radio"></span>
-                                                            자영업
-                                                        </label>
-                                                        <label class="radio-item">
-                                                            <input type="radio" name="job_group" disabled id="job_group_2">
-                                                            <span class="custom-radio"></span>
-                                                            프리랜서
-                                                        </label>
-                                                        <label class="radio-item">
-                                                            <input type="radio" name="job_group" disabled id="job_group_3">
-                                                            <span class="custom-radio"></span>
-                                                            전업주부
-                                                        </label>
-                                                        <label class="radio-item">
-                                                            <input type="radio" name="job_group" disabled id="job_group_4">
-                                                            <span class="custom-radio"></span>
-                                                            기타
-                                                        </label>
-                                                    </p>
-                                                </div>
-                                            </div>  
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <th scope="row">희망 직업군 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="input-area mo-size wid400">
-                                                <select title="선택하세요">
-                                                    <option>선택</option>
-                                                </select>
-                                            </div>  
-                                        </td>
-                                    </tr>    
-                                    <tr>
-                                        <th scope="row">희망 상담<br> 기관 선택 <span class="must">*</span></th>
-                                        <td>
-                                            <div class="input-area mo-size wid400">
-                                                <select title="선택하세요">
-                                                    <option>선택</option>
-                                                </select>
-                                            </div>  
-                                            <div class="box-organ-wrap-area">
-                                                <div class="box-organ-wrap">
-                                                    <div class="box-type-inner-title">
-                                                        중부캠퍼스
-                                                    </div>
-                                                    <div class="box-type-inner-content">
-                                                        연락처 : 02-460-5150<br>
-                                                        위치 : 서울시 마포구 백범로31길 21, 서울복지타운 2층
-                                                    </div>
-                                                </div>
-                                                <p class="mt-16">
-                                                    <a href="#" class="text-link-underline">
-                                                        캠퍼스 안내 위치 자세히 보기
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </td>
-                                    </tr>                                                                                                                                                                                                                                                           
-                                </tbody>
-                            </table>
+                        <div class="check-wrap mt-40">
+                            <input type="checkbox" id="check1"/>
+                            <label for="check1"><span><strong>[필수] 개인정보 수집 ∙ 이용 내역 동의</strong></span></label>
                         </div>
-                        <div class="button-area flex-end mt-32">
-                            <a href="#" class="btn btn-primary  btn-md">                                
-                                다음으로
-                            </a>
+                        <div class="text-area-wrap mt-16">
+                            <strong>개인정보의 수집·이용에 관한 사항</strong><br />
+                            「개인정보 보호법」 제15조(개인정보의 수집·이용)에 따라 서울시50플러스재단에서는 아래와 같이 참여 기업과 귀하의 개인정보를 수집·이용하고 있으며, 수집된 정보는 서비스 제공 목적 외 용도로는 사용되지 않습니다.개인정보 수집·이용 목적<br>
+                            ➀ 서울시50플러스재단 일자리 관련 사업 운영 및 평가: 참여자 선발, 사업 운영 등 자격검증 조회<br>
+                            ➁ 참여자 만족도 조사 및 사업종료 후 현황조사<br>
+                            ③ 참여자 만족도 조사 및 사업종료 후 현황조사
                         </div>
-
+                        <div class="check-wrap mt-40">
+                            <input type="checkbox" id="check2"/>
+                            <label for="check2"><span><strong>[필수] 개인정보 수집 ∙ 이용 내역 동의</strong></span></label>
+                        </div>
+                        <div class="text-area-wrap mt-16">
+                            <strong>개인정보의 수집·이용에 관한 사항</strong><br />
+                            「개인정보 보호법」 제15조(개인정보의 수집·이용)에 따라 서울시50플러스재단에서는 아래와 같이 참여 기업과 귀하의 개인정보를 수집·이용하고 있으며, 수집된 정보는 서비스 제공 목적 외 용도로는 사용되지 않습니다.개인정보 수집·이용 목적<br>
+                            ➀ 서울시50플러스재단 일자리 관련 사업 운영 및 평가: 참여자 선발, 사업 운영 등 자격검증 조회<br>
+                            ➁ 참여자 만족도 조사 및 사업종료 후 현황조사<br>
+                            ③ 참여자 만족도 조사 및 사업종료 후 현황조사
+                        </div>
                     </article>
+                    <div class="button-area flex-end mt-40">
+                        <button type="button" class="btn btn-primary btn-md">
+                            <i class="ico ico-pen-wt"></i>
+                            상담신청
+                        </button>
+                    </div>
 
                 </div>
                 <div class="banner-zone mo-only">
