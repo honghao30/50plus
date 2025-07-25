@@ -317,6 +317,18 @@ body {
     width: 40px;
     height: 40px;
 }
+.ico.ico-member-type1::after {
+    background: url(../img/common/ico-member-type1.svg) no-repeat;
+    background-size: 100% auto;
+    width: 48px;
+    height: 48px;
+}
+.ico.ico-member-type2::after {
+    background: url(../img/common/ico-member-type2.svg) no-repeat;
+    background-size: 100% auto;
+    width: 48px;
+    height: 48px;
+}
 
 @media (max-width: 768px) {
     .ico.ico-pen-wt {
@@ -1701,6 +1713,10 @@ body {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+    }
+    .page-title-wrap.has-bottom-line {
+        margin: 0 16px;
+        padding-bottom: 18px;
     }
 }
 
