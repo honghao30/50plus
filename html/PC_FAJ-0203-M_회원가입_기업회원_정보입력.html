@@ -148,21 +148,22 @@
                             회원가입
                         </li>
                         <li class="font-body-style4">
-                            개인회원
+                            기업회원
                         </li>                        
                     </ol>
                 </div>
                 <!-- //location -->
                 <div class="page-title-wrap has-bottom-line">
                     <div class="page-title">
-                        <div class="h1-title">개인회원</div>
+                        <div class="h1-title">기업회원</div>
                     </div>
                 </div>
                 <!-- //page-title-wrap -->
                 <div class="content-section">
                     <div class="table-wrap join-info-wrap">
                         <p class="join-info-text"><span class="must">*</span> 표시는 필수 입력 사항입니다.</p>
-                        <table class="table-body-only mt-16">
+                        <div class="join-info-title">기본정보</div>
+                        <table class="table-body-only no-line-mg mt-16">
                             <caption class="ir-text">개인정보수정 표</caption>
                             <colgroup class="pc-cell">
                                 <col style="width: 160px" />
@@ -210,61 +211,17 @@
                                 </tr>   
                                 <tr>
                                     <th scope="row">
-                                        이름 <span class="must">*</span> 
+                                        기업명 <span class="must">*</span> 
                                     </th>
                                     <td>
                                         <div class="input-area wid100p">
-                                            <input type="text" placeholder="이름을 입력해 주세요.">
+                                            <input type="text" disabled title="기업명" placeholder="기업명을 입력해 주세요.">
                                         </div>
+                                        <p class="join-info-text mt-16">* 사업자등록증상의 기업명으로 입력</p>
                                     </td>
-                                </tr>                                                                                                            
+                                </tr>    
                                 <tr>
-                                    <th scope="row">생년
-                                        <br class="mo-only">
-                                        월일 <span class="must">*</span></th>
-                                    <td>
-                                        <div class="input-group phone-group">
-                                            <div class="items1">
-                                                <div class="input-area wid100">
-                                                    <select title="선택하세요">
-                                                        <option>선택</option>
-                                                    </select>
-                                                </div>                                                 
-                                            </div>
-                                            <div class="items2">
-                                                <div class="input-area wid100">
-                                                    <select title="선택하세요">
-                                                        <option>선택</option>
-                                                    </select>
-                                                </div>   
-                                                <div class="input-area wid100">
-                                                    <select title="선택하세요">
-                                                        <option>선택</option>
-                                                    </select>
-                                                </div>                                                 
-                                            </div>                                         
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">성별 <span class="must">*</span></th>
-                                    <td>
-                                        <div class="flex gap10">
-                                            <label class="radio-item">
-                                                <input type="radio" name="education" value="all" checked="">
-                                                <span class="custom-radio"></span>
-                                                남자
-                                            </label>
-                                            <label class="radio-item">
-                                                <input type="radio" name="education" value="none">
-                                                <span class="custom-radio"></span>
-                                                여자
-                                            </label>
-                                        </div>                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">이메일 <span class="must">*</span></th>
+                                    <th scope="row">대표 <br class="mo-only">이메일 <span class="must">*</span></th>
                                     <td>
                                         <div class="input-group email-group">
                                             <div class="items1">
@@ -285,9 +242,118 @@
                                             </div>                                                                                   
                                         </div>                                        
                                     </td>
-                                </tr>  
+                                </tr> 
                                 <tr>
                                     <th scope="row">휴대폰 <span class="must">*</span></th>
+                                    <td>
+                                        <div class="input-group phone-group">
+                                            <div class="items1">
+                                                <div class="input-area wid120">
+                                                    <select title="선택하세요">
+                                                        <option>010</option>
+                                                    </select>
+                                                </div> 
+                                                <div class="dash">-</div> 
+                                            </div>
+                                            <div class="items2">
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>
+                                                <div class="dash">-</div>  
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                            </div>                                         
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join-info-title">기업정보</div>
+                        <table class="table-body-only no-line-mg mt-16">
+                            <caption class="ir-text">개인정보수정 표</caption>
+                            <colgroup class="pc-cell">
+                                <col style="width: 160px" />
+                                <col />
+                            </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>                            
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        사업자등록번호
+                                    </th>
+                                    <td>
+                                        123-45-67890
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        기업명 
+                                    </th>
+                                    <td>
+                                        길동주식회사
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <th scope="row">
+                                        지사(지점)명 
+                                    </th>
+                                    <td>
+                                        -
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <th scope="row">
+                                        업종 <span class="must">*</span> 
+                                    </th>
+                                    <td>
+                                        <div class="input-area wid100p has-button">
+                                            <input type="text" placeholder="업종을 선택해 주세요." title="업종을 선택해 주세요.">
+                                            <button type="button" class="btn btn-primary btn-xsm">
+                                                업종검색
+                                            </button>
+                                        </div>                                     
+                                    </td>
+                                </tr>    
+                                <tr>
+                                    <th scope="row">
+                                        주요<br class="mo-only"> 사업내용<span class="must">*</span> 
+                                    </th>
+                                    <td>
+                                        <div class="input-area wid100p">
+                                            <input type="text" placeholder="주요 사업내용을 입력해 주세요." title="주요 사업내용을 입력해 주세요.">
+                                        </div>                                     
+                                    </td>
+                                </tr>                                 
+                                <tr>
+                                    <th scope="row">대표<br class="mo-only"> 전화번호 <span class="must">*</span></th>
+                                    <td>
+                                        <div class="input-group phone-group">
+                                            <div class="items1">
+                                                <div class="input-area wid120">
+                                                    <select title="선택하세요">
+                                                        <option>010</option>
+                                                    </select>
+                                                </div> 
+                                                <div class="dash">-</div> 
+                                            </div>
+                                            <div class="items2">
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>
+                                                <div class="dash">-</div>  
+                                                <div class="input-area wid120">
+                                                    <input type="text" placeholder="1234">
+                                                </div>   
+                                            </div>                                         
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">팩스</th>
                                     <td>
                                         <div class="input-group phone-group">
                                             <div class="items1">
@@ -331,69 +397,119 @@
                                         </div>
                                     </td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <div class="join-info-title">부가정보</div>
+                        <table class="table-body-only no-line-mg mt-16">
+                            <caption class="ir-text">개인정보수정 표</caption>
+                            <colgroup class="pc-cell">
+                                <col style="width: 160px" />
+                                <col />
+                            </colgroup>
+                            <colgroup class="mo-cell">
+                                <col style="width: 88px" />
+                                <col />
+                            </colgroup>                            
+                            <tbody>
                                 <tr>
-                                    <th scope="row">가입경로 <span class="must">*</span></th>
-                                    <td>
-                                        <div class="input-area mo-size wid400">
-                                            <select title="선택하세요">
-                                                <option>직접입력</option>
-                                            </select>
-                                        </div>   
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        가입동기 및<br>희망분야 <span class="must">*</span>
-                                    </th>
-                                    <td>
-                                        <div class="input-area mo-size wid400">
-                                            <select title="선택하세요">
-                                                <option>직접입력</option>
-                                            </select>
-                                        </div>                                           
-                                    </td>
-                                </tr>                                
-                                <tr>
-                                    <th scope="row">나의<br class="mo-only"> 관심 50+<br>기관 <span class="must">*</span></th>
-                                    <td>
-                                        <div class="interest-grid">
-                                            <div class="check-wrap"><input type="checkbox" id="interest_all"><label for="interest_all"><span>전체</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_foundation"><label for="interest_foundation"><span>50+재단</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_west"><label for="interest_west"><span>서부캠퍼스</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_central"><label for="interest_central"><span>중부캠퍼스</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_south"><label for="interest_south"><span>남부캠퍼스</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_east"><label for="interest_east"><span>동부캠퍼스</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_north"><label for="interest_north"><span>북부캠퍼스</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_dosim"><label for="interest_dosim"><span>도심권동작센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_yeongdeungpo"><label for="interest_yeongdeungpo"><span>영등포센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_nowon"><label for="interest_nowon"><span>노원센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_seodaemun"><label for="interest_seodaemun"><span>서대문센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_seongbuk"><label for="interest_seodaemun"><span>성북센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_geumcheon"><label for="interest_geumcheon"><span>금천센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_gangseo"><label for="interest_gangseo"><span>강서센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_seocho"><label for="interest_seocho"><span>서초센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_gangdong"><label for="interest_gangdong"><span>강동센터</span></label></div>                                            
-                                            <div class="check-wrap"><input type="checkbox" id="interest_yangcheon"><label for="interest_yangcheon"><span>양천센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_seongdong"><label for="interest_seongdong"><span>성동센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_gangbuk"><label for="interest_gangbuk"><span>강북센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_gwanak"><label for="interest_gwanak"><span>관악센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_40scamp"><label for="interest_40scamp"><span>40대직업캠프</span></label></div>
-                                            <div class="check-wrap long-type"><input type="checkbox" id="interest_senior"><label for="interest_senior"><span>시니어일자리지원센터</span></label></div>
-                                            <div class="check-wrap"><input type="checkbox" id="interest_expo"><label for="interest_expo"><span>일자리박람회</span></label></div>
-                                        </div>
-                                        <p class="interest-note mt-16">*관심 50+ 기관의 소식(문자, 뉴스레터)을 받을 수 있습니다.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">주된 직업군<br>(퇴직자 포함) <span class="must">*</span></th>
+                                    <th scope="row">홈페이지</th>
                                     <td>
                                         <div class="input-area wid100p">
-                                            <select title="선택하세요">
-                                                <option>선택</option>
-                                            </select>
-                                        </div>   
+                                            <span class="url-prefix">http://</span>
+                                            <input type="text" title="홈페이지 입력해 주세요." placeholder="입력해 주세요.">
+                                        </div>                                        
                                     </td>
-                                </tr>    
+                                </tr>
+                                <tr>
+                                    <th scope="row">설립<br class="mo-only"> 연월<span class="must">*</span></th>
+                                    <td>
+                                        <div class="input-area wid100p">
+                                            <input type="date" title="설립연월 입력해 주세요." placeholder="예) 20250510">
+                                        </div>                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">근로자수<br class="mo-only"> 연월<span class="must">*</span></th>
+                                    <td>
+                                        <div class="employee-count-wrap">
+                                            <div class="employee-count-item">
+                                                <div class="input-area wid72">
+                                                    <input type="text" title="근로자수 입력해 주세요." placeholder="0">
+                                                </div>
+                                                명
+                                            </div>
+
+                                            <div class="employee-count-item">
+                                                (여
+                                                <div class="input-area wid72">
+                                                    <input type="text" title="여자 근로자수 입력해 주세요." placeholder="0">
+                                                </div> 명
+                                            </div>
+                                            <div class="employee-count-item">
+                                                /
+                                            </div>
+                                            <div class="employee-count-item">
+                                                장애인
+                                                <div class="input-area wid72">
+                                                    <input type="text" title="장애인 근로자수 입력해 주세요." placeholder="0">
+                                                </div> 명 )
+                                            </div>
+
+                                        </div>
+                                        <p class="join-info-text mt-16">* 값이 없는경우: 0명</p>                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상장 여부</th>
+                                    <td>
+                                        <div class="flex gap10">
+                                            <label class="radio-item">
+                                                <input type="radio" name="stock" value="open-y" checked="">
+                                                <span class="custom-radio"></span>
+                                                상장
+                                            </label>
+                                            <label class="radio-item">
+                                                <input type="radio" name="stock" value="open-n">
+                                                <span class="custom-radio"></span>
+                                                비상장
+                                            </label>
+                                        </div>                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4대보험<br class="mo-only"> 가입<span class="must">*</span></th>
+                                    <td>
+                                        <div class="insurance-check-list">
+                                            <div class="check-wrap"><input type="checkbox" id="insurance_1"><label for="insurance_1"><span>국민연금</span></label></div>
+                                            <div class="check-wrap"><input type="checkbox" id="insurance_2"><label for="insurance_2"><span>고용보험</span></label></div>
+                                            <div class="check-wrap"><input type="checkbox" id="insurance_3"><label for="insurance_3"><span>산재보험</span></label></div>
+                                            <div class="check-wrap"><input type="checkbox" id="insurance_4"><label for="insurance_4"><span>건강보험</span></label></div>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기업유형 <span class="must">*</span></th>
+                                    <td>
+                                        <div class="flex gap10 radio-item3">
+                                            <label class="radio-item">
+                                                <input type="radio" name="company-type" value="company-type1" checked="">
+                                                <span class="custom-radio"></span>
+                                                공공
+                                            </label>
+                                            <label class="radio-item">
+                                                <input type="radio" name="company-type" value="company-type2">
+                                                <span class="custom-radio"></span>
+                                                민간
+                                            </label>
+                                            <label class="radio-item">
+                                                <input type="radio" name="company-type" value="company-type3">
+                                                <span class="custom-radio"></span>
+                                                기타법인 및 단체
+                                            </label>
+                                        </div>                                        
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th scope="row">Email 수신</th>
                                     <td>
@@ -427,7 +543,7 @@
                                             </label>
                                         </div>                                        
                                     </td>
-                                </tr>                                                                                                                                                                                   
+                                </tr> 
                             </tbody>
                         </table>
                         <div class="button-area flex-justify-center mt-32">
@@ -436,6 +552,8 @@
                             </a>
                         </div>
                     </div>
+
+
 
 
                 </div>

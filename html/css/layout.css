@@ -1985,7 +1985,10 @@ body.modal-open {
     width: 100%;
     max-width: 1020px;
 }
-
+.modal-wd560 {
+    width: 100%;
+    max-width: 560px;
+}
 .modal-header {
     height: 72px;
     display: flex;
@@ -2056,7 +2059,9 @@ body.modal-open {
 .table-wrap.no-line-mg table {
     border-top: 0;
 }
-
+.section-title +.table-body-only.no-line-mg {
+    border-bottom: 0;
+}
 .table-wrap table {
     width: 100%;
     border-top: 2px solid var(--color-black);

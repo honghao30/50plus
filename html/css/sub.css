@@ -3117,6 +3117,10 @@ sub page 체크후  */
     font-size: 18px;
     line-height: 20px;
 }
+.title-type.title-type22 {
+    font-size: 22px;
+    line-height: 22px;
+}
 .out-notice-list {
     display: flex;
     flex-direction: column;
@@ -4745,6 +4749,19 @@ appearance: none;
     }
 }
 
+.certification-desc {
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.compnay-certification-wrap {
+    border-top:1px solid #D8D9DA;    
+    padding: 24px 0;
+    margin-top: 24px;
+}
+
 .member-certification-wrap {
     width: 100%;
     max-width: 400px;
@@ -4926,6 +4943,91 @@ appearance: none;
     .table-wrap.join-info-wrap .interest-grid .check-wrap.long-type {
         width: 100%;
     }
+}
+
+.join-info-title {    
+    font-weight: 700;    
+    font-size: 18px;    
+    line-height: 18px;    
+    color: #151515;
+    margin-top: 24px;
+}
+.insurance-check-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.insurance-check-list .check-wrap {
+    width: calc((100% - 48px) / 4);
+}
+.employee-count-wrap {
+    display: flex;
+    gap: 16px;
+}
+.employee-count-wrap .employee-count-item {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.employee-count-wrap .employee-count-item input {
+    width: 100%;
+    text-align: right;
+}
+@media (max-width: 768px) {
+    .insurance-check-list {
+        flex-wrap: wrap;
+    }
+    .insurance-check-list .check-wrap input[type="checkbox"]+label>span {
+        white-space: nowrap;
+    }
+    .insurance-check-list .check-wrap {
+        width: calc((100% - 16px) / 2);
+    }
+    .radio-item3 {
+        flex-wrap: wrap;
+    }
+    .radio-item3 .radio-item {
+        white-space: nowrap;
+    }
+
+    .employee-count-wrap {
+        flex-direction: column;
+    }
+}
+
+.welcome-wrap {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;    
+    gap: 16px;
+}
+.welcome-wrap .welcome-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #151515;
+    background-color: #E6EBF5;
+    padding: 24px 16px;
+    color:#4F6793;
+    text-align: center;
+}
+.welcome-wrap .welcome-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #151515;
+    text-align: center;
+    border-bottom: 1px solid #D8D9DA;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+}
+.welcome-wrap .btn-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* 공통 */
