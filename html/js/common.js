@@ -304,6 +304,35 @@ const moButton = () => {
             if (moGnb) {
                 addClass(moGnb, 'is-active');
                 addClass(document.body, 'modal-open');
+                const moGnbSubList = safeQuerySelectorAll('.gnb-list > li');
+                moGnbSubList.forEach((item,index) => {
+                    const moGnbSubList = item.innerHTML;                    
+                    const newMoGnbWrap = document.createElement('div');
+                    newMoGnbWrap.innerHTML = moGnbSubList;
+                    newMoGnbWrap.classList.add('mo-gnb-list-item');
+                    newMoGnbWrap.setAttribute('id', `mo-sub${index}`);
+                    document.querySelector('.mo-gnb-sub-list').appendChild(newMoGnbWrap);
+                    newMoGnbWrap.querySelectorAll('ul').forEach((item,index) => {
+                        if(item.classList.contains('is-active')) {
+                            item.classList.remove('is-active');
+                        }
+                        item.classList.remove('gnb-sub-list');
+                    });
+                    newMoGnbWrap.querySelectorAll('.font-body-style2').forEach((item,index) => {
+                        item.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const targetId = item.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            
+                            if (targetElement) {
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        }); 
+                    });
+                })
             }
         });
     });
@@ -386,8 +415,10 @@ const gnbMenu = () => {
 
     // 서브메뉴 열기 함수
     const openSubMenu = (target) => {
-        addClass(gnbDimBg, 'is-active');
-        gnbDimBg.style.top = `${target.offsetTop + 63}px`;
+        if(window.innerWidth > 768) {
+            addClass(gnbDimBg, 'is-active');
+            gnbDimBg.style.top = `${target.offsetTop + 63}px`;
+        }
         addClass(gnbList, 'is-active');
         
         const subLists = safeQuerySelectorAll('.gnb-sub-list');
@@ -606,23 +637,29 @@ const moGnb = () => {
     // 첫 번째 메뉴의 하위메뉴를 기본적으로 열린 상태로 설정
     executeIfExists('.gnb-list li:first-child', (firstMenuItem) => {
         addClass(firstMenuItem, 'is-active');
-        const firstSubMenu = firstMenuItem.querySelector('.gnb-sub-list');
-        if (firstSubMenu) {
-            addClass(firstSubMenu, 'is-active');
-        }
+        // const firstSubMenu = firstMenuItem.querySelector('.gnb-sub-list');
+        // if (firstSubMenu) {
+        //     addClass(firstSubMenu, 'is-active');
+        // }
     });
     
     addEventListeners(moGnbList, 'click', (event) => {
         // 모든 메뉴의 is-active 클래스 제거
         resetMenuStates('.gnb-list li');
-        
+        event.preventDefault();
         // 클릭한 메뉴만 활성화
         const clickedItem = event.currentTarget.parentElement;
+        console.log(clickedItem);
         addClass(clickedItem, 'is-active');
         
-        const subMenu = event.currentTarget.nextElementSibling;
-        if (subMenu) {
-            addClass(subMenu, 'is-active');
+        const targetId = event.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 }

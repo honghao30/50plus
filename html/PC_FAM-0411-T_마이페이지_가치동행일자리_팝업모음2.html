@@ -170,6 +170,9 @@
                         <a href="#" class="btn btn-primary btn-md"  onclick="openModal(event)" modal-id="modal005">                
                             FAM-0410-P_활동일지상세작성
                         </a>
+                        <a href="#" class="btn btn-primary btn-md"  onclick="openModal(event)" modal-id="modal006">                
+                            FAM-0814-P_기존 수강이력 가져오기_팝업
+                        </a>
                         
                     </div>
 
@@ -855,6 +858,67 @@
             </button>
             <button type="button" class="btn btn-primary btn-md button-wid150">                
                 저장하기
+            </button>
+        </div>
+        <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
+            <i class="ico ico-x-bl"></i>
+        </button>
+        </div>
+    </div>  
+
+    <div class="modal__wrap--bg cmp-modal" id="modal006">
+        <div class="modal-wrap-container modal-wd1020">
+        <div class="modal-header">
+            <div class="title">기존 수강이력 가져오기</div>      
+        </div>
+        <div class="modal-body-container">   
+            <div class="table-wrap border-top-none mt-0">
+                <table class="table-body-only">
+                    <colgroup class="pc-cell">
+                        <col style="width: 160px;" />
+                        <col />
+                    </colgroup>
+                    <colgroup class="mo-cell">
+                        <col style="width: 88px;" />
+                        <col />
+                    </colgroup> 
+                    <tbody>                       
+                        <tr>
+                            <th scope="row">기존 이용기관</th>
+                            <td>
+                                <div class="input-area wid100p">
+                                    <select title="선택하세요">
+                                        <option>선택</option>
+                                    </select>
+                                </div>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">아이디</th>
+                            <td>
+                                <div class="input-area mo-size wid120">
+                                    <input type="text" title="아이디를 입력해 주세요" placeholder="아이디 입력해 주세요." value="">
+                                </div>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">비밀번호</th>
+                            <td>
+                                <div class="input-area wid100p">
+                                    <input type="password" title="비밀번호를 입력해 주세요" placeholder="비밀번호 입력해 주세요.">
+                                </div> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-md button-wid150">
+                닫기
+            </button>
+            <button type="button" class="btn btn-primary btn-md">                
+                기존 수강이력 가져오기
             </button>
         </div>
         <button type="button" class="btn btn-close only-icon close-modal" onclick="closeModal(event)">
