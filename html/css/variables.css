@@ -66,6 +66,7 @@
 
     /* ## Layout */
     --layout-max-width: 1440px;
+    --layout-tablet-width: 1024px;
 
     /* ## Border */
     --border-color-primary: #D8D9DA;

@@ -1291,6 +1291,26 @@ sub page 체크후  */
     background: url(../img/common/ico-main-quick04.svg) no-repeat;
     background-size: 100% auto;
 }
+@media (min-width: 769px) and (max-width: 1439px) {
+    .content-inner-full.quick-move-section .section-inner {
+        padding: 34px 32px;
+    }
+    .main-quick-link {        
+        flex-wrap: wrap;
+    }
+    .bn01,
+    .bn02 {
+        width: 50%;
+    }
+    .bn01 img,
+    .bn02 img {
+        width: 100%;
+    }
+    .main-quick-link .quick-link a {
+        width: 48%;
+    }
+
+}
 
 @media (max-width: 768px) {
     .content-inner-full.quick-move-section .section-inner {
@@ -1536,6 +1556,76 @@ sub page 체크후  */
     color: #3D5FEA;
     background: #C4D0FF80;
 }
+@media (min-width: 769px) and (max-width: 1439px) {
+    .content-inner-fix.board-section {
+        padding: 100px 32px;
+    }
+    .job-card-grid {
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .job-card {
+        border-radius: 43px;
+        min-width: 312px;
+        width: 312px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+    .content-inner-full.main-board-list .section-inner .main-board-box .title {
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .main-tab .tab-head .tab-menu-wrap button.is-active::after {
+        width: 28px;
+        height: 20px;
+        background-size: contain;
+    }
+    .main-tab .tab-head .tab-menu-wrap {
+        border-radius: 20px;
+        width: 100%;
+    }
+    .content-inner-fix.board-section {
+        padding: 48px 0px;
+    }
+    .main-tab .tab-head {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0 16px;
+    }
+    .main-tab .tab-head .tab-menu-title {
+        margin-left: 0;
+        font-size: 30px;
+        line-height: 50px;        
+    }
+    .main-tab .tab-head .tab-menu-wrap button {
+        font-size: 20px;
+        line-height: 36px;
+        padding: 15px 0;
+        width: 50%;
+    }
+    .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab01 {
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+    }
+    .main-tab .tab-head .tab-menu-wrap button.is-active .ico-main-tab02 {
+        width: 32px;
+        height: 28px;
+        background-size: contain;
+    }
+
+    .content-inner-full.main-board-list {
+        padding: 80px 32px;        
+    }
+    .content-inner-full.main-board-list .section-inner {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .content-inner-full.main-board-list {
         padding: 48px 16px;
