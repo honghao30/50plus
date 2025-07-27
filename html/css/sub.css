@@ -4677,9 +4677,10 @@ appearance: none;
 .modal-body-container .tab-wid-full.tab-container-full.sticky{
     position: relative;
 }
-.modal-body-container .tab-wid-full.tab-container-full.sticky .tab-head{
+.modal-body-container .tab-wid-full.tab-container-full.sticky .tab-head, .modal-body-container.ht-full.sticky .box-community-top.box-type{
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 @media(max-width: 768px){
     .job-posting-container .tab-container-sort{
