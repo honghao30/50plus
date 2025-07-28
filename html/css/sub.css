@@ -4718,6 +4718,296 @@ appearance: none;
     }
     
 }
+.login-wrap .login-area{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-bottom: 1px solid #D8D9DA;
+    padding-bottom: 24px;
+
+}
+.login-wrap .login-area .login-item .input-area{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.login-wrap .login-item .tit{
+    font-weight: 700;
+}
+.login-wrap .login-area .login-item .input-area input{
+    flex: none;
+    width: 100%
+}
+.login-wrap .login-area .login-item .button-area{
+    margin-top: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+.login-wrap .login-area .login-item .button-area .btn{
+    width: 100%;
+}
+.login-wrap .login-area .login-item .desc{
+    font-size: 16px;
+    color: #666;
+}
+.login-wrap .find-area{
+    width: 400px;
+    margin: 24px auto 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+.login-wrap .find-area a{
+    text-decoration: underline;
+    color: #333;
+    font-size: 15px;
+}
+.login-wrap .welcome-wrap .welcome-tite{
+    padding: 24px 40px;
+    word-break: keep-all;
+}
+.login-wrap .data-match{
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 24px;
+    display: flex;
+    color: #151515;
+    margin-top: 24px;
+}
+.login-wrap .data-match .matched-item{
+    font-size: 16px;
+    width: 96px;
+    text-align-last: left;
+}
+.login-wrap .data-match .matched-text{
+    font-size: 18px;
+    font-weight: 700;
+}
+.login-wrap .login-area > .data-match{
+    border-radius: 0;
+    background-color: #E6EBF5;
+}
+
+.login-card {
+    border: 1px solid #D8D9DA;
+    border-radius: 32px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+}
+.login-card + .login-card{
+    margin-top: 40px;
+}
+.login-card .top-bar .tit-box{
+    display: flex;
+    gap: 16px;
+}
+.login-card .top-bar .tit.tooltip{
+    padding-right: 28px;
+    position: relative;
+}
+.login-card .top-bar .tit.tooltip::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background: url(../img/common/tooltip_btn.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.login-card .top-bar .txt{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.login-card .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #F8F8F8;
+}
+
+.login-card .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.login-card .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.login-card .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.login-card .slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.login-card input:checked + .slider {
+    background-color: #2680EB;
+}
+
+.login-card input:checked + .slider::before {
+    transform: translateX(24px);
+}
+.login-card .join-member{
+    font-size: 15px;
+    display: flex;
+    gap: 24px;
+}
+.login-card .join-member .join-member-item{
+    display: flex;
+    gap: 8px;
+    line-height: 24px;
+}
+.login-card .join-member .btn-pop{
+    color: #4F6793;
+    position: relative;
+    padding-right: 24px;
+}
+.login-card .join-member .btn-pop::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background: url(../img/common/arrow_navy_right.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.login-options {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.login-box{
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid #D8D9DA;
+    padding: 33px 72px 33px 88px;
+    word-break: keep-all;
+    background-repeat: no-repeat;
+    background-position: 24px center;
+}
+.login-box::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background: url(../img/common/ico_arrow2_right.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+}
+.login-box.mobile{
+    background-image: url(../img/common/ico_mobile.png);
+}
+.login-box.easy{
+    background-image: url(../img/common/ico_easy.png);
+}
+.login-box.public{
+    background-image: url(../img/common/ico_public.png);
+}
+.login-box.financial{
+    background-image: url(../img/common/ico_financial.png);
+}
+
+.login-box h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #4F6793;
+}
+
+.login-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+.sub-login h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.id-login {
+  background: #e6f0fd;
+  border: 1px solid #91bdfb;
+}
+
+
+@media(max-width: 768px){
+    .login-wrap .login-area{
+        width: 100%;
+    }
+    .login-wrap .find-area{
+        width: 100%;
+    }
+    .login-wrap .welcome-wrap{
+        max-width: 100%;
+    }
+    .login-wrap .welcome-wrap .welcome-tite{
+        font-size: 18px;
+    }
+    .login-card .top-bar{
+        display: block;
+        padding: 24px 20px;
+    }
+    .login-card .top-bar .tit-box.has-bottom-line{
+        border-bottom: 1px solid #D8D9DA;
+        padding-bottom: 16px;
+        justify-content: space-between;
+    }
+    .login-card .join-member {
+        flex-direction: column;
+        gap: 0;
+    }
+    .login-card .join-member .join-member-item {
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+    .login-options{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .login-card .top-bar .tit{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .login-box{
+        padding: 24px 64px 24px 80px;
+        background-position: 16px center;
+    }
+}
 
 .search-form-top {
     display: flex;
