@@ -582,6 +582,7 @@ const gnbSearch = () => {
                 }
 
                 // 300ms 지연 후 검색창 닫기
+                /* 검색창 자동으로 닫히지 않게 처리해달라고함. 
                 searchCloseTimer = setTimeout(() => {
                     if (moSearchArea.classList.contains('is-active')) {
                         removeClass(moSearchArea, 'is-active');
@@ -589,6 +590,7 @@ const gnbSearch = () => {
                         if (searchItem) removeClass(searchItem, 'is-active');
                     }
                 }, 300);
+                */
             }
         });
 
@@ -681,6 +683,39 @@ const moGnb = () => {
     });
 }
 
+// 07.28 cy - mobile 전체메뉴 스크롤시 좌측 gnb영역 active 추가&제거
+const subListScroll = () => {
+    const subListArea = document.querySelector('.mo-gnb-sub-list');
+    if (!subListArea) return;
+
+    subListArea.addEventListener('scroll', () => {
+        const targetItems = subListArea.querySelectorAll(".mo-gnb-list-item");
+        const gnbLinks = document.querySelectorAll(".gnb-list > li > a");
+        const scrollTop = subListArea.scrollTop;
+        let closestIdx = 0;
+        let minDistance = Infinity;
+
+      // 현재 스크롤 위치에 가장 가까운 item 찾기
+        targetItems.forEach((el, idx) => {
+            const distance = Math.abs(el.offsetTop - scrollTop);
+            if (distance < minDistance) {
+                console.log(minDistance)
+                minDistance = distance;
+                closestIdx = idx;
+            }
+        });
+
+        // 기존 active 제거
+        document.querySelectorAll(".gnb-list > li").forEach(li => li.classList.remove("is-active"));
+
+        // 가장 가까운 항목에 active 추가
+        const targetLi = gnbLinks[closestIdx]?.closest("li");
+        if (targetLi) {
+            targetLi.classList.add("is-active");
+        }
+    });
+};
+
 // 스크롤 이벤트에 쓰로틀링 적용
 window.addEventListener('scroll', () => {
     if (!timer) {
@@ -705,6 +740,7 @@ window.addEventListener('resize', () => {
     }
     if (window.innerWidth < 768) {
         moGnb();
+        subListScroll();
     }
 });
 
@@ -729,5 +765,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (window.innerWidth < 768) {
         moGnb();
+        subListScroll();
     }
 });
