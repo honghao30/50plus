@@ -937,7 +937,7 @@
 .filter-column ul li.is-active a,
 .filter-column ul li:hover a {
     color: var(--font-color-accent);
-    display: block;
+    /* display: block; */
     width: 100%;
 }
 
