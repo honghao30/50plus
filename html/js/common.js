@@ -138,43 +138,60 @@ const copyDv = () => {
 
 //tab menu sort
 const initTabs = (containerSelector, type) => {
-    const container = safeQuerySelector(containerSelector);
-    if (!container) return;
+    const containers = safeQuerySelectorAll(containerSelector);
+    if (!containers.length) return;
 
-    const tabMenus = container.querySelectorAll('.tab-menu');
-    const tabContents = container.querySelectorAll('.tab-content__wrap .tab-content');
-    const tabMenuWrap = container.querySelector('.scroll-tab');
-
-    const scrollActiveTabIntoView = () => {
-        const activeTab = container.querySelector('.tab-menu.is-active');
-        if (activeTab && tabMenuWrap && tabMenuWrap.scrollWidth > tabMenuWrap.clientWidth) {
-            activeTab.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
-        }
-    };
-
-    scrollActiveTabIntoView();
-
-    addEventListeners(tabMenus, 'click', (event) => {
-        const tab = event.currentTarget;
+    containers.forEach(container => {
+        // 현재 컨테이너 내의 직접적인 탭 메뉴만 선택 (중첩 탭 방지)
+        const tabMenuWrap = container.querySelector('.tab-menu-wrap');
+        if (!tabMenuWrap) return;
         
-        // 모든 탭 메뉴에서 active 클래스 제거
-        removeClass(Array.from(tabMenus), 'is-active');
-        addClass(tab, 'is-active');
+        const tabMenus = tabMenuWrap.querySelectorAll('.tab-menu');
+        const tabContents = container.querySelectorAll('.tab-content__wrap .tab-content');
+        const scrollTab = container.querySelector('.scroll-tab');
 
-        // 탭 콘텐츠 처리 (type이 'sort'가 아닌 경우만)
-        if (type !== 'sort') {
-            const targetId = tab.getAttribute('data-tab');
-            const targetContent = container.querySelector(`#${targetId}`);
+        if (tabMenus.length === 0) return;
 
-            removeClass(Array.from(tabContents), 'is-active');
-            if (targetContent) {
-                addClass(targetContent, 'is-active');
+        const scrollActiveTabIntoView = () => {
+            const activeTab = tabMenuWrap.querySelector('.tab-menu.is-active');
+            if (activeTab && scrollTab && scrollTab.scrollWidth > scrollTab.clientWidth) {
+                activeTab.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
             }
-        }
+        };
+
+        // 탭 클릭 이벤트 처리 (이벤트 위임 사용)
+        tabMenuWrap.addEventListener('click', (event) => {
+            // 클릭된 요소가 탭 메뉴인지 확인
+            if (!event.target.classList.contains('tab-menu')) return;
+            
+            // 이벤트 버블링 방지 (중첩 탭 간섭 방지)
+            event.stopPropagation();
+            
+            const clickedTab = event.target;
+            
+            // 현재 컨테이너의 탭 메뉴들에서만 active 클래스 제거/추가
+            Array.from(tabMenus).forEach(tab => removeClass(tab, 'is-active'));
+            addClass(clickedTab, 'is-active');
+
+            // 탭 콘텐츠 처리 (type이 'sort'가 아닌 경우만)
+            if (type !== 'sort' && tabContents.length > 0) {
+                const targetId = clickedTab.getAttribute('data-tab');
+                const targetContent = container.querySelector(`#${targetId}`);
+
+                Array.from(tabContents).forEach(content => removeClass(content, 'is-active'));
+                if (targetContent) {
+                    addClass(targetContent, 'is-active');
+                }
+            }
+            
+            scrollActiveTabIntoView();
+        });
+
+        // 초기 스크롤 위치 설정
         scrollActiveTabIntoView();
     });
 };
