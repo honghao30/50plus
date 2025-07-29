@@ -683,6 +683,10 @@ body {
     display: inline-flex;
     width: 100%;
 }
+.tab-content.sort-type {
+    display: block;
+    width: 100%;
+}
 @media (max-width: 768px) {
     .tab-menu {
         height: 48px;

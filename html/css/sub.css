@@ -1186,6 +1186,10 @@
     background: #F6EDFD;
     color: #A548E3;
 }
+.job-card .job-tag.type-c {
+    background: #999999;
+    color: var(--color-white);
+}
 /* main tag type
 sub page 체크후  */
 .board-section .job-card .job-tag.type4 {
@@ -1816,7 +1820,10 @@ sub page 체크후  */
     padding: 10px 0 20px;
     border-bottom: 1px solid var(--color-gray-300);    
 }
-
+.job-details + .recruitment-info {
+    border-top: 0;
+    padding-top: 0;
+}
 .job-details .bar {
     width: 1px;
     height: 13px;
