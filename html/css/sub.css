@@ -5508,6 +5508,10 @@ appearance: none;
     padding: 24px 16px;
     margin-bottom: 24px;
 }
+.welcome-wrap .welcome-text.no-signup{
+    border-bottom: 0;
+    margin: 0;
+}
 .welcome-wrap .btn-wrap {
     display: flex;
     flex-direction: column;
