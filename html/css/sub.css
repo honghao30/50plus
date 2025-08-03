@@ -5016,6 +5016,174 @@ appearance: none;
     }
 }
 
+.job-posting-container.global-search{
+    display: flex;
+    gap : 24px;
+}
+.job-posting-container.global-search .tab-container-full{
+    width: 1194px;
+}
+.job-posting-container.global-search .tab-menu-wrap.scroll-tab .font-body-style3.tab-menu{
+    display: block;
+}
+.job-posting-container.global-search .article-result{
+    font-size: 18px;
+    color: #151515;
+}
+.tab-menu-wrap .result-count{
+    font-size: 15px;
+    display: block;
+    color: #999;
+}
+.tab-menu.is-active .result-count{
+    color: #fff;
+}
+.result-keyword{
+    color: var(--color-secondary);
+}
+.job-posting-container.global-search .article-details{
+    flex: 1;
+}
+.job-posting-container.global-search .article-tag{
+    width: auto;
+    padding: 16px 24px;
+}
+.job-posting-container.global-search .article-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.job-posting-container.global-search .sort-wrap{
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #151515;
+    border-bottom: 1px solid #D8D9DA;
+    padding: 16px;
+}
+.job-posting-container.global-search .sort-wrap .input-area{
+    width: 200px;
+}
+.job-posting-container.global-search .button-area.btn-load-more{
+    margin: 64px 0;
+}
+.job-posting-container.global-search .search-keyword{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.job-posting-container.global-search .search-keyword .search-box {
+  border: 1px solid #ccc;
+  border-radius: 0 8px 8px 8px;
+  overflow: hidden;
+}
+.job-posting-container.global-search .search-keyword .search-list{
+    padding: 20px;
+}
+.job-posting-container.global-search .search-keyword .search-list li+li{
+    margin-top: 8px;
+}
+.job-posting-container.global-search .search-keyword .search-box-title{
+    color: #4F6793;
+    font-size: 16px;
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 16px 20px;
+}
+.job-posting-container.global-search .search-keyword .search-box-title::before{
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: #4F6793;
+    display: inline-block;
+    margin: 2px 8px 0 0;
+}
+.job-posting-container.global-search .center-filter-list{
+    position: absolute;
+    bottom: -92px;
+    right: 16px;
+    border: 2px solid #0178FF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.55);
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #fff;
+}
+.job-posting-container.global-search .center-filter-list .pc-view{
+    display: block;
+}
+.job-posting-container.global-search .center-filter-list .mo-view{
+    display: none;
+}
+.job-posting-container.global-search .center-filter-list .center-filter-list-inner{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.job-posting-container.global-search .tab-head{
+    position: relative;
+}
+@media (max-width: 768px) {
+    .job-posting-container.global-search .tab-menu-wrap.box-type .tab-menu{
+        border-radius: 0;
+        border: 0;
+    }
+    .job-posting-container.global-search .tab-menu-wrap.box-type{
+        gap: 0;
+        border-top: 1px solid #151515;
+    }
+    .job-posting-container.global-search .search-keyword{
+        display: none;   
+    }
+    .job-posting-container.global-search .sort-wrap{
+        flex-direction: column;
+    }
+    .job-posting-container.global-search .sort-wrap li:last-child{
+        text-align: right;
+    }
+    .job-posting-container.global-search .article-title{
+        display: block;
+    }
+    .job-posting-container.global-search .article-bottom .color-gray{
+        display: none;
+    }
+    .job-posting-container.global-search .article-bottom .article-keywords{
+        flex-wrap: wrap;
+    }
+    .job-posting-container.global-search .tab-head{
+        position: unset;
+    }
+    .job-posting-container.global-search .center-filter-list{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border: none;
+        width: 100%;
+    }
+    .job-posting-container.global-search .center-filter-list .pc-view{
+        display: none;
+    }
+    .job-posting-container.global-search .center-filter-list .mo-view{
+        display: block;
+    }
+    .job-posting-container.global-search .center-filter-list .mo-view .center-filter-list-inner{
+        flex-direction: column;
+        gap: 0;
+        overflow-y: auto;
+        max-height: 320px;
+    }
+    .job-posting-container.global-search .center-filter-list .mo-view .center-filter-list-inner li{
+        width: 100%;
+        text-align: left;
+    }
+    .job-posting-container.global-search .center-filter-list .mo-view .center-filter-list-inner .btn{
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: transparent;
+        line-height: 50px;
+    }
+}
+
+
+
 .search-form-top {
     display: flex;
     justify-content: flex-end;

@@ -246,6 +246,32 @@ const likeEvent = (selector) => {
     });
 }
 
+//통합검색 - 센터 버튼 클릭시 지역나오게
+const centerFilter = () => {
+    const centerButtons = document.querySelectorAll('.center-filter');
+    const centerList = document.querySelector('.center-filter-list');
+    const closeButtons = document.querySelectorAll('.btn-close');
+
+    centerButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (centerList.style.display === 'none' || centerList.style.display === '') {
+                centerList.style.display = 'block';
+            } else {
+                centerList.style.display = 'none';
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            centerList.style.display = 'none';
+        });
+    });
+};
+
+
+
+
 // modal
 const setModal = (target) => {
     const targetElement = typeof target === 'string' ? safeQuerySelector(`#${target}`) : target;
@@ -753,6 +779,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filtersSelect();
     initializeFileInputs();
     likeEvent('.like-button');
+    centerFilter();
     moButton();
     moButtonClose();
     dropdownList();
