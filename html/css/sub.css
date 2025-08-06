@@ -1190,6 +1190,10 @@
     background: #999999;
     color: var(--color-white);
 }
+.job-card .job-tag.type-d {
+    background: #E0F0FB;
+    color: #2F97E1;
+}
 /* main tag type
 sub page 체크후  */
 .board-section .job-card .job-tag.type4 {
@@ -5013,6 +5017,48 @@ appearance: none;
     .login-box{
         padding: 24px 64px 24px 80px;
         background-position: 16px center;
+    }
+}
+
+/* 공통 - 게시판목록 */
+.fix-pin .title-line, .fix-pin .article-details{
+    position: relative;
+    padding-right: 28px;
+    width: 100%;
+}
+.fix-pin .title-line::after{
+    content: url('../img/common/fix_pin_on.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.fix-pin .article-details::after{
+    content: url('../img/common/fix_pin_on.png');
+    position: absolute;
+    top: 16px;
+    right: 0;    
+}
+.fix-pin .article-title.file::after{
+    content: '';
+    background-image: url('../img/common/ico_file.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 8px;
+}
+@media(max-width: 768px){
+    .fix-pin .article-details::after{
+        top: 30px;
+    }
+    .fix-pin .article-title.file::after{
+        width: 40px;
+        height: 34px;
+        vertical-align: bottom;
+    }
+    .article-title.file{
+        display: inline;
     }
 }
 
