@@ -752,6 +752,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
+//Masonry grid 적용
+const handleMasonry = () => {
+  const grid = document.querySelector('.job-card-grid.masonry-grid');
+  if (!grid) return;
+
+  if (window.innerWidth > 768) {
+    imagesLoaded(grid, () => {
+      new Masonry(grid, {
+        itemSelector: '.job-card',
+        columnWidth: '.job-card',
+        percentPosition: true,
+        gutter: 20
+      });
+    });
+  }
+};
+
+
 window.addEventListener('resize', () => {
     copyDv();
     jobCardTitle();
@@ -763,6 +781,7 @@ window.addEventListener('resize', () => {
         setGnbSubListHeight();
         gnbSearch();
         moSearchClose();
+        handleMasonry();
     }
     if (window.innerWidth < 768) {
         moGnb();
@@ -789,6 +808,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setGnbSubListHeight();
         gnbSearch();
         moSearchClose();
+        handleMasonry();
     }
     if (window.innerWidth < 768) {
         moGnb();

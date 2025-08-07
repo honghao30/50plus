@@ -5048,6 +5048,19 @@ appearance: none;
     display: inline-block;
     margin-left: 8px;
 }
+.job-card-grid.masonry-grid{
+    position: relative;
+    display: block;
+}
+.job-card-grid.masonry-grid::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.job-card-grid.masonry-grid .job-card {
+    float: left;
+    margin-bottom: 20px;
+}
 @media(max-width: 768px){
     .fix-pin .article-details::after{
         top: 30px;
@@ -5059,6 +5072,10 @@ appearance: none;
     }
     .article-title.file{
         display: inline;
+    }
+    .job-card-grid.masonry-grid{
+        display: flex;
+        align-items: flex-start;
     }
 }
 
